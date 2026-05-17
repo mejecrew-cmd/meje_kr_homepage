@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="(주)메제웍스 개인정보처리방침 — 개인정보 보호법에 따른 개인정보 처리 절차 및 기준 안내.">
+<title>개인정보 처리방침 | (주)메제웍스</title>
+<meta property="og:title" content="개인정보 처리방침 | (주)메제웍스">
+<meta property="og:description" content="(주)메제웍스 개인정보처리방침 — 개인정보 보호법에 따른 처리 절차 안내">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/privacy.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/privacy.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/privacy.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/privacy.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/privacy.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/privacy.html">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── PRIVACY PAGE SPECIFIC ── */
+.policy-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 40px 60px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.policy-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--green);
+  border: 1px solid rgba(76,175,125,0.3);
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+}
+.policy-badge::before { content: '● '; }
+
+.policy-title {
+  font-family: var(--display);
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.policy-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 2;
+}
+
+/* ── ARTICLE SECTIONS ── */
+.policy-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 40px;
+  border-bottom: 1px solid var(--border-dim);
+}
+.policy-section:last-of-type { border-bottom: none; }
+
+.article-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.article-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  flex-shrink: 0;
+  min-width: 40px;
+}
+
+.article-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.article-body {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.9;
+  margin-left: 52px;
+}
+
+.article-body p { margin-bottom: 12px; }
+
+.article-body ul {
+  list-style: none;
+  margin: 12px 0;
+}
+
+.article-body li {
+  padding: 8px 0 8px 20px;
+  border-left: 1px solid var(--border-dim);
+  margin-bottom: 4px;
+  transition: border-color 0.2s;
+}
+.article-body li:hover { border-left-color: var(--accent-dim); }
+
+.article-body li strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.article-body .sub-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent-dim);
+  letter-spacing: 0.1em;
+  margin: 16px 0 8px;
+}
+
+/* ── DPO BOX ── */
+.dpo-box {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  border-left: 2px solid var(--accent);
+  padding: 24px 28px;
+  margin-top: 20px;
+}
+
+.dpo-box .dpo-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.dpo-box .dpo-info {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 2;
+}
+.dpo-box a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ── REMEDIES GRID ── */
+.remedies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 12px;
+}
+
+.remedy-item {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 16px 20px;
+}
+
+.remedy-item-name {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.remedy-item-info {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.remedy-item-info a {
+  color: var(--accent-dim);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .policy-hero { padding: 80px 20px 40px; }
+  .policy-section { padding: 36px 20px; }
+  .article-body { margin-left: 0; margin-top: 12px; }
+  .article-header { flex-direction: column; gap: 4px; }
+  .remedies-grid { grid-template-columns: 1fr; }
+}
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="privacy.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="en/privacy.html">EN</a><span class="sep">&middot;</span>
+    <a href="ja/privacy.html">JA</a><span class="sep">&middot;</span>
+    <a href="zh-tw/privacy.html">繁</a><span class="sep">&middot;</span>
+    <a href="zh-cn/privacy.html">简</a><span class="sep">&middot;</span>
+    <a href="ar/privacy.html">AR</a><span class="sep">&middot;</span>
+    <a href="fa/privacy.html">FA</a><span class="sep">&middot;</span>
+    <a href="ur/privacy.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="privacy.html" class="active">Privacy</a></li>
+  </ul>
+  <span class="nav-badge">Privacy Policy</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<div class="policy-hero">
+  <span class="policy-badge">Legal Document</span>
+  <h1 class="policy-title">(주)메제웍스<br>개인정보처리방침</h1>
+  <div class="policy-meta">
+    공고일자 — 2025.10.06<br>
+    시행일자 — 2025.10.13
+  </div>
+</div>
+
+<!-- ── INTRO ── -->
+<div class="policy-section">
+  <div class="article-body" style="margin-left:0;">
+    <p>(주)메제웍스(이하 "회사"라 함)는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 수립하여 공개합니다.</p>
+  </div>
+</div>
+
+<!-- ── 제1조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">01</span>
+    <h2 class="article-title">개인정보의 처리 목적</h2>
+  </div>
+  <div class="article-body">
+    <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+    <ul>
+      <li><strong>회원 관리:</strong> 회원 가입 의사의 확인, 이용자 식별, 회원 자격 유지·관리, 서비스 부정 이용 방지, 만 14세 미만 아동의 개인정보 처리 시 법정대리인의 동의 여부 확인, 각종 고지·통지, 고충 처리 등을 목적으로 개인정보를 처리합니다.</li>
+      <li><strong>서비스 제공:</strong> 게임 서비스 제공, 콘텐츠 제공, 구매 및 요금 결제, 본인 인증, 연령 인증 등을 목적으로 개인정보를 처리합니다.</li>
+      <li><strong>마케팅 및 광고에 활용:</strong> 신규 서비스 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여 기회 제공, 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계 등을 목적으로 개인정보를 처리합니다.</li>
+      <li><strong>이용자 보호 및 서비스 운영:</strong> 법령 및 이용약관을 위반하는 회원에 대한 이용 제한 조치, 부정 이용 행위 방지 및 제재, 계정 도용 방지, 분쟁 조정을 위한 기록 보존, 민원 처리 등 이용자 보호 및 원활한 서비스 운영을 위하여 개인정보를 이용합니다.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── 제2조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">02</span>
+    <h2 class="article-title">처리하는 개인정보 항목</h2>
+  </div>
+  <div class="article-body">
+    <p>회사는 서비스 제공을 위해 필요한 최소한의 범위에서 다음의 개인정보를 수집하고 있습니다.</p>
+
+    <p class="sub-title">1. 회원가입 시</p>
+    <ul>
+      <li>일반 로그인: 이메일 주소, 비밀번호, 닉네임</li>
+      <li>소셜 로그인 (구글, 애플 등): 이용자 식별 데이터(고유 식별자), 이메일 주소, 닉네임, 프로필 사진</li>
+    </ul>
+
+    <p class="sub-title">2. 서비스 이용 과정에서 자동으로 생성되거나 추가로 수집될 수 있는 정보</p>
+    <ul>
+      <li>IP 주소, 쿠키, 서비스 이용 기록, 기기 정보(기기 식별자, OS 정보, 모델명), 결제 기록</li>
+    </ul>
+
+    <p class="sub-title">3. 고객 지원 및 이벤트 참여 시</p>
+    <ul>
+      <li>고객 문의: 이메일 주소, 닉네임, 기기 정보</li>
+      <li>이벤트 참여 및 경품 배송: 이름, 연락처, 주소</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── 제3조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">03</span>
+    <h2 class="article-title">개인정보의 처리 및 보유기간</h2>
+  </div>
+  <div class="article-body">
+    <p>회사는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
+    <ul>
+      <li><strong>회원 정보:</strong> 회원 탈퇴 시까지. 다만, 부정 이용 방지 및 다른 법령 준수를 위해 탈퇴 후 30일간 보관 후 파기합니다.</li>
+      <li><strong>계약 또는 청약철회 등에 관한 기록:</strong> 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>대금결제 및 재화 등의 공급에 관한 기록:</strong> 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>소비자의 불만 또는 분쟁 처리에 관한 기록:</strong> 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>로그인 기록:</strong> 3개월 (통신비밀보호법)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── 제4조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">04</span>
+    <h2 class="article-title">개인정보의 파기 절차 및 방법</h2>
+  </div>
+  <div class="article-body">
+    <ul>
+      <li><strong>파기절차:</strong> 파기 사유가 발생한 개인정보를 선정하고, 회사의 개인정보 보호책임자의 승인을 받아 개인정보를 파기합니다.</li>
+      <li><strong>파기방법:</strong> 전자적 파일 형태로 기록·저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제하며, 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각하여 파기합니다.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── 제5조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">05</span>
+    <h2 class="article-title">개인정보의 제3자 제공</h2>
+  </div>
+  <div class="article-body">
+    <p>회사는 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p>
+  </div>
+</div>
+
+<!-- ── 제6조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">06</span>
+    <h2 class="article-title">개인정보 처리의 위탁</h2>
+  </div>
+  <div class="article-body">
+    <p>회사는 원활한 개인정보 업무 처리를 위하여 개인정보 처리 업무를 위탁하고 있지 않습니다. 향후 위탁이 필요한 경우에는 관계 법령에 따른 절차를 준수하여 고지하겠습니다.</p>
+  </div>
+</div>
+
+<!-- ── 제7조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">07</span>
+    <h2 class="article-title">정보주체와 법정대리인의 권리·의무 및 행사방법</h2>
+  </div>
+  <div class="article-body">
+    <ul>
+      <li>정보주체는 회사에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다.</li>
+      <li>권리 행사는 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 회사는 이에 대해 지체 없이 조치하겠습니다.</li>
+      <li>정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.</li>
+      <li>만 14세 미만 아동의 경우, 법정대리인이 아동의 개인정보에 대한 권리를 행사할 수 있습니다.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── 제8조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">08</span>
+    <h2 class="article-title">개인정보의 안전성 확보조치</h2>
+  </div>
+  <div class="article-body">
+    <p>회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+    <ul>
+      <li><strong>관리적 조치:</strong> 내부관리계획 수립·시행, 정기적 직원 교육</li>
+      <li><strong>기술적 조치:</strong> 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템 설치, 고유식별정보 등의 암호화</li>
+      <li><strong>물리적 조치:</strong> 전산실, 자료보관실 등의 접근통제</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── 제9조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">09</span>
+    <h2 class="article-title">개인정보 자동 수집 장치의 설치·운영 및 거부</h2>
+  </div>
+  <div class="article-body">
+    <ul>
+      <li>회사는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다.</li>
+      <li>이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 웹브라우저 설정에서 쿠키 허용, 차단 등의 옵션을 설정할 수 있습니다.</li>
+      <li>쿠키 설치를 거부하였을 경우 서비스 제공에 어려움이 있을 수 있습니다.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── 제10조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">10</span>
+    <h2 class="article-title">개인정보 보호책임자</h2>
+  </div>
+  <div class="article-body">
+    <p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
+
+    <div class="dpo-box">
+      <p class="dpo-label">Data Protection Officer</p>
+      <div class="dpo-info">
+        이름: 김동은 · 직위: 대표<br>
+        이메일: <a href="mailto:privacy@meje.kr">privacy@meje.kr</a><br>
+        전화: 0507-1420-1205
+      </div>
+    </div>
+
+    <p style="margin-top:16px;">회사의 서비스를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자에게 문의하실 수 있습니다. 회사는 정보주체의 문의에 대해 지체없이 답변 및 처리해드릴 것입니다.</p>
+  </div>
+</div>
+
+<!-- ── 제11조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">11</span>
+    <h2 class="article-title">권익침해 구제방법</h2>
+  </div>
+  <div class="article-body">
+    <p>정보주체는 개인정보침해로 인한 구제를 받기 위하여 아래의 기관에 분쟁해결이나 상담 등을 신청할 수 있습니다.</p>
+
+    <div class="remedies-grid">
+      <div class="remedy-item">
+        <p class="remedy-item-name">개인정보분쟁조정위원회</p>
+        <p class="remedy-item-info">(국번없이) 1833-6972<br><a href="https://www.kopico.go.kr" target="_blank" rel="noopener">www.kopico.go.kr</a></p>
+      </div>
+      <div class="remedy-item">
+        <p class="remedy-item-name">개인정보침해신고센터</p>
+        <p class="remedy-item-info">(국번없이) 118<br><a href="https://privacy.kisa.or.kr" target="_blank" rel="noopener">privacy.kisa.or.kr</a></p>
+      </div>
+      <div class="remedy-item">
+        <p class="remedy-item-name">대검찰청</p>
+        <p class="remedy-item-info">(국번없이) 1301<br><a href="https://www.spo.go.kr" target="_blank" rel="noopener">www.spo.go.kr</a></p>
+      </div>
+      <div class="remedy-item">
+        <p class="remedy-item-name">경찰청</p>
+        <p class="remedy-item-info">(국번없이) 182<br><a href="https://ecrm.police.go.kr" target="_blank" rel="noopener">ecrm.police.go.kr</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 제12조 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">12</span>
+    <h2 class="article-title">개인정보처리방침 변경</h2>
+  </div>
+  <div class="article-body">
+    <p>이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.</p>
+    <ul>
+      <li>공고일자: 2025년 10월 6일</li>
+      <li>시행일자: 2025년 10월 13일</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:10px; color:var(--text-muted); opacity:0.6;">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; Home</a>
+    <a href="about.html">About</a>
+    <a href="ceo.html">CEO</a>
+    <a href="works.html">Works</a>
+    <a href="ip.html">IP</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

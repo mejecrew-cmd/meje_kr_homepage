@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEJE WORKS IP Partnership — Worldview library, character design, and 100-day fandom activity operation for brand, game, fandom, and art IPs.">
+<title>IP Partnership | MEJE WORKS</title>
+<meta property="og:title" content="IP Partnership | MEJE WORKS">
+<meta property="og:description" content="Worldview library, character design, 100-day fandom activity — partnership / transfer / commission models">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/en/ip.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/ip.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/ip.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/ip.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/ip.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/ip.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/ip.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/ip.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/ip.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/ip.html">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="apple-touch-icon" href="../img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+/* ── IP PAGE HERO ── */
+#ip-hero {
+  max-width: 100%;
+  padding: 120px 40px 100px;
+  border-bottom: 1px solid var(--border-dim);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#ip-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, var(--accent-dim), transparent);
+}
+
+/* ── IP DOMAIN GRID ── */
+.domain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.domain-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 32px 24px;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+.domain-card:hover {
+  background: var(--bg-3);
+  border-color: var(--border);
+}
+
+.domain-card-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.domain-card-title {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.domain-card-en {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ── SERVICE PILLAR ── */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+}
+
+.pillar {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 36px 40px;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 24px;
+  align-items: start;
+  transition: background 0.2s;
+}
+.pillar:hover { background: var(--bg-3); }
+
+.pillar-num {
+  font-family: var(--mono);
+  font-size: 24px;
+  color: var(--accent);
+  font-weight: 300;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.pillar-title {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.pillar-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.pillar-tags {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pillar-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  border: 1px solid var(--border-dim);
+  padding: 2px 8px;
+}
+
+/* ── MODEL COMPARE ── */
+.model-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.model-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 36px 32px;
+  position: relative;
+}
+
+.model-card-badge {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.model-card-badge.a {
+  color: var(--green);
+  border: 1px solid rgba(76,175,125,0.3);
+}
+.model-card-badge.b {
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+}
+
+.model-card-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.model-card-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.model-card-items li {
+  font-size: 12px;
+  color: var(--text-dim);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+.model-card-items li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+/* ── TIMELINE FLOW ── */
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.flow-step {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 24px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.flow-step-week {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.flow-step-title {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.flow-step-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── CTA BLOCK ── */
+.cta-block {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 48px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.cta-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cta-title {
+  font-family: var(--display);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.cta-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid;
+}
+.cta-btn.primary {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+.cta-btn.primary:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+.cta-btn.secondary {
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+.cta-btn.secondary:hover {
+  color: var(--text-dim);
+  border-color: var(--border);
+  background: var(--bg-3);
+}
+
+@media (max-width: 768px) {
+  #ip-hero { padding: 100px 20px 80px; }
+  .domain-grid { grid-template-columns: repeat(2, 1fr); }
+  .model-grid { grid-template-columns: 1fr; }
+  .flow-grid { grid-template-columns: repeat(2, 1fr); }
+  .pillar { grid-template-columns: 1fr; gap: 12px; }
+  .pillar-num { text-align: left; }
+  .cta-block { flex-direction: column; align-items: flex-start; }
+}
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="../ip.html">KR</a><span class="sep">&middot;</span>
+    <a href="ip.html" class="active">EN</a><span class="sep">&middot;</span>
+    <a href="../ja/ip.html">JA</a><span class="sep">&middot;</span>
+    <a href="../zh-tw/ip.html">繁</a><span class="sep">&middot;</span>
+    <a href="../zh-cn/ip.html">简</a><span class="sep">&middot;</span>
+    <a href="../ar/ip.html">AR</a><span class="sep">&middot;</span>
+    <a href="../fa/ip.html">FA</a><span class="sep">&middot;</span>
+    <a href="../ur/ip.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="ip.html" class="active">IP</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="knowledge.html">Knowledge</a></li>
+  </ul>
+  <span class="nav-badge">IP Partnership</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section id="ip-hero">
+  <span style="font-family:var(--mono); font-size:13px; color:var(--green); border:1px solid rgba(76,175,125,0.3); padding:3px 10px; display:inline-block; margin-bottom:24px; letter-spacing:0.1em; animation:fadeUp 0.8s ease both;">● IP Partnership</span>
+  <h1 style="font-family:var(--display); font-size:clamp(32px,5vw,56px); font-weight:700; color:var(--text); margin-bottom:16px; animation:fadeUp 0.8s ease 0.1s both;">
+    Built with worldview,<br>operated for 100 days together
+  </h1>
+  <p style="font-family:var(--mono), var(--sans); font-size:14px; color:var(--text-dim); max-width:600px; line-height:2.2; animation:fadeUp 0.8s ease 0.2s both;">
+    Worldview library · Character design · 100-day fandom activity operation.<br>
+    Choose from Partnership · IP Transfer · Commission,<br>
+    and we design the right model for your IP through consultation.
+  </p>
+</section>
+
+<!-- ── IP DOMAINS ── -->
+<section class="section reveal" id="domains">
+  <div class="sec-head">
+    <p class="sec-label">Domains</p>
+    <h2 class="sec-title">IP Domains We Cover</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">ls </span><span class="flag">ip-domains/</span>
+  </div>
+
+  <div class="domain-grid">
+    <div class="domain-card">
+      <span class="domain-card-icon" style="color:var(--accent);">♛</span>
+      <p class="domain-card-title">Brand IP</p>
+      <p class="domain-card-en">Brand IP</p>
+    </div>
+    <div class="domain-card">
+      <span class="domain-card-icon" style="color:var(--green);">▶</span>
+      <p class="domain-card-title">Game IP</p>
+      <p class="domain-card-en">Game IP</p>
+    </div>
+    <div class="domain-card">
+      <span class="domain-card-icon" style="color:#7a9fbf;">♫</span>
+      <p class="domain-card-title">Fandom · Music IP</p>
+      <p class="domain-card-en">Fandom · Music IP</p>
+    </div>
+    <div class="domain-card">
+      <span class="domain-card-icon" style="color:#b07acc;">◈</span>
+      <p class="domain-card-title">Art IP</p>
+      <p class="domain-card-en">Art IP</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section reveal" id="services">
+  <div class="sec-head">
+    <p class="sec-label">Services</p>
+    <h2 class="sec-title">Services</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">cat </span><span class="flag">services/ip-partnership.yaml</span>
+  </div>
+
+  <a href="process.html" style="display:block; margin-bottom:24px; padding:18px 22px; background:var(--bg-2); border:1px solid var(--accent-dim); text-decoration:none;">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>
+        <p style="font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:0.14em; margin-bottom:4px;">// Methodologies behind every service</p>
+        <p style="font-family:var(--display); font-size:14px; color:var(--text); font-weight:600;">
+          Each service runs on five MEJE proprietary processes
+        </p>
+        <p style="font-family:var(--sans); font-size:12px; color:var(--text-muted); margin-top:4px;">
+          Librarying · Seoyeongak · Character · LOREBOOK · Storytelling 100. See PROCESS tags on each service.
+        </p>
+      </div>
+      <span style="font-family:var(--mono); font-size:13px; color:var(--accent); white-space:nowrap;">Process page →</span>
+    </div>
+  </a>
+
+  <div class="pillar-grid">
+    <div class="pillar">
+      <span class="pillar-num">01</span>
+      <div>
+        <h3 class="pillar-title">Worldview Library Production</h3>
+        <p class="pillar-desc">
+          We analyze the essence of your IP and build a Setting Bible:
+          a term wiki, timeline, spatial structure, narrative architecture, and other
+          knowledge assets that form the foundation for IP expansion.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Setting Bible</span>
+          <span class="pillar-tag">IP Wiki</span>
+          <span class="pillar-tag">Timeline</span>
+          <span class="pillar-tag">Lore Architecture</span>
+        </div>
+        <div class="process-tag-row">
+          <span class="process-tag-label">// PROCESS</span>
+          <a href="process/librarying.html" class="process-tag tag-libr">LIBRARYING</a>
+          <a href="process/lorebook.html" class="process-tag">LOREBOOK</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-num">02</span>
+      <div>
+        <h3 class="pillar-title">Character Persona & Design</h3>
+        <p class="pillar-desc">
+          We create original characters that reflect your IP identity.
+          Delivered with persona settings, visual design, and character sheets (design guides).
+          Choose between license grant or full transfer.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Character Sheet</span>
+          <span class="pillar-tag">Persona Design</span>
+          <span class="pillar-tag">Visual Guide</span>
+          <span class="pillar-tag">License / Transfer</span>
+        </div>
+        <div class="process-tag-row">
+          <span class="process-tag-label">// PROCESS</span>
+          <a href="process/character.html" class="process-tag">CHARACTER</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-num">03</span>
+      <div>
+        <h3 class="pillar-title">Fandom Activity Platform · 100-Day Operation</h3>
+        <p class="pillar-desc">
+          A 100-day long-form event lived together with characters. Not quite a game, but a digital home
+          where Tamagotchi-like daily tasks and stories flow.
+          Daily stories · character care · mini-games · digital goods · photo cards.
+          With 40+ languages supported simultaneously, you reach global fandom without separate overseas promotion,
+          and season-based operation lets you decide whether to extend to Season 2 based on Season 1 results.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">100-Day Activity</span>
+          <span class="pillar-tag">Daily Content</span>
+          <span class="pillar-tag">Digital Goods</span>
+          <span class="pillar-tag">40+ Languages</span>
+          <span class="pillar-tag">Season-based</span>
+        </div>
+        <div class="process-tag-row">
+          <span class="process-tag-label">// PROCESS</span>
+          <a href="process/storytelling100.html" class="process-tag">STORYTELLING 100</a>
+          <a href="process/seoyeongak.html" class="process-tag">SEOYEONGAK</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-num">04</span>
+      <div>
+        <h3 class="pillar-title">IP Expansion & Secondary Business</h3>
+        <p class="pillar-desc">
+          Character merchandise, digital goods, limited physical goods, crowdfunding integration —
+          we plan and operate secondary businesses derived from your IP based on data.
+          Fan preference analysis enables accurate product planning.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Character MD</span>
+          <span class="pillar-tag">Limited Goods</span>
+          <span class="pillar-tag">Crowdfunding</span>
+          <span class="pillar-tag">Data-driven</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PARTNERSHIP MODELS ── -->
+<section class="section reveal" id="models">
+  <div class="sec-head">
+    <p class="sec-label">Models</p>
+    <h2 class="sec-title">Partnership Models</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">diff </span><span class="flag">models/partnership models/transfer models/commission</span>
+  </div>
+
+  <div class="model-grid" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="model-card">
+      <span class="model-card-badge a">MODEL A</span>
+      <h3 class="model-card-title">Growth Partnership</h3>
+      <p class="model-card-sub" style="font-family:var(--mono); font-size:11px; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:14px;">Standard · Recommended</p>
+      <ul class="model-card-items">
+        <li>Start without upfront development cost</li>
+        <li>MEJE Works shares resources and risk</li>
+        <li>IP is registered as a joint asset of both parties</li>
+        <li>100-day operation revenue distributed by agreed structure; ratio re-balanced from Season 2</li>
+        <li>Self-use revenue (concerts · SNS · in-house goods) belongs to the client</li>
+      </ul>
+    </div>
+    <div class="model-card">
+      <span class="model-card-badge b">MODEL B</span>
+      <h3 class="model-card-title">IP Transfer Development</h3>
+      <p class="model-card-sub" style="font-family:var(--mono); font-size:11px; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:14px;">IP-as-Asset Priority</p>
+      <ul class="model-card-items">
+        <li>Proceed with reasonable development cost</li>
+        <li>All rights to worldview, characters, and platform transferred to the client</li>
+        <li>Operation handled by MEJE Works; revenue shared by agreed ratio</li>
+        <li>Full control over the entire project</li>
+        <li>Free to use and expand after delivery</li>
+      </ul>
+    </div>
+    <div class="model-card">
+      <span class="model-card-badge" style="background:rgba(170,170,170,0.12); color:var(--text-dim); border-color:var(--text-dim);">MODEL C</span>
+      <h3 class="model-card-title">Single-Item Commission</h3>
+      <p class="model-card-sub" style="font-family:var(--mono); font-size:11px; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:14px;">Partial Brief · By Agreement</p>
+      <ul class="model-card-items">
+        <li>Partial commission: worldview only / character only / encyclopedia only</li>
+        <li>IP 100% belongs to the client</li>
+        <li>Operation not included (delivery-only)</li>
+        <li>Suitable when the client has its own operating team</li>
+        <li>Specifications and scope determined separately by agreement</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:24px; font-family:var(--sans); font-size:12px; color:var(--text-muted); line-height:1.9;">
+    Specific IP rights structure, operation revenue split, self-use scope, and Season 2 conversion terms are decided by agreement based on project nature.
+    Hybrid models beyond the above are also possible.
+  </p>
+</section>
+
+<!-- ── PROCESS FLOW ── -->
+<section class="section reveal" id="process">
+  <div class="sec-head">
+    <p class="sec-label">Process</p>
+    <h2 class="sec-title">Project Timeline</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">pipeline </span><span class="flag">--ip-dev --weeks=13</span>
+  </div>
+
+  <div class="flow-grid">
+    <div class="flow-step">
+      <p class="flow-step-week">WEEK 1–4</p>
+      <h4 class="flow-step-title">IP Analysis &<br>Worldview Design</h4>
+      <p class="flow-step-desc">Deep IP analysis<br>Setting bible draft<br>First review</p>
+    </div>
+    <div class="flow-step">
+      <p class="flow-step-week">WEEK 5–7</p>
+      <h4 class="flow-step-title">Character<br>Design</h4>
+      <p class="flow-step-desc">Worldview finalized<br>Character sheet delivery<br>Second review</p>
+    </div>
+    <div class="flow-step">
+      <p class="flow-step-week">WEEK 8–10</p>
+      <h4 class="flow-step-title">Platform<br>Prototype</h4>
+      <p class="flow-step-desc">Characters finalized<br>Fandom activity development<br>Third review</p>
+    </div>
+    <div class="flow-step">
+      <p class="flow-step-week">WEEK 11–13</p>
+      <h4 class="flow-step-title">Test &<br>Launch</h4>
+      <p class="flow-step-desc">Alpha/Beta test<br>Stabilization<br>Service launch</p>
+    </div>
+  </div>
+
+  <div class="ascii-diagram" style="margin-top: 2px; text-align: center;">
+<span class="dim">──────</span> <span class="hl">13 WEEKS (~100 DAYS)</span> <span class="dim">──────────────────────────────</span>
+
+  <span class="hl">W1━━━━W4</span>    <span class="bl">W5━━W7</span>    <span class="gr">W8━━━W10</span>    <span class="hl">W11━━W13</span>
+  <span class="dim">│</span> IP Anal.  <span class="dim">│</span> Character<span class="dim">│</span> Prototype <span class="dim">│</span> Test     <span class="dim">│</span>
+  <span class="dim">│</span> Worldview<span class="dim">│</span> Design  <span class="dim">│</span> Activity <span class="dim">│</span> & Launch<span class="dim">│</span>
+  <span class="dim">│</span> Design   <span class="dim">│</span>        <span class="dim">│</span> Dev      <span class="dim">│</span>          <span class="dim">│</span>
+  <span class="dim">└─ R1 ──┘── R2 ──┘─── R3 ───┘── LAUNCH ─┘</span>
+
+  <span class="dim">Same timeline as album preparation →</span> <span class="hl">Season-based 100-day live operation</span>
+  </div>
+</section>
+
+<!-- ── WHY MEJE ── -->
+<section class="section reveal" id="why">
+  <div class="sec-head">
+    <p class="sec-label">Why MEJE</p>
+    <h2 class="sec-title">Why MEJE Works</h2>
+  </div>
+
+  <div class="pillar-grid">
+    <div class="pillar">
+      <span class="pillar-num" style="color:var(--green);">✓</span>
+      <div>
+        <h3 class="pillar-title">Deep Understanding and Respect for IP</h3>
+        <p class="pillar-desc">
+          Success comes from deep understanding of IP and fandom, not technology.
+          Our CEO &mdash; former HYBE Worldview Library Part Lead and BTS WORLD development lead &mdash; personally leads every project.
+          Cross-domain IP and worldview consulting experience including LG Electronics Metaverse,
+          LG H&H Skin MBTI, Gravity Ragnarok Scenario Division, and Holycrick Metaverskra chairmanship.
+        </p>
+      </div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num" style="color:var(--green);">✓</span>
+      <div>
+        <h3 class="pillar-title">Proven Fandom Performance Metrics</h3>
+        <p class="pillar-desc">A proven fandom activity system: 41% DAU conversion, 1h 2m average session, and 33.5% paid conversion on a real operating platform.</p>
+      </div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num" style="color:var(--green);">✓</span>
+      <div>
+        <h3 class="pillar-title">100-Day Season Model — Risk-Free Start</h3>
+        <p class="pillar-desc">Start light with a limited event. After 100 days, decide on Season 2 expansion or closure based on fan reaction data. No long-term contract burden, no IP image risk.</p>
+      </div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num" style="color:var(--green);">✓</span>
+      <div>
+        <h3 class="pillar-title">Instant 40-Language Global Reach</h3>
+        <p class="pillar-desc">Reach global fandom simultaneously without separate overseas promotion budget. Web-based platform means no app-install barrier &mdash; accessible worldwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT CTA ── -->
+<section class="section reveal" id="contact">
+  <div class="sec-head">
+    <p class="sec-label">Contact</p>
+    <h2 class="sec-title">Partnership Inquiry</h2>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta-text">
+      <h3 class="cta-title">Start an IP Partnership</h3>
+      <p class="cta-desc">
+        After understanding your IP characteristics and goals,<br>
+        and discussing scope and budget, we deliver a tailored proposal.
+      </p>
+    </div>
+    <div class="cta-buttons">
+      <a href="mailto:Contact@meje.kr" class="cta-btn primary">Contact@meje.kr →</a>
+      <a href="tel:+82-507-1420-1205" class="cta-btn secondary">+82-507-1420-1205</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ +82-507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:13px; color:var(--text-muted); opacity:0.6;">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; Home</a>
+    <a href="about.html">About</a>
+    <a href="ceo.html">CEO</a>
+    <a href="works.html">Works</a>
+    <a href="process.html">Process</a>
+    <a href="knowledge.html">Knowledge</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

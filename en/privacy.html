@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEJE Works Corp. Privacy Policy — Information on personal data processing procedures and standards pursuant to the Personal Information Protection Act.">
+<title>Privacy Policy — MEJE Works Corp.</title>
+<meta property="og:title" content="Privacy Policy — MEJE Works Corp.">
+<meta property="og:description" content="MEJE Works Corp. Privacy Policy — Personal data processing procedures pursuant to the Personal Information Protection Act">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/en/privacy.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/privacy.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/privacy.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/privacy.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/privacy.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/privacy.html">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="apple-touch-icon" href="../img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+/* ── LANG BAR ── */
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+
+/* ── PRIVACY PAGE SPECIFIC ── */
+.policy-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 40px 60px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.policy-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--green);
+  border: 1px solid rgba(76,175,125,0.3);
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+}
+.policy-badge::before { content: '● '; }
+
+.policy-title {
+  font-family: var(--display);
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.policy-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 2;
+}
+
+/* ── ARTICLE SECTIONS ── */
+.policy-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 40px;
+  border-bottom: 1px solid var(--border-dim);
+}
+.policy-section:last-of-type { border-bottom: none; }
+
+.article-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.article-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  flex-shrink: 0;
+  min-width: 40px;
+}
+
+.article-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.article-body {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.9;
+  margin-left: 52px;
+}
+
+.article-body p { margin-bottom: 12px; }
+
+.article-body ul {
+  list-style: none;
+  margin: 12px 0;
+}
+
+.article-body li {
+  padding: 8px 0 8px 20px;
+  border-left: 1px solid var(--border-dim);
+  margin-bottom: 4px;
+  transition: border-color 0.2s;
+}
+.article-body li:hover { border-left-color: var(--accent-dim); }
+
+.article-body li strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.article-body .sub-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent-dim);
+  letter-spacing: 0.1em;
+  margin: 16px 0 8px;
+}
+
+/* ── DPO BOX ── */
+.dpo-box {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  border-left: 2px solid var(--accent);
+  padding: 24px 28px;
+  margin-top: 20px;
+}
+
+.dpo-box .dpo-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.dpo-box .dpo-info {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 2;
+}
+.dpo-box a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ── REMEDIES GRID ── */
+.remedies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 12px;
+}
+
+.remedy-item {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 16px 20px;
+}
+
+.remedy-item-name {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.remedy-item-info {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.remedy-item-info a {
+  color: var(--accent-dim);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .policy-hero { padding: 80px 20px 40px; }
+  .policy-section { padding: 36px 20px; }
+  .article-body { margin-left: 0; margin-top: 12px; }
+  .article-header { flex-direction: column; gap: 4px; }
+  .remedies-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="../en/index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="../privacy.html">KR</a><span class="sep">&middot;</span>
+    <a href="privacy.html" class="active">EN</a><span class="sep">&middot;</span>
+    <a href="../ja/privacy.html">JA</a><span class="sep">&middot;</span>
+    <a href="../zh-tw/privacy.html">繁</a><span class="sep">&middot;</span>
+    <a href="../zh-cn/privacy.html">简</a><span class="sep">&middot;</span>
+    <a href="../ar/privacy.html">AR</a><span class="sep">&middot;</span>
+    <a href="../fa/privacy.html">FA</a><span class="sep">&middot;</span>
+    <a href="../ur/privacy.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="../en/index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="privacy.html" class="active">Privacy</a></li>
+  </ul>
+  <span class="nav-badge">Privacy Policy</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<div class="policy-hero">
+  <span class="policy-badge">Legal Document</span>
+  <h1 class="policy-title">MEJE Works Corp.<br>Privacy Policy</h1>
+  <div class="policy-meta">
+    Date of Public Notice &mdash; 2025.10.06<br>
+    Effective Date &mdash; 2025.10.13
+  </div>
+</div>
+
+<!-- ── INTRO ── -->
+<div class="policy-section">
+  <div class="article-body" style="margin-left:0;">
+    <p>MEJE Works Corp. (hereinafter referred to as the "Company") processes personal information lawfully and manages it securely in compliance with the Personal Information Protection Act (개인정보 보호법) and other applicable laws and regulations, in order to protect the freedom and rights of data subjects. Pursuant to Article 30 of the Personal Information Protection Act, the Company hereby establishes and publishes this Privacy Policy to inform data subjects of the procedures and standards for personal information processing and to ensure the prompt and smooth resolution of related grievances.</p>
+  </div>
+</div>
+
+<!-- ── Article 1 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">01</span>
+    <h2 class="article-title">Purposes of Processing Personal Information</h2>
+  </div>
+  <div class="article-body">
+    <p>The Company processes personal information for the following purposes. Personal information being processed shall not be used for purposes other than those stated below. In the event that the purpose of use is changed, the Company shall take necessary measures, such as obtaining separate consent, in accordance with Article 18 of the Personal Information Protection Act (개인정보 보호법).</p>
+    <ul>
+      <li><strong>Member Management:</strong> Personal information is processed for the purposes of verifying membership registration intent, identifying users, maintaining and managing membership status, preventing unauthorized use of services, verifying legal guardian consent for processing personal information of children under 14, delivering various notices and notifications, and handling grievances.</li>
+      <li><strong>Service Provision:</strong> Personal information is processed for the purposes of providing game services, delivering content, processing purchases and payments, identity verification, and age verification.</li>
+      <li><strong>Marketing and Advertising:</strong> Personal information is processed for the purposes of developing new services and providing personalized services, providing event and promotional information and participation opportunities, analyzing access frequency, and compiling statistics on members' service usage.</li>
+      <li><strong>User Protection and Service Operations:</strong> Personal information is used for restricting use by members who violate applicable laws or the Terms of Service, preventing and sanctioning unauthorized use, preventing account theft, preserving records for dispute resolution, handling complaints, and otherwise protecting users and ensuring smooth service operations.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Article 2 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">02</span>
+    <h2 class="article-title">Categories of Personal Information Processed</h2>
+  </div>
+  <div class="article-body">
+    <p>The Company collects the following personal information to the minimum extent necessary for service provision.</p>
+
+    <p class="sub-title">1. Upon Membership Registration</p>
+    <ul>
+      <li>Standard Login: email address, password, nickname</li>
+      <li>Social Login (Google, Apple, etc.): user identification data (unique identifier), email address, nickname, profile picture</li>
+    </ul>
+
+    <p class="sub-title">2. Information Automatically Generated or Additionally Collected During Service Use</p>
+    <ul>
+      <li>IP address, cookies, service usage records, device information (device identifier, OS information, model name), payment records</li>
+    </ul>
+
+    <p class="sub-title">3. Upon Customer Support Inquiries and Event Participation</p>
+    <ul>
+      <li>Customer inquiries: email address, nickname, device information</li>
+      <li>Event participation and prize delivery: name, contact information, address</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Article 3 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">03</span>
+    <h2 class="article-title">Processing and Retention Period of Personal Information</h2>
+  </div>
+  <div class="article-body">
+    <p>The Company processes and retains personal information within the retention and usage period prescribed by applicable laws or within the retention and usage period consented to by the data subject at the time of collection.</p>
+    <ul>
+      <li><strong>Member Information:</strong> Until membership withdrawal. However, to prevent unauthorized use and to comply with other applicable laws, the information shall be retained for 30 days following withdrawal and then destroyed.</li>
+      <li><strong>Records relating to contracts or withdrawal of offers:</strong> 5 years (Act on Consumer Protection in Electronic Commerce, Etc. / 전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>Records relating to payment and supply of goods:</strong> 5 years (Act on Consumer Protection in Electronic Commerce, Etc. / 전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>Records relating to consumer complaints or dispute resolution:</strong> 3 years (Act on Consumer Protection in Electronic Commerce, Etc. / 전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>Login records:</strong> 3 months (Protection of Communications Secrets Act / 통신비밀보호법)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Article 4 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">04</span>
+    <h2 class="article-title">Procedures and Methods for Destruction of Personal Information</h2>
+  </div>
+  <div class="article-body">
+    <ul>
+      <li><strong>Destruction Procedure:</strong> The Company selects personal information for which grounds for destruction have arisen and destroys such personal information upon obtaining approval from the Company's Data Protection Officer.</li>
+      <li><strong>Destruction Method:</strong> Personal information recorded and stored in electronic file format is deleted using technical methods that render the records irreproducible. Personal information printed on paper is destroyed by shredding or incineration.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Article 5 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">05</span>
+    <h2 class="article-title">Provision of Personal Information to Third Parties</h2>
+  </div>
+  <div class="article-body">
+    <p>The Company provides personal information to third parties only in cases falling under Articles 17 and 18 of the Personal Information Protection Act (개인정보 보호법), such as when the data subject has given consent or when there is a special provision under applicable law.</p>
+  </div>
+</div>
+
+<!-- ── Article 6 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">06</span>
+    <h2 class="article-title">Entrustment of Personal Information Processing</h2>
+  </div>
+  <div class="article-body">
+    <p>The Company does not currently entrust the processing of personal information to third parties. Should entrustment become necessary in the future, the Company shall comply with the procedures prescribed by applicable laws and provide appropriate notice.</p>
+  </div>
+</div>
+
+<!-- ── Article 7 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">07</span>
+    <h2 class="article-title">Rights and Obligations of Data Subjects and Legal Guardians, and Methods of Exercising Such Rights</h2>
+  </div>
+  <div class="article-body">
+    <ul>
+      <li>Data subjects may exercise their rights to access, correct, delete, or suspend the processing of their personal information with respect to the Company at any time.</li>
+      <li>Such rights may be exercised through written notice, email, or facsimile (FAX), and the Company shall take action without delay.</li>
+      <li>In the event that a data subject requests correction or deletion of errors in their personal information, the Company shall not use or provide such personal information until the correction or deletion has been completed.</li>
+      <li>For children under 14 years of age, the legal guardian may exercise rights with respect to the child's personal information.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Article 8 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">08</span>
+    <h2 class="article-title">Measures to Ensure the Security of Personal Information</h2>
+  </div>
+  <div class="article-body">
+    <p>The Company takes the following measures to ensure the security of personal information.</p>
+    <ul>
+      <li><strong>Administrative Measures:</strong> Establishment and implementation of internal management plans, regular employee training</li>
+      <li><strong>Technical Measures:</strong> Management of access rights to personal information processing systems, installation of access control systems, encryption of unique identification information</li>
+      <li><strong>Physical Measures:</strong> Access control for server rooms, data storage facilities, and similar locations</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Article 9 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">09</span>
+    <h2 class="article-title">Installation, Operation, and Rejection of Automatic Personal Information Collection Devices</h2>
+  </div>
+  <div class="article-body">
+    <ul>
+      <li>The Company uses "cookies" that store and periodically retrieve usage information in order to provide individually customized services to users.</li>
+      <li>Users have the right to choose whether to install cookies. Users may configure their web browser settings to allow or block cookies.</li>
+      <li>If cookie installation is refused, there may be difficulties in the provision of certain services.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Article 10 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">10</span>
+    <h2 class="article-title">Data Protection Officer</h2>
+  </div>
+  <div class="article-body">
+    <p>The Company has designated a Data Protection Officer as set forth below to take overall responsibility for the processing of personal information and to handle complaints and remedies for damage related to personal information processing by data subjects.</p>
+
+    <div class="dpo-box">
+      <p class="dpo-label">Data Protection Officer</p>
+      <div class="dpo-info">
+        Name: Kim Dong-eun &middot; Title: CEO<br>
+        Email: <a href="mailto:privacy@meje.kr">privacy@meje.kr</a><br>
+        Phone: 0507-1420-1205
+      </div>
+    </div>
+
+    <p style="margin-top:16px;">You may direct any inquiries, complaints, or requests for remedies regarding personal information protection arising from the use of the Company's services to the Data Protection Officer. The Company shall respond to and process data subjects' inquiries without delay.</p>
+  </div>
+</div>
+
+<!-- ── Article 11 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">11</span>
+    <h2 class="article-title">Remedies for Infringement of Rights</h2>
+  </div>
+  <div class="article-body">
+    <p>Data subjects may apply for dispute resolution or consultation with the following organizations to obtain remedies for personal information infringement.</p>
+
+    <div class="remedies-grid">
+      <div class="remedy-item">
+        <p class="remedy-item-name">Personal Information Dispute Mediation Committee (개인정보분쟁조정위원회)</p>
+        <p class="remedy-item-info">1833-6972<br><a href="https://www.kopico.go.kr" target="_blank" rel="noopener">www.kopico.go.kr</a></p>
+      </div>
+      <div class="remedy-item">
+        <p class="remedy-item-name">Personal Information Infringement Report Center (개인정보침해신고센터)</p>
+        <p class="remedy-item-info">118<br><a href="https://privacy.kisa.or.kr" target="_blank" rel="noopener">privacy.kisa.or.kr</a></p>
+      </div>
+      <div class="remedy-item">
+        <p class="remedy-item-name">Supreme Prosecutors' Office (대검찰청)</p>
+        <p class="remedy-item-info">1301<br><a href="https://www.spo.go.kr" target="_blank" rel="noopener">www.spo.go.kr</a></p>
+      </div>
+      <div class="remedy-item">
+        <p class="remedy-item-name">National Police Agency (경찰청)</p>
+        <p class="remedy-item-info">182<br><a href="https://ecrm.police.go.kr" target="_blank" rel="noopener">ecrm.police.go.kr</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Article 12 ── -->
+<div class="policy-section">
+  <div class="article-header">
+    <span class="article-num">12</span>
+    <h2 class="article-title">Changes to the Privacy Policy</h2>
+  </div>
+  <div class="article-body">
+    <p>This Privacy Policy shall take effect from the effective date. In the event of any additions, deletions, or modifications pursuant to applicable laws or this Policy, the Company shall provide notice through announcements at least 7 days prior to the implementation of such changes.</p>
+    <ul>
+      <li>Date of Public Notice: October 6, 2025</li>
+      <li>Effective Date: October 13, 2025</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    Rm 503, 217 Yeoksam-ro, Gangnam-gu, Seoul, South Korea ｜ 0507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:10px; color:var(--text-muted); opacity:0.6;">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="../en/index.html">&larr; Home</a>
+    <a href="about.html">About</a>
+    <a href="ceo.html">CEO</a>
+    <a href="works.html">Works</a>
+    <a href="ip.html">IP</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

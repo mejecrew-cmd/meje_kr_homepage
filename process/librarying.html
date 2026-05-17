@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="라이브러링 연재 — 흩어진 IP 자료를 옵시디안 Vault 1,500 표제어로 묶는 4단계 파이프라인. 14회 연재.">
+<title>라이브러링 연재 — Librarying | MEJE WORKS</title>
+<meta property="og:title" content="라이브러링 연재 — Librarying | MEJE WORKS">
+<meta property="og:description" content="룰북·단편·기획서·외부 위키 같은 흩어진 자료를 옵시디안 Vault 사전으로 묶는 4단계.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/process/librarying.html">
+<meta property="og:type" content="article">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/process/librarying.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/process/librarying.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/process/librarying.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/process/librarying.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/process/librarying.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/process/librarying.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/process/librarying.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/process/librarying.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/process/librarying.html">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="apple-touch-icon" href="../img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <a href="../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="librarying.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="../en/process/librarying.html">EN</a><span class="sep">&middot;</span>
+    <a href="../ja/process/librarying.html">JA</a><span class="sep">&middot;</span>
+    <a href="../zh-tw/process/librarying.html">繁</a><span class="sep">&middot;</span>
+    <a href="../zh-cn/process/librarying.html">简</a><span class="sep">&middot;</span>
+    <a href="../ar/process/librarying.html">AR</a><span class="sep">&middot;</span>
+    <a href="../fa/process/librarying.html">FA</a><span class="sep">&middot;</span>
+    <a href="../ur/process/librarying.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../works.html">Works</a></li>
+    <li><a href="../ip.html">IP</a></li>
+    <li><a href="../process.html" class="active">Process</a></li>
+    <li><a href="../knowledge.html">Knowledge</a></li>
+  </ul>
+  <span class="nav-badge">Librarying</span>
+</nav>
+
+<main>
+
+<section class="proc-hero">
+  <div class="proc-hero-meta">// PROCESS 03 / 정리 단계 · 4 STAGES</div>
+  <h1 class="proc-hero-title">라이브러링 연재</h1>
+  <p class="proc-hero-en">LIBRARYING</p>
+  <p class="proc-hero-lead">
+    한 IP가 5년 운영되면 룰북 일곱 권, 단편 백 편의 텍스트 파일,
+    외부 위키 페이지가 책상 위와 모니터에 흩어집니다.
+    어디부터 어디까지가 공식 자료인지 한 사람의 머릿속에만 정리되어 있고,
+    그 머릿속의 자료가 흐려지면 IP가 흐려집니다.
+    <br><br>
+    라이브러링은 그 흩어진 자료에서 키워드를 끌어내고,
+    같은 의미의 단어를 한 표제어로 묶고,
+    옵시디안 위키 형태의 Vault 1,500 표제어를 짓는 4단계 작업입니다.
+    제작자와 AI 작업 동료가 두 손으로 짓는 한 권의 살아 있는 사전.
+  </p>
+</section>
+
+<section class="proc-io">
+  <div class="proc-io-grid">
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">INPUT</div>
+      <div class="proc-io-box-title">흩어진 자료</div>
+      <p class="proc-io-box-desc">
+        룰북, 단편 텍스트, 기획서 버전들,
+        외부 위키 페이지. 한 IP를 운영하면서 폴더 곳곳에 쌓인 다수 문서.
+      </p>
+    </div>
+    <div class="proc-io-arrow">→</div>
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">OUTPUT</div>
+      <div class="proc-io-box-title">옵시디안 Vault · 1,500 표제어</div>
+      <p class="proc-io-box-desc">
+        9분류와 세계관축 두 좌표로 정렬된 1,500개 .md 파일.
+        wikilink로 이어진 노드 5,000~10,000개의 그래프.
+        다음 작업(로어북·스토리100)이 가져가는 단일 진실 공급원.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// table_of_contents</p>
+  <h2 class="proc-section-title">14회 차례</h2>
+  <p class="proc-section-desc">
+    각 회는 자기완결적 1회 분량으로 작성되어 있습니다.
+    매 회에서 입력·산출·합격선과 AI 작업 분담을 함께 명시합니다.
+  </p>
+
+  <div class="chapter-list">
+    <div class="chapter-item"><div class="chapter-num">01</div><div class="chapter-title">글로서리에서 클라우드로 ─ 우리가 다루는 자료의 변화</div></div>
+    <div class="chapter-item"><div class="chapter-num">02</div><div class="chapter-title">제작자와 AI 작업 동료 ─ 두 손으로 짓는 위키</div></div>
+    <div class="chapter-item"><div class="chapter-num">03</div><div class="chapter-title">입력에서 Vault까지 ─ 4단계의 흐름</div></div>
+    <div class="chapter-item"><div class="chapter-num">04</div><div class="chapter-title">모든 키워드를 끌어내기 ─ 1차 추출의 자세</div></div>
+    <div class="chapter-item"><div class="chapter-num">05</div><div class="chapter-title">Wiki 표제어로 묶기 ─ 2차 통합의 결정들</div></div>
+    <div class="chapter-item"><div class="chapter-num">06</div><div class="chapter-title">두 분류 기준 ─ 9분류와 세계관축</div></div>
+    <div class="chapter-item"><div class="chapter-num">07</div><div class="chapter-title">골격 빌드 ─ CSV가 옵시디안 파일이 되는 과정</div></div>
+    <div class="chapter-item"><div class="chapter-num">08</div><div class="chapter-title">hub와 leaf ─ 표제어의 비중을 결정하는 일</div></div>
+    <div class="chapter-item"><div class="chapter-num">09</div><div class="chapter-title">4차 서술 집필 ─ Vault에 생명을 불어넣기</div></div>
+    <div class="chapter-item"><div class="chapter-num">10</div><div class="chapter-title">검증 ─ 세 단계로 합격을 담보하는 과정</div></div>
+    <div class="chapter-item"><div class="chapter-num">11</div><div class="chapter-title">Vault의 평생 ─ 역류와 운영 사이클</div></div>
+    <div class="chapter-item"><div class="chapter-num">12</div><div class="chapter-title">Vault의 출구 ─ 다음 작업이 가져가는 것</div></div>
+    <div class="chapter-item"><div class="chapter-num">13</div><div class="chapter-title">1,500을 빚으며 알게 된 것 ─ 실전의 풍경</div></div>
+    <div class="chapter-item"><div class="chapter-num">14</div><div class="chapter-title">빈 Vault 앞에서 ─ 이 글이 전하려 한 것</div></div>
+  </div>
+
+  <a href="https://brunch.co.kr/@whtdrgon" target="_blank" rel="noopener" class="proc-cta">브런치 연재 →</a>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// applied_projects</p>
+  <h2 class="proc-section-title">적용 사례</h2>
+  <p class="proc-section-desc">
+    라이브러링은 MEJE Works의 B2B 세계관 IP 제작과 자체 IP 운영에서 1차 작업으로 들어갑니다.
+  </p>
+  <div class="applied-list">
+    <div class="applied-row">
+      <div class="applied-name">FEWK (자체 IP)</div>
+      <div class="applied-desc">사이버펑크 TRPG 시스템. 3판까지 누적된 룰북·단편·외부 위키를 라이브러링으로 단일 Vault에 통합. <a href="../works.html" style="color:var(--accent); text-decoration:none;">Works의 FEWK Core Rulebook·World Book 출판물</a>의 입력 자료.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">B2B 클라이언트 프로젝트</div>
+      <div class="applied-desc">아이돌 그룹·브랜드 IP의 흩어진 자료를 라이브러링으로 단일 Vault에 통합. NDA로 클라이언트명 비공개. <a href="../ip.html" style="color:var(--accent); text-decoration:none;">IP 파트너십 상세</a>.</div>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// next_in_pipeline</p>
+  <h2 class="proc-section-title">파이프라인 안에서</h2>
+  <p class="proc-section-desc">
+    라이브러링이 만든 Vault는 다음 두 산출 작업의 입력이 됩니다.
+  </p>
+  <div class="cross-grid">
+    <a href="lorebook.html" class="cross-card">
+      <div class="cross-card-label">↓ 산출</div>
+      <div class="cross-card-title">로어북 프로세스 연재</div>
+      <p class="cross-card-desc">Vault → B5 양장 약 450p 백과사전 + 웹 공개본. 6 Phase 작업.</p>
+    </a>
+    <a href="storytelling100.html" class="cross-card">
+      <div class="cross-card-label">↓ 산출</div>
+      <div class="cross-card-title">스토리100 프로세스 연재</div>
+      <p class="cross-card-desc">Vault + 캐릭터 시트 → 일상단면 시나리오 100편. 7단계 절차.</p>
+    </a>
+    <a href="seoyeongak.html" class="cross-card">
+      <div class="cross-card-label">↑ 입력 짝</div>
+      <div class="cross-card-title">서연각 프로세스 연재</div>
+      <p class="cross-card-desc">외국어 원본 작품 → 번역·각색 자료. 라이브러링과 짝을 이루는 자료 준비 프로세스.</p>
+    </a>
+    <a href="character.html" class="cross-card">
+      <div class="cross-card-label">↑ 입력 짝</div>
+      <div class="cross-card-title">캐릭터 프로세스 연재</div>
+      <p class="cross-card-desc">시드 한 줄 → 인물 시트. 라이브러링 Vault에 들어가는 인물 자료의 빌드 절차.</p>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="../index.html">&larr; Home</a>
+    <a href="../about.html">About</a>
+    <a href="../works.html">Works</a>
+    <a href="../process.html">Process</a>
+    <a href="../knowledge.html">Knowledge</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+</script>
+</body>
+</html>

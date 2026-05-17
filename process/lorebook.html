@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="로어북 프로세스 연재 — Vault를 B5 양장 약 450p 출판본과 웹 공개본으로 묶는 6 Phase. 14회 + 부록.">
+<title>로어북 프로세스 연재 — LOREBOOK | MEJE WORKS</title>
+<meta property="og:title" content="로어북 프로세스 연재 — LOREBOOK | MEJE WORKS">
+<meta property="og:description" content="한 IP의 백과사전을 묶는 6 Phase. 12부형 표준과 5종 변주.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/process/lorebook.html">
+<meta property="og:type" content="article">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/process/lorebook.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/process/lorebook.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/process/lorebook.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/process/lorebook.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/process/lorebook.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/process/lorebook.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/process/lorebook.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/process/lorebook.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/process/lorebook.html">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="apple-touch-icon" href="../img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <a href="../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="lorebook.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="../en/process/lorebook.html">EN</a><span class="sep">&middot;</span>
+    <a href="../ja/process/lorebook.html">JA</a><span class="sep">&middot;</span>
+    <a href="../zh-tw/process/lorebook.html">繁</a><span class="sep">&middot;</span>
+    <a href="../zh-cn/process/lorebook.html">简</a><span class="sep">&middot;</span>
+    <a href="../ar/process/lorebook.html">AR</a><span class="sep">&middot;</span>
+    <a href="../fa/process/lorebook.html">FA</a><span class="sep">&middot;</span>
+    <a href="../ur/process/lorebook.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../works.html">Works</a></li>
+    <li><a href="../ip.html">IP</a></li>
+    <li><a href="../process.html" class="active">Process</a></li>
+    <li><a href="../knowledge.html">Knowledge</a></li>
+  </ul>
+  <span class="nav-badge">LOREBOOK</span>
+</nav>
+
+<main>
+
+<section class="proc-hero">
+  <div class="proc-hero-meta">// PROCESS 04 / 산출 단계 · 6 PHASES</div>
+  <h1 class="proc-hero-title">로어북 프로세스 연재</h1>
+  <p class="proc-hero-en">LOREBOOK</p>
+  <p class="proc-hero-lead">
+    J.R.R. 톨킨은 죽기 전까지 〈실마릴리온〉을 완성하지 못했습니다.
+    한 IP의 자료가 한 권의 책으로 묶이기까지 70년이 들었습니다.
+    세상의 모든 창작자들은 결국 세계를 창작하게 되고,
+    그 떠오른 세계를 한 권의 책으로 묶고 싶어지는 시기가 옵니다.
+    <br><br>
+    로어북은 그 작업을 9~14개월에 끝내는 6 Phase 절차입니다.
+    Vault 1,500 표제어를 입력으로 받아 B5 양장 약 450p 출판본과
+    웹 공개본을 동시에 산출하는 단일 .md 소스 작업.
+    14회 + 권말 부록.
+  </p>
+</section>
+
+<section class="proc-io">
+  <div class="proc-io-grid">
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">INPUT</div>
+      <div class="proc-io-box-title">Vault 1,500 표제어 또는 IP 자료</div>
+      <p class="proc-io-box-desc">
+        라이브러링이 끝난 옵시디안 Vault. 13컬럼 frontmatter가 채워진
+        1,500 .md 파일. Vault 없이 자료가 어느 정도 모인 상태로도 시작 가능.
+      </p>
+    </div>
+    <div class="proc-io-arrow">→</div>
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">OUTPUT</div>
+      <div class="proc-io-box-title">출판본 + 웹 공개본</div>
+      <p class="proc-io-box-desc">
+        B5 양장 약 450p의 책 한 권 + 도메인에 배포된 정적 사이트.
+        같은 .md 1,500개가 단일 소스. 매 분기 갱신되는 살아 있는 자료.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// table_of_contents</p>
+  <h2 class="proc-section-title">14회 + 부록</h2>
+  <p class="proc-section-desc">
+    14장에 걸쳐 표준 백과형(A) 위에서 진행되는 풀 절차.
+    다른 4종 변주(아트북·내러티브 바이블·게임 디자인 바이블·만화/웹툰 공식 설정집)는
+    표준의 비중 분포 차이로 흡수.
+  </p>
+
+  <div class="chapter-list">
+    <div class="chapter-item"><div class="chapter-num">01</div><div class="chapter-title">한 IP의 백과사전 ─ LOREBOOK이란 무엇인가</div></div>
+    <div class="chapter-item"><div class="chapter-num">02</div><div class="chapter-title">다섯 가지 LOREBOOK</div></div>
+    <div class="chapter-item"><div class="chapter-num">03</div><div class="chapter-title">라이브러링이 끝난 다음 ─ Vault에서 LOREBOOK으로</div></div>
+    <div class="chapter-item"><div class="chapter-num">04</div><div class="chapter-title">거시 6 섹션과 12부형 ─ 책의 골격이 정해지는 곳</div></div>
+    <div class="chapter-item"><div class="chapter-num">05</div><div class="chapter-title">한 항목의 모양 ─ 표준 템플릿과 frontmatter</div></div>
+    <div class="chapter-item"><div class="chapter-num">06</div><div class="chapter-title">9분류와 세계관축 ─ 두 좌표가 부 구성을 결정한다</div></div>
+    <div class="chapter-item"><div class="chapter-num">07</div><div class="chapter-title">세 음색 ─ 연대기체·현장체·도감체</div></div>
+    <div class="chapter-item"><div class="chapter-num">08</div><div class="chapter-title">이중 서술 ─ 외부 비유와 내부 법칙의 산문</div></div>
+    <div class="chapter-item"><div class="chapter-num">09</div><div class="chapter-title">단편 인용과 다국어 ─ 본권에 들이는 것과 들이지 않는 것</div></div>
+    <div class="chapter-item"><div class="chapter-num">10</div><div class="chapter-title">Phase 0~3 ─ 합의서에서 시범 부까지의 첫 절반</div></div>
+    <div class="chapter-item"><div class="chapter-num">11</div><div class="chapter-title">Phase 4~6 ─ 책의 재료가 책으로 변환되는 시간</div></div>
+    <div class="chapter-item"><div class="chapter-num">12</div><div class="chapter-title">AI 작업 동료와 함께 ─ 두 손이 짓는 한 권</div></div>
+    <div class="chapter-item"><div class="chapter-num">13</div><div class="chapter-title">정합성·버전·일러스트 ─ 살아 움직이는 LOREBOOK</div></div>
+    <div class="chapter-item"><div class="chapter-num">14</div><div class="chapter-title">5종 변주, 그리고 마지막 인사</div></div>
+    <div class="chapter-item"><div class="chapter-num">+</div><div class="chapter-title">부록 ─ 주요 용어 색인과 시장 사례 모음</div></div>
+  </div>
+
+  <a href="https://brunch.co.kr/@whtdrgon" target="_blank" rel="noopener" class="proc-cta">브런치 연재 →</a>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// applied_projects</p>
+  <h2 class="proc-section-title">적용 사례</h2>
+  <p class="proc-section-desc">
+    B2B 클라이언트의 Setting Bible 납품과 자체 IP 백과사전 출판에 적용됩니다.
+  </p>
+  <div class="applied-list">
+    <div class="applied-row">
+      <div class="applied-name">FEWK World Book (자체 IP)</div>
+      <div class="applied-desc">사이버펑크 TRPG 시스템의 세계관 백과사전. 12부형 표준 적용. 2026년 상반기 출간 예정. Core Rulebook과 짝. <a href="../works.html" style="color:var(--accent); text-decoration:none;">Works의 출판 일정</a>.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">B2B Setting Bible 납품</div>
+      <div class="applied-desc">게임·엔터테인먼트 IP의 세계관 설정집(Setting Bible) 납품. 클라이언트 내부 작가실용 비공개 PDF 또는 출판 양도. <a href="../ip.html" style="color:var(--accent); text-decoration:none;">IP 파트너십 상세</a>.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">하얀용 세계관 가이드</div>
+      <div class="applied-desc">창작 IP '하얀용(WhtDrgon)' 30년 자료의 통합 백과. 브런치북 연재 진행. 단행본 묶음 작업 중.</div>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// next_in_pipeline</p>
+  <h2 class="proc-section-title">파이프라인 안에서</h2>
+  <p class="proc-section-desc">
+    로어북은 라이브러링 Vault의 산출 단계. 같은 입력에서 스토리100이 단편을 짭니다.
+  </p>
+  <div class="cross-grid">
+    <a href="librarying.html" class="cross-card">
+      <div class="cross-card-label">↑ 입력</div>
+      <div class="cross-card-title">라이브러링 연재</div>
+      <p class="cross-card-desc">로어북의 표준 입력. Vault 1,500 표제어가 12부형 매트릭스로 매핑.</p>
+    </a>
+    <a href="storytelling100.html" class="cross-card">
+      <div class="cross-card-label">↔ 산출 짝</div>
+      <div class="cross-card-title">스토리100 프로세스 연재</div>
+      <p class="cross-card-desc">로어북이 한 권의 사전이라면, 스토리100은 그 사전을 소비하는 단편 100편. 같은 Vault에서 분기.</p>
+    </a>
+    <a href="seoyeongak.html" class="cross-card">
+      <div class="cross-card-label">↑ 입력 짝</div>
+      <div class="cross-card-title">서연각 프로세스 연재</div>
+      <p class="cross-card-desc">번역·각색 자료가 로어북의 다국어판 발간 자료원.</p>
+    </a>
+    <a href="character.html" class="cross-card">
+      <div class="cross-card-label">↑ 입력 짝</div>
+      <div class="cross-card-title">캐릭터 프로세스 연재</div>
+      <p class="cross-card-desc">캐릭터 시트가 로어북 9부 인물 도감의 1차 자료. 풀빌드 시트는 hub 표제어로.</p>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="../index.html">&larr; Home</a>
+    <a href="../about.html">About</a>
+    <a href="../works.html">Works</a>
+    <a href="../process.html">Process</a>
+    <a href="../knowledge.html">Knowledge</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEJE WORKS IP 파트너십 — 브랜드·게임·팬덤·예술 IP를 위한 세계관 라이브러리, 캐릭터 디자인, 팬덤 액티비티 제작. 수익 쉐어 및 IP 양도 모델.">
+<title>IP Partnership | MEJE WORKS</title>
+<meta property="og:title" content="IP Partnership | MEJE WORKS">
+<meta property="og:description" content="세계관 라이브러리, 캐릭터 디자인, 팬덤 액티비티 제작 — 수익 쉐어 및 IP 양도 모델">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/ip.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/ip.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/ip.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/ip.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/ip.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/ip.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/ip.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/ip.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/ip.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/ip.html">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── IP PAGE HERO ── */
+#ip-hero {
+  max-width: 100%;
+  padding: 120px 40px 100px;
+  border-bottom: 1px solid var(--border-dim);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#ip-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, var(--accent-dim), transparent);
+}
+
+/* ── IP DOMAIN GRID ── */
+.domain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.domain-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 32px 24px;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+.domain-card:hover {
+  background: var(--bg-3);
+  border-color: var(--border);
+}
+
+.domain-card-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.domain-card-title {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.domain-card-en {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ── SERVICE PILLAR ── */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+}
+
+.pillar {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 36px 40px;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 24px;
+  align-items: start;
+  transition: background 0.2s;
+}
+.pillar:hover { background: var(--bg-3); }
+
+.pillar-num {
+  font-family: var(--mono);
+  font-size: 24px;
+  color: var(--accent);
+  font-weight: 300;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.pillar-title {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.pillar-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.pillar-tags {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pillar-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  border: 1px solid var(--border-dim);
+  padding: 2px 8px;
+}
+
+/* ── MODEL COMPARE ── */
+.model-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.model-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 36px 32px;
+  position: relative;
+}
+
+.model-card-badge {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.model-card-badge.a {
+  color: var(--green);
+  border: 1px solid rgba(76,175,125,0.3);
+}
+.model-card-badge.b {
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+}
+
+.model-card-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.model-card-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.model-card-items li {
+  font-size: 12px;
+  color: var(--text-dim);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+.model-card-items li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+/* ── TIMELINE FLOW ── */
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.flow-step {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 24px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.flow-step-week {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.flow-step-title {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.flow-step-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── CTA BLOCK ── */
+.cta-block {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 48px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.cta-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cta-title {
+  font-family: var(--display);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.cta-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid;
+}
+.cta-btn.primary {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+.cta-btn.primary:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+.cta-btn.secondary {
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+.cta-btn.secondary:hover {
+  color: var(--text-dim);
+  border-color: var(--border);
+  background: var(--bg-3);
+}
+
+@media (max-width: 768px) {
+  #ip-hero { padding: 100px 20px 80px; }
+  .domain-grid { grid-template-columns: repeat(2, 1fr); }
+  .model-grid { grid-template-columns: 1fr; }
+  .flow-grid { grid-template-columns: repeat(2, 1fr); }
+  .pillar { grid-template-columns: 1fr; gap: 12px; }
+  .pillar-num { text-align: left; }
+  .cta-block { flex-direction: column; align-items: flex-start; }
+}
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="ip.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="en/ip.html">EN</a><span class="sep">&middot;</span>
+    <a href="ja/ip.html">JA</a><span class="sep">&middot;</span>
+    <a href="zh-tw/ip.html">繁</a><span class="sep">&middot;</span>
+    <a href="zh-cn/ip.html">简</a><span class="sep">&middot;</span>
+    <a href="ar/ip.html">AR</a><span class="sep">&middot;</span>
+    <a href="fa/ip.html">FA</a><span class="sep">&middot;</span>
+    <a href="ur/ip.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="ip.html" class="active">IP</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="knowledge.html">Knowledge</a></li>
+  </ul>
+  <span class="nav-badge">IP Partnership</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section id="ip-hero">
+  <span style="font-family:var(--mono); font-size:13px; color:var(--green); border:1px solid rgba(76,175,125,0.3); padding:3px 10px; display:inline-block; margin-bottom:24px; letter-spacing:0.1em; animation:fadeUp 0.8s ease both;">● IP Partnership</span>
+  <h1 style="font-family:var(--display); font-size:clamp(32px,5vw,56px); font-weight:700; color:var(--text); margin-bottom:16px; animation:fadeUp 0.8s ease 0.1s both;">
+    세계관으로 짓고,<br>100일을 함께 운영합니다
+  </h1>
+  <p style="font-family:var(--mono), var(--sans); font-size:14px; color:var(--text-dim); max-width:600px; line-height:2.2; animation:fadeUp 0.8s ease 0.2s both;">
+    세계관 라이브러리 · 캐릭터 디자인 · 100일 팬덤 액티비티 운영.<br>
+    동반 성장 파트너십 · IP 양도 · 단품 외주 중<br>
+    귀사의 IP에 맞는 모델을 협의로 설계합니다.
+  </p>
+</section>
+
+<!-- ── IP DOMAINS ── -->
+<section class="section reveal" id="domains">
+  <div class="sec-head">
+    <p class="sec-label">Domains</p>
+    <h2 class="sec-title">대응 가능 IP 영역</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">ls </span><span class="flag">ip-domains/</span>
+  </div>
+
+  <div class="domain-grid">
+    <div class="domain-card">
+      <span class="domain-card-icon" style="color:var(--accent);">♛</span>
+      <p class="domain-card-title">브랜드 IP</p>
+      <p class="domain-card-en">Brand IP</p>
+    </div>
+    <div class="domain-card">
+      <span class="domain-card-icon" style="color:var(--green);">▶</span>
+      <p class="domain-card-title">게임 IP</p>
+      <p class="domain-card-en">Game IP</p>
+    </div>
+    <div class="domain-card">
+      <span class="domain-card-icon" style="color:#7a9fbf;">♫</span>
+      <p class="domain-card-title">팬덤 / 음악 IP</p>
+      <p class="domain-card-en">Fandom · Music IP</p>
+    </div>
+    <div class="domain-card">
+      <span class="domain-card-icon" style="color:#b07acc;">◈</span>
+      <p class="domain-card-title">예술 IP</p>
+      <p class="domain-card-en">Art IP</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section reveal" id="services">
+  <div class="sec-head">
+    <p class="sec-label">Services</p>
+    <h2 class="sec-title">제공 서비스</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">cat </span><span class="flag">services/ip-partnership.yaml</span>
+  </div>
+
+  <a href="process.html" style="display:block; margin-bottom:24px; padding:18px 22px; background:var(--bg-2); border:1px solid var(--accent-dim); text-decoration:none;">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>
+        <p style="font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:0.14em; margin-bottom:4px;">// 서비스가 작동하는 방법론</p>
+        <p style="font-family:var(--display); font-size:14px; color:var(--text); font-weight:600;">
+          각 서비스는 MEJE 자체 프로세스 5종으로 운영됩니다
+        </p>
+        <p style="font-family:var(--sans); font-size:12px; color:var(--text-muted); margin-top:4px;">
+          라이브러링 · 서연각 · 캐릭터 · 로어북 · 스토리100. 각 서비스에 부착된 PROCESS 태그로 확인.
+        </p>
+      </div>
+      <span style="font-family:var(--mono); font-size:13px; color:var(--accent); white-space:nowrap;">Process 페이지 →</span>
+    </div>
+  </a>
+
+  <div class="pillar-grid">
+    <div class="pillar">
+      <span class="pillar-num">01</span>
+      <div>
+        <h3 class="pillar-title">세계관 라이브러리 제작</h3>
+        <p class="pillar-desc">
+          IP의 본질을 분석하여 세계관 설정집(Setting Bible)을 구축합니다.
+          용어 위키, 타임라인, 공간 구조, 서사 아키텍처 등
+          IP가 확장될 수 있는 기반이 되는 지식 자산을 체계적으로 설계합니다.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Setting Bible</span>
+          <span class="pillar-tag">IP Wiki</span>
+          <span class="pillar-tag">Timeline</span>
+          <span class="pillar-tag">Lore Architecture</span>
+        </div>
+        <div class="process-tag-row">
+          <span class="process-tag-label">// PROCESS</span>
+          <a href="process/librarying.html" class="process-tag tag-libr">LIBRARYING</a>
+          <a href="process/lorebook.html" class="process-tag">LOREBOOK</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-num">02</span>
+      <div>
+        <h3 class="pillar-title">캐릭터 페르소나 & 디자인</h3>
+        <p class="pillar-desc">
+          IP의 정체성을 반영한 오리지널 캐릭터를 창작합니다.
+          페르소나 설정, 비주얼 디자인, 캐릭터 시트(디자인 가이드)를 납품하며,
+          캐릭터 사용권 부여 또는 완전 양도 중 선택 가능합니다.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Character Sheet</span>
+          <span class="pillar-tag">Persona Design</span>
+          <span class="pillar-tag">Visual Guide</span>
+          <span class="pillar-tag">License / Transfer</span>
+        </div>
+        <div class="process-tag-row">
+          <span class="process-tag-label">// PROCESS</span>
+          <a href="process/character.html" class="process-tag">CHARACTER</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-num">03</span>
+      <div>
+        <h3 class="pillar-title">팬덤 액티비티 플랫폼 · 100일 운영</h3>
+        <p class="pillar-desc">
+          캐릭터와 함께 살아가는 100일 장기 이벤트. 게임처럼 느껴지지 않지만
+          다마고치·말보걷기 같은 매일의 할 일과 이야기가 흐르는 디지털 베이스.
+          데일리 스토리·캐릭터 케어·미니게임·디지털 굿즈·포토카드.
+          40개 이상 언어 동시 지원으로 별도 해외 프로모션 없이 글로벌 팬덤에 도달하며,
+          시즌제 운영으로 시즌2 연장 여부를 시즌1 결과로 결정합니다.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">100-Day Activity</span>
+          <span class="pillar-tag">Daily Content</span>
+          <span class="pillar-tag">Digital Goods</span>
+          <span class="pillar-tag">40+ Languages</span>
+          <span class="pillar-tag">Season-based</span>
+        </div>
+        <div class="process-tag-row">
+          <span class="process-tag-label">// PROCESS</span>
+          <a href="process/storytelling100.html" class="process-tag">STORYTELLING 100</a>
+          <a href="process/seoyeongak.html" class="process-tag">SEOYEONGAK</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-num">04</span>
+      <div>
+        <h3 class="pillar-title">IP 확장 & 2차 사업</h3>
+        <p class="pillar-desc">
+          캐릭터 MD, 디지털 굿즈, 한정판 피지컬 굿즈, 크라우드펀딩 연계 등
+          IP에서 파생되는 2차 사업을 데이터 기반으로 기획·운영합니다.
+          팬 선호도 분석을 통해 정확한 상품 기획이 가능합니다.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Character MD</span>
+          <span class="pillar-tag">Limited Goods</span>
+          <span class="pillar-tag">Crowdfunding</span>
+          <span class="pillar-tag">Data-driven</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PARTNERSHIP MODELS ── -->
+<section class="section reveal" id="models">
+  <div class="sec-head">
+    <p class="sec-label">Models</p>
+    <h2 class="sec-title">파트너십 모델</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">diff </span><span class="flag">models/partnership models/transfer models/commission</span>
+  </div>
+
+  <div class="model-grid" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="model-card">
+      <span class="model-card-badge a">MODEL A</span>
+      <h3 class="model-card-title">동반 성장 파트너십</h3>
+      <p class="model-card-sub" style="font-family:var(--mono); font-size:11px; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:14px;">표준 · 권장</p>
+      <ul class="model-card-items">
+        <li>초기 개발 비용 부담 없이 시작</li>
+        <li>메제웍스가 리소스·리스크를 함께 부담</li>
+        <li>IP는 양측의 공동 자산으로 등록</li>
+        <li>100일 운영 매출을 합의된 구조로 배분, 시즌2부터 비율 재조정</li>
+        <li>자체 활용(콘서트·SNS·자체 굿즈) 매출은 클라이언트 귀속</li>
+      </ul>
+    </div>
+    <div class="model-card">
+      <span class="model-card-badge b">MODEL B</span>
+      <h3 class="model-card-title">IP 양도 개발</h3>
+      <p class="model-card-sub" style="font-family:var(--mono); font-size:11px; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:14px;">IP 자산화 우선</p>
+      <ul class="model-card-items">
+        <li>합리적 개발 비용으로 진행</li>
+        <li>세계관·캐릭터·플랫폼의 모든 권리를 클라이언트에게 양도</li>
+        <li>운영 운영은 메제웍스가 대행, 운영 매출은 합의 비율로 배분</li>
+        <li>프로젝트 전 과정 완전한 통제권</li>
+        <li>납품 후 자유로운 활용 및 확장</li>
+      </ul>
+    </div>
+    <div class="model-card">
+      <span class="model-card-badge" style="background:rgba(170,170,170,0.12); color:var(--text-dim); border-color:var(--text-dim);">MODEL C</span>
+      <h3 class="model-card-title">단품 외주</h3>
+      <p class="model-card-sub" style="font-family:var(--mono); font-size:11px; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:14px;">부분 의뢰 · 협의</p>
+      <ul class="model-card-items">
+        <li>세계관만 / 캐릭터만 / 백과사전만 등 부분 외주</li>
+        <li>IP는 100% 클라이언트 귀속</li>
+        <li>운영은 포함되지 않음 (납품 종료형)</li>
+        <li>클라이언트가 자체 운영팀을 보유한 경우 적합</li>
+        <li>세부 사양·범위는 협의에 따라 별도 결정</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:24px; font-family:var(--sans); font-size:12px; color:var(--text-muted); line-height:1.9;">
+    구체적인 IP 권리 구조·운영 매출 배분 비율·자체 활용 범위·시즌2 전환 조건은 프로젝트 성격에 따라 협의로 결정합니다.
+    위 모델 외 혼합형(Hybrid)도 가능합니다.
+  </p>
+</section>
+
+<!-- ── PROCESS FLOW ── -->
+<section class="section reveal" id="process">
+  <div class="sec-head">
+    <p class="sec-label">Process</p>
+    <h2 class="sec-title">진행 프로세스</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">pipeline </span><span class="flag">--ip-dev --weeks=13</span>
+  </div>
+
+  <div class="flow-grid">
+    <div class="flow-step">
+      <p class="flow-step-week">WEEK 1–4</p>
+      <h4 class="flow-step-title">IP 분석 &<br>세계관 설계</h4>
+      <p class="flow-step-desc">IP 딥 분석<br>세계관 설정집 초안<br>1차 리뷰</p>
+    </div>
+    <div class="flow-step">
+      <p class="flow-step-week">WEEK 5–7</p>
+      <h4 class="flow-step-title">캐릭터<br>디자인</h4>
+      <p class="flow-step-desc">세계관 확정<br>캐릭터 시트 납품<br>2차 리뷰</p>
+    </div>
+    <div class="flow-step">
+      <p class="flow-step-week">WEEK 8–10</p>
+      <h4 class="flow-step-title">플랫폼<br>프로토타입</h4>
+      <p class="flow-step-desc">캐릭터 확정<br>팬덤 액티비티 개발<br>3차 리뷰</p>
+    </div>
+    <div class="flow-step">
+      <p class="flow-step-week">WEEK 11–13</p>
+      <h4 class="flow-step-title">테스트 &<br>런칭</h4>
+      <p class="flow-step-desc">알파/베타 테스트<br>안정화<br>서비스 오픈</p>
+    </div>
+  </div>
+
+  <div class="ascii-diagram" style="margin-top: 2px; text-align: center;">
+<span class="dim">──────</span> <span class="hl">13 WEEKS (~100 DAYS)</span> <span class="dim">──────────────────────────────</span>
+
+  <span class="hl">W1━━━━W4</span>    <span class="bl">W5━━W7</span>    <span class="gr">W8━━━W10</span>    <span class="hl">W11━━W13</span>
+  <span class="dim">│</span> IP 분석   <span class="dim">│</span> 캐릭터  <span class="dim">│</span> 프로토타입 <span class="dim">│</span> 테스트    <span class="dim">│</span>
+  <span class="dim">│</span> 세계관   <span class="dim">│</span> 디자인  <span class="dim">│</span> 액티비티  <span class="dim">│</span> & 런칭   <span class="dim">│</span>
+  <span class="dim">│</span> 설계    <span class="dim">│</span>        <span class="dim">│</span> 개발     <span class="dim">│</span>          <span class="dim">│</span>
+  <span class="dim">└─ R1 ──┘── R2 ──┘─── R3 ───┘── LAUNCH ─┘</span>
+
+  <span class="dim">앨범 준비 주기와 동일한 타임라인 →</span> <span class="hl">시즌제 100일 라이브 운영</span>
+  </div>
+</section>
+
+<!-- ── WHY MEJE ── -->
+<section class="section reveal" id="why">
+  <div class="sec-head">
+    <p class="sec-label">Why MEJE</p>
+    <h2 class="sec-title">메제웍스를 선택하는 이유</h2>
+  </div>
+
+  <div class="pillar-grid">
+    <div class="pillar">
+      <span class="pillar-num" style="color:var(--green);">✓</span>
+      <div>
+        <h3 class="pillar-title">IP에 대한 깊은 이해와 존중</h3>
+        <p class="pillar-desc">
+          기술이 아닌, IP와 팬덤에 대한 깊은 이해가 성공의 핵심입니다.
+          하이브 세계관 라이브러리 파트장, BTS WORLD 개발총괄 출신 대표가 직접 프로젝트를 리드합니다.
+          LG전자 메타버스 자문, LG생활건강 피부MBTI 자문, 그라비티 라그나로크 시나리오부,
+          호콜릭 메타버스크라 좌장 등 다국가 IP·세계관 자문 경력.
+        </p>
+      </div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num" style="color:var(--green);">✓</span>
+      <div>
+        <h3 class="pillar-title">검증된 팬덤 성과 지표</h3>
+        <p class="pillar-desc">실제 운영 플랫폼에서 DAU 전환율 41%, 평균 세션 1시간 2분, 유료 전환율 33.5%를 기록한 검증된 팬덤 액티비티 시스템.</p>
+      </div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num" style="color:var(--green);">✓</span>
+      <div>
+        <h3 class="pillar-title">100일 시즌제 — 리스크 없는 시작</h3>
+        <p class="pillar-desc">한정 이벤트로 가볍게 시작하고, 100일 후 팬 반응 데이터를 기반으로 시즌 2 확장 또는 종료를 결정. 장기 계약 부담 없이, IP 이미지 리스크 없이.</p>
+      </div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num" style="color:var(--green);">✓</span>
+      <div>
+        <h3 class="pillar-title">글로벌 40개 언어 즉시 대응</h3>
+        <p class="pillar-desc">별도의 해외 프로모션 비용 없이 글로벌 팬덤에 동시 도달. 웹 기반 플랫폼으로 앱 설치 장벽 없이 전 세계 접근 가능.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT CTA ── -->
+<section class="section reveal" id="contact">
+  <div class="sec-head">
+    <p class="sec-label">Contact</p>
+    <h2 class="sec-title">파트너십 문의</h2>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta-text">
+      <h3 class="cta-title">IP 파트너십을 시작해 보세요</h3>
+      <p class="cta-desc">
+        IP의 특성과 목표를 확인하고, 범위와 예산을 논의한 후<br>
+        맞춤형 제안서를 전달드립니다.
+      </p>
+    </div>
+    <div class="cta-buttons">
+      <a href="mailto:Contact@meje.kr" class="cta-btn primary">Contact@meje.kr →</a>
+      <a href="tel:0507-1420-1205" class="cta-btn secondary">0507-1420-1205</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:13px; color:var(--text-muted); opacity:0.6;">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; Home</a>
+    <a href="about.html">About</a>
+    <a href="ceo.html">CEO</a>
+    <a href="works.html">Works</a>
+    <a href="process.html">Process</a>
+    <a href="knowledge.html">Knowledge</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

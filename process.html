@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEJE Works 절차적 창작 파이프라인. 라이브러링·서연각·캐릭터·로어북·스토리100의 다섯 프로세스 연재.">
+<title>Process — 절차적 창작 파이프라인 | MEJE WORKS</title>
+<meta property="og:title" content="Process — 절차적 창작 파이프라인 | MEJE WORKS">
+<meta property="og:description" content="MEJE Works의 다섯 프로세스 연재. 흩어진 자료에서 한 권의 책과 100편의 단편까지.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/process.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/process.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/process.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/process.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/process.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/process.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/process.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/process.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/process.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/process.html">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+/* ── PROCESS HERO ── */
+#process-hero {
+  max-width: 100%;
+  padding: 120px 40px 64px;
+  border-bottom: 1px solid var(--border-dim);
+  text-align: center;
+}
+.process-hero-badge {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+}
+.process-hero-badge::before { content: '● '; }
+.process-hero-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.process-hero-sub {
+  font-family: var(--display);
+  font-size: clamp(15px, 2vw, 20px);
+  color: var(--text-dim);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.process-hero-desc {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+/* ── PIPELINE DIAGRAM ── */
+#pipeline {
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border-dim);
+}
+.pipeline-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  margin-bottom: 6px;
+}
+.pipeline-title {
+  font-family: var(--display);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.pipeline-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 640px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 0;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pipe-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pipe-col-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--border-dim);
+}
+.pipe-node {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 16px 18px;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s, background 0.2s;
+}
+.pipe-node:hover {
+  border-color: var(--accent-dim);
+  background: var(--bg-3);
+}
+.pipe-node-title {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+.pipe-node-en {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.pipe-node-desc {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.pipe-arrow {
+  font-family: var(--mono);
+  font-size: 18px;
+  color: var(--accent-dim);
+  align-self: center;
+  padding: 0 14px;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .pipeline-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .pipe-arrow {
+    text-align: center;
+    padding: 4px 0;
+    transform: rotate(90deg);
+  }
+}
+
+/* ── PROCESS LIST ── */
+.process-section {
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border-dim);
+}
+.process-section:last-of-type { border-bottom: none; }
+
+.process-cat-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  margin-bottom: 6px;
+}
+.process-cat-title {
+  font-family: var(--display);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.process-cat-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  max-width: 640px;
+  line-height: 1.9;
+}
+
+.process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.process-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px 140px;
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 24px 28px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+  align-items: center;
+  gap: 24px;
+}
+.process-row:hover {
+  background: var(--bg-3);
+  border-color: var(--accent-dim);
+}
+.process-row-num {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+.process-row-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.process-row-name-ko {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+.process-row-name-en {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+.process-row-desc {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.process-row-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+.process-row-arrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent-dim);
+  text-align: right;
+  letter-spacing: 0.06em;
+}
+.process-row:hover .process-row-arrow { color: var(--accent); }
+
+@media (max-width: 900px) {
+  .process-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .process-row-arrow { text-align: left; }
+}
+
+/* ── PRINCIPLES ── */
+#principles {
+  padding: 64px 40px 80px;
+}
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 32px;
+}
+.principle-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 28px 24px;
+}
+.principle-icon {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+.principle-title {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.principle-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+@media (max-width: 768px) {
+  .principles-grid { grid-template-columns: 1fr; }
+  #process-hero { padding: 100px 20px 48px; }
+  #pipeline, .process-section, #principles { padding: 48px 20px 40px; }
+}
+
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="process.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="en/process.html">EN</a><span class="sep">&middot;</span>
+    <a href="ja/process.html">JA</a><span class="sep">&middot;</span>
+    <a href="zh-tw/process.html">繁</a><span class="sep">&middot;</span>
+    <a href="zh-cn/process.html">简</a><span class="sep">&middot;</span>
+    <a href="ar/process.html">AR</a><span class="sep">&middot;</span>
+    <a href="fa/process.html">FA</a><span class="sep">&middot;</span>
+    <a href="ur/process.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="process.html" class="active">Process</a></li>
+    <li><a href="knowledge.html">Knowledge</a></li>
+  </ul>
+  <span class="nav-badge">Process</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section id="process-hero">
+  <span class="process-hero-badge">MEJE Works · B2B 세계관 IP 제작</span>
+  <h1 class="process-hero-title">Process</h1>
+  <p class="process-hero-sub">세계관 IP 제작 파이프라인 · 다섯 프로세스 연재</p>
+  <p class="process-hero-desc">
+    MEJE Works의 B2B 세계관 IP 제작 영역에서 작동하는 다섯 프로세스.<br>
+    세계관·캐릭터·100 시나리오는 그 자체가 목적이 아니라<br>
+    <strong style="color:var(--accent);">100일 팬덤 액티비티 운영을 위한 입력 자산</strong>입니다.
+  </p>
+</section>
+
+<!-- ── MEGA PIPELINE ── -->
+<section style="padding: 32px 40px; border-bottom: 1px solid var(--border-dim); background: var(--bg-2);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <p style="font-family: var(--mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.16em; margin-bottom: 16px;">// MEJE WORKS · END-TO-END PIPELINE</p>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-family: var(--mono); font-size: 12px;">
+      <span style="padding: 8px 14px; background: var(--bg-3); border: 1px solid var(--border-dim); color: var(--text-dim); letter-spacing: 0.08em;">CRAWLING</span>
+      <span style="color: var(--text-dim); padding: 0 2px;">→</span>
+      <span style="padding: 8px 14px; background: var(--bg-3); border: 1px solid var(--border-dim); color: var(--text-dim); letter-spacing: 0.08em;">MONITORING</span>
+      <span style="color: var(--text-dim); padding: 0 2px;">→</span>
+      <span style="padding: 8px 16px; background: rgba(201,168,76,0.08); border: 1px solid var(--accent); color: var(--accent); letter-spacing: 0.08em; font-weight: 500;">★ 세계관 IP 제작 (5 PROCESS)</span>
+      <span style="color: var(--text-dim); padding: 0 2px;">→</span>
+      <a href="ip.html#services" style="padding: 8px 14px; background: var(--bg-3); border: 1px solid var(--border-dim); color: var(--text-dim); letter-spacing: 0.08em; text-decoration: none; transition: border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='var(--accent-dim)'; this.style.color='var(--accent)';" onmouseout="this.style.borderColor='var(--border-dim)'; this.style.color='var(--text-dim)';">100일 팬덤 액티비티 운영 →</a>
+    </div>
+    <p style="margin-top: 16px; font-family: var(--sans); font-size: 12px; color: var(--text-muted); line-height: 1.8;">
+      이 페이지는 가운데 단계 <strong style="color: var(--accent);">세계관 IP 제작</strong>의 5 프로세스를 다룹니다.
+      이 산출 자산이 다음 단계 <a href="ip.html#services" style="color: var(--accent); text-decoration: none;">100일 팬덤 액티비티 운영</a>의 입력이 되며,
+      자체 IP 산출물(FEWK 시리즈 등)은 <a href="works.html" style="color: var(--accent); text-decoration: none;">Works</a>에서 확인할 수 있습니다.
+    </p>
+  </div>
+</section>
+
+<!-- ── PIPELINE DIAGRAM ── -->
+<section id="pipeline" class="reveal">
+  <p class="pipeline-label">// pipeline_overview</p>
+  <h2 class="pipeline-title">파이프라인 한눈에</h2>
+  <p class="pipeline-desc">
+    입력 자료 준비에서 자료 정리, 출판물과 단편 시리즈 산출까지.
+    다섯 프로세스는 자매 관계로 짜이며, 한 IP의 절차적 창작이 같은 골격 위에서 흐릅니다.
+  </p>
+
+  <div class="pipeline-grid">
+    <div class="pipe-col">
+      <div class="pipe-col-label">[ 입력 ]</div>
+      <a href="process/seoyeongak.html" class="pipe-node">
+        <div class="pipe-node-title">서연각</div>
+        <div class="pipe-node-en">SEOYEONGAK · 6 STEPS</div>
+        <p class="pipe-node-desc">외국어 원본을 깊이 읽어 번역·각색 자료로</p>
+      </a>
+      <a href="process/character.html" class="pipe-node">
+        <div class="pipe-node-title">캐릭터 빌드</div>
+        <div class="pipe-node-en">CHARACTER · 12 STEPS</div>
+        <p class="pipe-node-desc">시드 한 줄에서 살아 움직이는 한 인물까지</p>
+      </a>
+    </div>
+
+    <div class="pipe-arrow">→</div>
+
+    <div class="pipe-col">
+      <div class="pipe-col-label">[ 정리 ]</div>
+      <a href="process/librarying.html" class="pipe-node" style="min-height:100%;">
+        <div class="pipe-node-title">라이브러링</div>
+        <div class="pipe-node-en">LIBRARYING · 4 STAGES</div>
+        <p class="pipe-node-desc">흩어진 자료를 옵시디안 Vault 1,500 표제어 한 사전으로 묶기. 모든 산출의 단일 진실 공급원.</p>
+      </a>
+    </div>
+
+    <div class="pipe-arrow">→</div>
+
+    <div class="pipe-col">
+      <div class="pipe-col-label">[ 산출 ]</div>
+      <a href="process/lorebook.html" class="pipe-node">
+        <div class="pipe-node-title">로어북</div>
+        <div class="pipe-node-en">LOREBOOK · 6 PHASES</div>
+        <p class="pipe-node-desc">Vault를 B5 양장 약 450p 출판본과 웹 공개본으로</p>
+      </a>
+      <a href="process/storytelling100.html" class="pipe-node">
+        <div class="pipe-node-title">스토리100</div>
+        <div class="pipe-node-en">STORYTELLING100 · 7 STAGES</div>
+        <p class="pipe-node-desc">Vault와 캐릭터 시트로 100편의 일상단면 단편</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS LIST ── -->
+<section class="process-section reveal" id="series">
+  <p class="process-cat-label">// process_series</p>
+  <h2 class="process-cat-title">다섯 프로세스 연재</h2>
+  <p class="process-cat-desc">
+    각 프로세스는 14회 연재로 풀어 두었습니다. 자기완결적 1회 분량으로,
+    독자의 IP에 적용할 수 있도록 입력·산출·합격선·AI 작업 분담을 매 회 명시합니다.
+  </p>
+
+  <div class="process-list">
+
+    <a href="process/seoyeongak.html" class="process-row">
+      <div class="process-row-num">01 / 입력</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">서연각 프로세스 연재</span>
+        <span class="process-row-name-en">SEOYEONGAK · 書淵閣</span>
+      </div>
+      <div class="process-row-desc">
+        외국어 원본을 번역·각색 가능한 자료로 변환하는 6단계.
+        Pride and Prejudice를 사례로 14회.
+      </div>
+      <div class="process-row-meta">
+        14장 / 약 14만자<br>
+        <span class="process-row-arrow">자세히 →</span>
+      </div>
+    </a>
+
+    <a href="process/character.html" class="process-row">
+      <div class="process-row-num">02 / 입력</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">캐릭터 프로세스 연재</span>
+        <span class="process-row-name-en">CHARACTER BUILD</span>
+      </div>
+      <div class="process-row-desc">
+        시드 한 줄에서 충분히 호흡하는 한 인물까지 12 단계.
+        다섯 매체(라이브러리·TRPG·시나리오·애니·웹소설) 출력까지.
+      </div>
+      <div class="process-row-meta">
+        14장 / 약 12만자<br>
+        <span class="process-row-arrow">자세히 →</span>
+      </div>
+    </a>
+
+    <a href="process/librarying.html" class="process-row">
+      <div class="process-row-num">03 / 정리</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">라이브러링 연재</span>
+        <span class="process-row-name-en">LIBRARYING</span>
+      </div>
+      <div class="process-row-desc">
+        룰북·단편·기획서·외부 위키 같은 흩어진 자료에서 키워드를 끌어내
+        옵시디안 Vault 1,500 표제어 사전으로 묶는 4단계 파이프라인.
+      </div>
+      <div class="process-row-meta">
+        14장 / 약 17만자<br>
+        <span class="process-row-arrow">자세히 →</span>
+      </div>
+    </a>
+
+    <a href="process/lorebook.html" class="process-row">
+      <div class="process-row-num">04 / 산출</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">로어북 프로세스 연재</span>
+        <span class="process-row-name-en">LOREBOOK</span>
+      </div>
+      <div class="process-row-desc">
+        Vault 또는 IP 자료를 B5 양장 약 450p 출판본과 웹 공개본으로 묶는 6 Phase.
+        12부형 표준 위에 5종 변주.
+      </div>
+      <div class="process-row-meta">
+        14장 + 부록<br>
+        <span class="process-row-arrow">자세히 →</span>
+      </div>
+    </a>
+
+    <a href="process/storytelling100.html" class="process-row">
+      <div class="process-row-num">05 / 산출</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">스토리100 프로세스 연재</span>
+        <span class="process-row-name-en">STORYTELLING 100</span>
+      </div>
+      <div class="process-row-desc">
+        Vault와 캐릭터 시트를 입력으로 100편의 일상단면 시나리오를 짓는 7단계.
+        세계관은 룰북으로 설명되지만 단편으로 살아납니다.
+      </div>
+      <div class="process-row-meta">
+        14장 / 약 17만자<br>
+        <span class="process-row-arrow">자세히 →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ── PRINCIPLES ── -->
+<section id="principles" class="reveal">
+  <p class="pipeline-label">// shared_principles</p>
+  <h2 class="pipeline-title">다섯 프로세스가 공유하는 원칙</h2>
+  <p class="pipeline-desc">
+    다섯 프로세스는 다른 산출물을 짜지만 같은 골격 위에 놓입니다.
+    제작자와 AI 작업 동료의 협업 4축, 단일 .md 소스, 매 단계의 합격선 게이트.
+  </p>
+
+  <div class="principles-grid">
+    <div class="principle-card">
+      <div class="principle-icon">&gt;_ COLLAB</div>
+      <div class="principle-title">제작자 + AI 작업 동료</div>
+      <p class="principle-desc">
+        매 단계에서 사람의 결정·압축·합격선 판단과
+        AI의 1차 산출·양식 변환·반복 작업을 분리해 둡니다.
+        협업 4축(규격·의도·기대 효과·한계)이 매 단계에서 같은 형식으로 짚입니다.
+      </p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon"># SOURCE</div>
+      <div class="principle-title">단일 .md 소스</div>
+      <p class="principle-desc">
+        옵시디안 Vault 한 작업 폴더가 모든 산출의 단일 진실 공급원.
+        같은 자료가 출판 PDF로도, 정적 사이트로도, 다국어판으로도 변환됩니다.
+        다른 매체로 옮길 때 자료가 두 갈래로 갈리지 않습니다.
+      </p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon">// GATE</div>
+      <div class="principle-title">합격선 게이트</div>
+      <p class="principle-desc">
+        매 단계의 진입에 자동 검사와 사람 검수가 함께 작동합니다.
+        한 단계의 결함이 다음 단계 전체로 번지지 않도록,
+        임시 우회 없이 매 게이트를 의무로 둡니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:13px; color:var(--text-muted); opacity:0.6;">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; Home</a>
+    <a href="about.html">About</a>
+    <a href="works.html">Works</a>
+    <a href="ip.html">IP</a>
+    <a href="process.html">Process</a>
+    <a href="knowledge.html">Knowledge</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="캐릭터 프로세스 연재 — 시드 한 줄에서 한 인물까지 12단계. 다섯 매체 출력까지.">
+<title>캐릭터 프로세스 연재 — Character Build | MEJE WORKS</title>
+<meta property="og:title" content="캐릭터 프로세스 연재 — Character Build | MEJE WORKS">
+<meta property="og:description" content="0에서 한 인물을 빚는 12 단계. 다섯 매체 출력까지 14회 연재.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/process/character.html">
+<meta property="og:type" content="article">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/process/character.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/process/character.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/process/character.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/process/character.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/process/character.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/process/character.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/process/character.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/process/character.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/process/character.html">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="apple-touch-icon" href="../img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <a href="../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="character.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="../en/process/character.html">EN</a><span class="sep">&middot;</span>
+    <a href="../ja/process/character.html">JA</a><span class="sep">&middot;</span>
+    <a href="../zh-tw/process/character.html">繁</a><span class="sep">&middot;</span>
+    <a href="../zh-cn/process/character.html">简</a><span class="sep">&middot;</span>
+    <a href="../ar/process/character.html">AR</a><span class="sep">&middot;</span>
+    <a href="../fa/process/character.html">FA</a><span class="sep">&middot;</span>
+    <a href="../ur/process/character.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../works.html">Works</a></li>
+    <li><a href="../ip.html">IP</a></li>
+    <li><a href="../process.html" class="active">Process</a></li>
+    <li><a href="../knowledge.html">Knowledge</a></li>
+  </ul>
+  <span class="nav-badge">Character</span>
+</nav>
+
+<main>
+
+<section class="proc-hero">
+  <div class="proc-hero-meta">// PROCESS 02 / 입력 단계 · 12 STEPS</div>
+  <h1 class="proc-hero-title">캐릭터 프로세스 연재</h1>
+  <p class="proc-hero-en">CHARACTER BUILD</p>
+  <p class="proc-hero-lead">
+    캐릭터는 데이터가 아닙니다. 이름·나이·키·취미 칸을 다 메워도
+    그 인물이 살아 움직이지 않는 경우가 많습니다.
+    같은 표를 두 사람이 채워도 한 쪽은 한 인간이 나오고
+    다른 쪽은 종이 인형이 나옵니다.
+    <br><br>
+    캐릭터 프로세스는 시드 한 줄에서 출발해
+    충분히 호흡하는 존재로 자리잡을 때까지 12 단계를 거칩니다.
+    제작자와 AI 작업 동료가 함께 8~15시간에 한 인물 풀빌드.
+    다섯 매체(라이브러리·TRPG·시나리오·애니·웹소설) 출력까지 14회.
+  </p>
+</section>
+
+<section class="proc-io">
+  <div class="proc-io-grid">
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">INPUT</div>
+      <div class="proc-io-box-title">시드 한 줌</div>
+      <p class="proc-io-box-desc">
+        외부에서 받은 키워드 묶음, 또는 30종 시드 카드에서 무작위로 뽑은
+        다섯 장. 한 인물을 떠올리게 하는 출발점.
+      </p>
+    </div>
+    <div class="proc-io-arrow">→</div>
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">OUTPUT</div>
+      <div class="proc-io-box-title">통합 시트 + 보조 산출물 + 5 매체 출력</div>
+      <p class="proc-io-box-desc">
+        12 단계 통합 시트 한 장, 1500자 일상단면 단편, 22 깊은 질문 답,
+        5막 변천, 다섯 매체별 출력 양식. 한 인물의 폴더 한 채.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// table_of_contents</p>
+  <h2 class="proc-section-title">14회 차례</h2>
+  <p class="proc-section-desc">
+    12 단계를 절차로서 가르치는 14회. 강명숙·K·E 같은 예시 인물이
+    단계의 보조 도구로 등장하지만, 본 강연의 주인공은 절차 자체.
+  </p>
+
+  <div class="chapter-list">
+    <div class="chapter-item"><div class="chapter-num">01</div><div class="chapter-title">충분히 호흡하는 존재 ─ 캐릭터를 한 인간으로, 그리고 제작자는 누구인가</div></div>
+    <div class="chapter-item"><div class="chapter-num">02</div><div class="chapter-title">시드에서 출력까지 ─ 12 단계의 흐름</div></div>
+    <div class="chapter-item"><div class="chapter-num">03</div><div class="chapter-title">무엇을 켜고 무엇을 끌까 ─ 4계층과 사전 준비 5 모듈</div></div>
+    <div class="chapter-item"><div class="chapter-num">04</div><div class="chapter-title">시드 결정 ─ 30카드와 약식 시드의 갈래</div></div>
+    <div class="chapter-item"><div class="chapter-num">05</div><div class="chapter-title">자기 객관화의 거울 ─ 척도들이 한 사람을 추상화하는 단계</div></div>
+    <div class="chapter-item"><div class="chapter-num">06</div><div class="chapter-title">일상단면 시나리오 ─ 캐릭터가 자기 자신을 쓰다</div></div>
+    <div class="chapter-item"><div class="chapter-num">07</div><div class="chapter-title">비틀기와 드라마 ─ 클리셰의 거꾸로, 그리고 신체 앵커</div></div>
+    <div class="chapter-item"><div class="chapter-num">08</div><div class="chapter-title">결점·결핍·트라우마 ─ 도덕적 회색의 영역까지</div></div>
+    <div class="chapter-item"><div class="chapter-num">09</div><div class="chapter-title">목표와 갈등 ─ 원하는 것·필요한 것·믿는 거짓</div></div>
+    <div class="chapter-item"><div class="chapter-num">10</div><div class="chapter-title">관계망과 캐스트 ─ 캐릭터 옆의 다섯 사람</div></div>
+    <div class="chapter-item"><div class="chapter-num">11</div><div class="chapter-title">몰입 운용 ─ 프루스트·편지·일기·5막 변천</div></div>
+    <div class="chapter-item"><div class="chapter-num">12</div><div class="chapter-title">다섯 매체로 출력하기 ─ 옵시디안·TRPG·시나리오·애니·웹소설</div></div>
+    <div class="chapter-item"><div class="chapter-num">13</div><div class="chapter-title">비전형 캐릭터와 작품의 다양성</div></div>
+    <div class="chapter-item"><div class="chapter-num">14</div><div class="chapter-title">다섯 가지 진단, 그리고 마지막 인사</div></div>
+  </div>
+
+  <a href="https://contents.premium.naver.com/whtdrgon/mejeworks/contents?categoryId=19dd8026462000kih" target="_blank" rel="noopener" class="proc-cta">네이버 프리미엄 →</a>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// applied_projects</p>
+  <h2 class="proc-section-title">적용 사례</h2>
+  <p class="proc-section-desc">
+    B2B 클라이언트의 캐릭터 페르소나 디자인과 자체 IP의 인물 빌드에 표준 절차로 적용됩니다.
+    주인공급 8~15시간, 단역 30분~1시간의 위계로 시간이 차등 분배됩니다.
+  </p>
+  <div class="applied-list">
+    <div class="applied-row">
+      <div class="applied-name">B2B 캐릭터 페르소나 디자인</div>
+      <div class="applied-desc">아이돌·브랜드·게임 IP의 오리지널 캐릭터 빌드. 캐릭터 시트와 디자인 가이드를 납품. NDA로 클라이언트명 비공개. <a href="../ip.html" style="color:var(--accent); text-decoration:none;">IP 파트너십 상세</a>.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">FEWK 단편 102편 (자체 IP)</div>
+      <div class="applied-desc">사이버펑크 세계관 단편집의 등장인물. 단편마다 위계가 다른 인물 분배. <a href="https://brunch.co.kr/magazine/fewk" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none;">FEWK 매거진 102편</a>.</div>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// next_in_pipeline</p>
+  <h2 class="proc-section-title">파이프라인 안에서</h2>
+  <p class="proc-section-desc">
+    캐릭터 시트는 라이브러링 Vault에 인물 자료로 통합되어
+    이후 로어북·스토리100의 인물 도감과 단편 100편의 주인공 자료로 흐릅니다.
+  </p>
+  <div class="cross-grid">
+    <a href="librarying.html" class="cross-card">
+      <div class="cross-card-label">↓ 다음 단계</div>
+      <div class="cross-card-title">라이브러링 연재</div>
+      <p class="cross-card-desc">캐릭터 시트가 Vault의 인물 표제어로 들어갑니다. 통합 인물 사전.</p>
+    </a>
+    <a href="seoyeongak.html" class="cross-card">
+      <div class="cross-card-label">↔ 입력 짝</div>
+      <div class="cross-card-title">서연각 프로세스 연재</div>
+      <p class="cross-card-desc">캐릭터가 0에서 인물을 빚는다면, 서연각은 이미 있는 외국어 작품의 인물을 잡는 짝 작업.</p>
+    </a>
+    <a href="storytelling100.html" class="cross-card">
+      <div class="cross-card-label">↓ 산출</div>
+      <div class="cross-card-title">스토리100 프로세스 연재</div>
+      <p class="cross-card-desc">캐릭터 시트가 100편 단편의 주인공 자료가 됩니다. 12 단계 시트는 단편 집필의 1차 입력.</p>
+    </a>
+    <a href="lorebook.html" class="cross-card">
+      <div class="cross-card-label">↓ 산출</div>
+      <div class="cross-card-title">로어북 프로세스 연재</div>
+      <p class="cross-card-desc">캐릭터 시트가 로어북 9부 인물 도감과 부록 5 NPC 미니카드의 자료원.</p>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="../index.html">&larr; Home</a>
+    <a href="../about.html">About</a>
+    <a href="../works.html">Works</a>
+    <a href="../process.html">Process</a>
+    <a href="../knowledge.html">Knowledge</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+</script>
+</body>
+</html>

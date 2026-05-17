@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEJE WORKS 개발 프로젝트 — 배니월드, 앵무병원 타이쿤, 혼령식당, 앵무마트 타이쿤, 아이동월드. 세계관 기반 게임 & 팬덤 플랫폼.">
+<title>Works — 프로젝트 | MEJE WORKS</title>
+<meta property="og:title" content="Works — 프로젝트 | MEJE WORKS">
+<meta property="og:description" content="배니월드, 앵무병원, 혼령식당 — 세계관 기반 게임 & 팬덤 플랫폼 프로젝트">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/works.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/works.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/works.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/works.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/works.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/works.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/works.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/works.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/works.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/works.html">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── WORKS HERO ── */
+#works-hero {
+  max-width: 100%;
+  padding: 120px 40px 80px;
+  border-bottom: 1px solid var(--border-dim);
+  text-align: center;
+}
+
+.works-hero-badge {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--green);
+  border: 1px solid rgba(76,175,125,0.3);
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  animation: fadeUp 0.8s ease both;
+}
+.works-hero-badge::before { content: '● '; }
+
+.works-hero-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.works-hero-desc {
+  font-family: var(--mono), var(--sans);
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 2;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+/* ── PROJECT CARD ── */
+.project-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 48px 40px;
+  margin-bottom: 2px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: start;
+  position: relative;
+  transition: background 0.2s;
+}
+.project-card:hover { background: var(--bg-3); }
+
+.project-card.is-dev {
+  border-left: 2px solid var(--accent-dim);
+}
+.project-card.is-live {
+  border-left: 2px solid var(--green);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.project-status {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  padding: 3px 10px;
+  display: inline-block;
+}
+.project-status.live {
+  color: var(--green);
+  border: 1px solid rgba(76,175,125,0.3);
+}
+.project-status.dev {
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+}
+.project-status.soon {
+  color: #7ecfff;
+  border: 1px solid rgba(126,207,255,0.35);
+  animation: soon-pulse 2s ease-in-out infinite;
+}
+@keyframes soon-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+.project-type {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.project-title {
+  font-family: var(--display);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.project-title-en {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.project-desc {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.project-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.project-features li {
+  font-family: var(--mono), var(--sans);
+  font-size: 13px;
+  color: var(--text-dim);
+  padding: 8px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border-dim);
+  transition: border-color 0.15s;
+}
+.project-features li:hover { border-color: var(--border); }
+.project-features li::before {
+  content: '› ';
+  color: var(--accent-dim);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent-dim);
+  text-decoration: none;
+  border: 1px solid var(--border-dim);
+  padding: 6px 16px;
+  transition: all 0.2s;
+}
+.project-link:hover {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+/* ── PROJECT SIDEBAR (METRICS) ── */
+.project-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-metric {
+  background: var(--bg);
+  border: 1px solid var(--border-dim);
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.project-metric-num {
+  font-family: var(--mono);
+  font-size: 22px;
+  color: var(--accent);
+  font-weight: 400;
+  display: block;
+  margin-bottom: 4px;
+}
+.project-metric-num.green { color: var(--green); }
+
+.project-metric-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.project-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  border: 1px solid var(--border-dim);
+  padding: 2px 8px;
+}
+
+/* ── PROGRESS BAR ── */
+.progress-bar {
+  background: var(--bg);
+  border: 1px solid var(--border-dim);
+  padding: 12px 20px;
+}
+
+.progress-bar-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.progress-bar-track {
+  height: 3px;
+  background: var(--border-dim);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 1px;
+  background: var(--accent);
+  transition: width 1s ease;
+}
+.progress-bar-fill.green { background: var(--green); }
+
+/* ── TRILOGY LABEL ── */
+.trilogy-badge {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #7a9fbf;
+  border: 1px solid rgba(122,159,191,0.3);
+  padding: 2px 8px;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  #works-hero { padding: 100px 20px 60px; }
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 24px;
+  }
+  .project-sidebar { flex-direction: row; flex-wrap: wrap; }
+  .project-metric { flex: 1; min-width: 120px; }
+}
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="works.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="en/works.html">EN</a><span class="sep">&middot;</span>
+    <a href="ja/works.html">JA</a><span class="sep">&middot;</span>
+    <a href="zh-tw/works.html">繁</a><span class="sep">&middot;</span>
+    <a href="zh-cn/works.html">简</a><span class="sep">&middot;</span>
+    <a href="ar/works.html">AR</a><span class="sep">&middot;</span>
+    <a href="fa/works.html">FA</a><span class="sep">&middot;</span>
+    <a href="ur/works.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html" class="active">Works</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="knowledge.html">Knowledge</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+  </ul>
+  <span class="nav-badge">Projects</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section id="works-hero">
+  <span class="works-hero-badge">MEJE Works</span>
+  <h1 class="works-hero-title">Projects</h1>
+  <p class="works-hero-desc">
+    세계관 기반의 게임, 팬덤 플랫폼, 인터랙티브 콘텐츠.<br>
+    메제웍스가 설계하고 개발하는 프로젝트들.
+  </p>
+</section>
+
+<!-- ── PROJECT LIST ── -->
+<section class="section reveal" id="projects" style="padding-top:48px;">
+  <div class="sec-head">
+    <p class="sec-label">Projects</p>
+    <h2 class="sec-title">개발 프로젝트</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">ls </span><span class="flag">projects/ --sort=status</span>
+  </div>
+
+  <!-- ═══ 01. 배니월드 ═══ -->
+  <div class="project-card is-live">
+    <div class="project-body">
+      <div class="project-header">
+        <span class="project-status live">● LIVE</span>
+        <span class="project-type">K-POP Fandom Platform</span>
+      </div>
+      <h3 class="project-title">배니월드</h3>
+      <p class="project-title-en">VANNEE World — Idol Character Fandom Activity</p>
+      <p class="project-desc">
+        K-POP Idol 그룹을 위한 디지털 인터랙티브 팬덤 플랫폼.
+        세계관 기반 데일리 콘텐츠 설계(깨우기·밥 먹기·잠 재우기 루틴)로
+        팬 참여를 극대화하고, 비과금 마케팅으로 자연 성장을 유도합니다.
+      </p>
+      <ul class="project-features">
+        <li>그룹+팬덤 세계관 연동 데일리 콘텐츠</li>
+        <li>비과금 마케팅 기반 자연 성장 설계</li>
+        <li>콜렉션 수집 · 디지털 굿즈 · 2차 굿즈</li>
+        <li>팬덤 퍼널: 시청취자 → 싱글 스판 → 멀티 스판 → 인플루언서</li>
+      </ul>
+      <a href="https://vanneeworld.com/" target="_blank" rel="noopener" class="project-link">vanneeworld.com →</a>
+      <span style="font-family:var(--mono); font-size:12px; color:var(--text-muted); margin-left:8px;">(서비스종료 · 샘플 페이지)</span>
+    </div>
+    <div class="project-sidebar">
+      <div class="project-metric">
+        <span class="project-metric-num green">43</span>
+        <span class="project-metric-label">Countries</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">35.16%</span>
+        <span class="project-metric-label">D90 Retention</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">33.5%</span>
+        <span class="project-metric-label">Paid Conversion</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">1h 02m</span>
+        <span class="project-metric-label">Avg. Session</span>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Web</span>
+        <span class="project-tag">Fandom</span>
+        <span class="project-tag">K-POP</span>
+        <span class="project-tag">Interactive</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 02. 앵무병원 타이쿤 ═══ -->
+  <div class="project-card is-live">
+    <div class="project-body">
+      <div class="project-header">
+        <span class="project-status live">● LIVE</span>
+        <span class="project-type">Mobile Simulation Tycoon</span>
+        <span class="trilogy-badge">앵무 트릴로지 #1</span>
+      </div>
+      <h3 class="project-title">앵무병원 타이쿤</h3>
+      <p class="project-title-en">Parrot Hospital Tycoon</p>
+      <p class="project-desc">
+        앵무새 캐릭터가 등장하는 병원 경영 시뮬레이션.
+        고양이 두통, 눈사람 변이, 벼락맞음 등 20가지 이상의 기상천외한 상상 질병과
+        진료 시설을 운영하며 병원을 확장합니다.
+        의사·간호사·직원·경비원 4종 스태프와 환자 동선 전략이 핵심.
+      </p>
+      <ul class="project-features">
+        <li>20+ 상상 질병 · 유머 컨셉의 치료 시스템</li>
+        <li>환자 스트레스 시스템 · 폭주 환자 & 경비원</li>
+        <li>재단 평가 등급 기반 월드맵 확장</li>
+        <li>쾌적도·인테리어 시스템 → 수익 보너스</li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.MEJEWorks.ParrotHospital&hl=ko" target="_blank" rel="noopener" class="project-link">Google Play →</a>
+      <a href="https://apps.apple.com/kr/app/앵무병원-방치형-힐링-타이쿤/id6757802365" target="_blank" rel="noopener" class="project-link" style="margin-left:8px;">App Store →</a>
+    </div>
+    <div class="project-sidebar">
+      <div class="project-metric">
+        <span class="project-metric-num green">169</span>
+        <span class="project-metric-label">Countries</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">~50K</span>
+        <span class="project-metric-label">Downloads</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">5.0</span>
+        <span class="project-metric-label">Google Play ★ (KR)</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">0.19%</span>
+        <span class="project-metric-label">Crash Rate</span>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Mobile</span>
+        <span class="project-tag">Tycoon</span>
+        <span class="project-tag">Simulation</span>
+        <span class="project-tag">Global</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 03. 혼령식당 ═══ -->
+  <div class="project-card is-dev">
+    <div class="project-body">
+      <div class="project-header">
+        <span class="project-status dev">◆ IN DEV</span>
+        <span class="project-type">Mobile Merge Puzzle + Story RPG</span>
+      </div>
+      <h3 class="project-title">혼령식당</h3>
+      <p class="project-title-en">Ghost Restaurant — K-Food Soul Healing Fantasy</p>
+      <p class="project-desc">
+        할머니의 한옥 식당을 물려받아 낮에는 재료를 수확·발효·요리하고(머지 퍼즐),
+        밤에는 한(恨)을 품은 혼령 손님에게 소울 푸드를 대접하는 이중 세계 게임.
+        조선부터 현대까지 80편의 옴니버스 에피소드로 한국 문화를 전달합니다.
+      </p>
+      <ul class="project-features">
+        <li>낮/밤 이중 머지 시스템 (경제 자원 + 힐링 도구)</li>
+        <li>80편 옴니버스 에피소드 · 한국 문화 스토리텔링</li>
+        <li>AI Hyper-Localization 70개 언어 동시 지원</li>
+        <li>웹툰 · 웹소설 IP 확장 준비</li>
+      </ul>
+    </div>
+    <div class="project-sidebar">
+      <div class="progress-bar">
+        <div class="progress-bar-label"><span>기획/시나리오</span><span>80%</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:80%"></div></div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar-label"><span>그래픽</span><span>75%</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:75%"></div></div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar-label"><span>프로그래밍</span><span>65%</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:65%"></div></div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar-label"><span>사운드</span><span>60%</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:60%"></div></div>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num">2026.11</span>
+        <span class="project-metric-label">Target Launch</span>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">iOS</span>
+        <span class="project-tag">Android</span>
+        <span class="project-tag">Merge</span>
+        <span class="project-tag">Story RPG</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 04. 앵무마트 타이쿤 ═══ -->
+  <div class="project-card is-live">
+    <div class="project-body">
+      <div class="project-header">
+        <span class="project-status soon">◆ COMING SOON</span>
+        <span class="project-type">Mobile Simulation Tycoon</span>
+        <span class="trilogy-badge">앵무 트릴로지 #2</span>
+      </div>
+      <h3 class="project-title">앵무마트 타이쿤</h3>
+      <p class="project-title-en">Parrot Mart Tycoon</p>
+      <p class="project-desc">
+        앵무병원 타이쿤의 두 번째 타이틀. 앵무새 캐릭터로 대형 마트를 건설·운영합니다.
+        상품 진열, 고객 응대, 계산, 물류·창고, 주차장, 절도 이벤트, 프로모션까지
+        전작보다 깊어진 다층 경영 시스템이 특징.
+      </p>
+      <ul class="project-features">
+        <li>5단계 마트 스테이지 · 각기 다른 필드 전략</li>
+        <li>물류/창고 자동 입고 시스템</li>
+        <li>주차장 → 대량 구매 고객 유치</li>
+        <li>직원 체력/피로 관리 · 12등급 시설 업그레이드</li>
+        <li>인앱 결제 수익 모델 (전작 대비 강화)</li>
+      </ul>
+    </div>
+    <div class="project-sidebar">
+      <div class="progress-bar">
+        <div class="progress-bar-label"><span>전체 개발</span><span>98%</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill green" style="--bar-w:98%"></div></div>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">2026.05</span>
+        <span class="project-metric-label">Launch</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num">169</span>
+        <span class="project-metric-label">Target Countries</span>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Mobile</span>
+        <span class="project-tag">Tycoon</span>
+        <span class="project-tag">Simulation</span>
+        <span class="project-tag">iOS</span>
+        <span class="project-tag">Android</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 06. FEWK ═══ -->
+  <div class="project-card is-live">
+    <div class="project-body">
+      <div class="project-header">
+        <span class="project-status live">● LIVE</span>
+        <span class="project-type">Original IP · TRPG System</span>
+      </div>
+      <h3 class="project-title">FEWK</h3>
+      <p class="project-title-en">FEWK Core Rulebook 3rd Edition — Cyberpunk TRPG</p>
+      <p class="project-desc">
+        MEJEworks가 자체 개발한 사이버펑크 배경의 오리지널 TRPG 시스템. 2021년 1판 이후 현재 3판까지 개정·공개되었으며,
+        Core Rulebook · World Book · Cyberpunk Pack 3권 구조로 구성됩니다.
+        플레이어는 '러너'로 활동하며 기업·정부·언더그라운드가 뒤엉킨 세계를 탐험합니다.
+        102편의 자체 단편 소설 세계관과 연동됩니다.
+      </p>
+      <ul class="project-features">
+        <li>Core Rulebook · World Book · Cyberpunk Pack 3권 체계</li>
+        <li>자체 세계관 기반 102편 단편소설 매거진 연동</li>
+        <li>기업·정부·언더그라운드 3축 세계관 구조</li>
+        <li>패션·광고·인체개조 등 현실 사회 이슈의 SF 풍자</li>
+      </ul>
+      <div class="process-tag-row">
+        <span class="process-tag-label">// USED PROCESS</span>
+        <a href="process/librarying.html" class="process-tag tag-libr">LIBRARYING</a>
+        <a href="process/character.html" class="process-tag">CHARACTER</a>
+        <a href="process/lorebook.html" class="process-tag">LOREBOOK</a>
+        <a href="process/storytelling100.html" class="process-tag">STORYTELLING 100</a>
+      </div>
+      <a href="https://whtdrgongmail.github.io/FEWKbooks3rd/#home" target="_blank" rel="noopener" class="project-link">FEWK 3판 룰북 →</a>
+      <a href="https://brunch.co.kr/magazine/fewk" target="_blank" rel="noopener" class="project-link" style="margin-left:8px;">단편소설 매거진 →</a>
+    </div>
+    <div class="project-sidebar">
+      <div class="project-metric">
+        <span class="project-metric-num green">3rd</span>
+        <span class="project-metric-label">Edition</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">102</span>
+        <span class="project-metric-label">Short Stories</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">3</span>
+        <span class="project-metric-label">Books (Core+World+CP)</span>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">TRPG</span>
+        <span class="project-tag">Cyberpunk</span>
+        <span class="project-tag">Original IP</span>
+        <span class="project-tag">Novel</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 07. FEWK Core Rulebook 출판 ═══ -->
+  <div class="project-card is-live">
+    <div class="project-body">
+      <div class="project-header">
+        <span class="project-status soon">◆ COMING SOON</span>
+        <span class="project-type">Physical Publication · TRPG Book</span>
+        <span class="trilogy-badge">FEWK 3판 #1</span>
+      </div>
+      <h3 class="project-title">FEWK: Core Rulebook</h3>
+      <p class="project-title-en">FEWK Core Rulebook 3rd Edition — B5 Hardcover</p>
+      <p class="project-desc">
+        FEWK 3판 시스템의 핵심 룰북. 560~700p 분량의 B5 양장본으로 출간 예정.
+        13부 구성: 게임 기초·캐릭터·판정·전투·자원·고유규칙·장비·성장·팀플레이·GM 가이드·NPC 카탈로그·시나리오 씨앗·디지털 연동.
+        현재 v0.3.1 — Phase 7 QA 진행 중.
+      </p>
+      <ul class="project-features">
+        <li>560~700p · B5 양장 · 약 106 항목</li>
+        <li>13부 + 부록 구성 · 완결형 규칙 체계</li>
+        <li>d6 Pool 판정 · 장르 자원·에고·운 토큰 메커니즘</li>
+        <li>온라인 룰북(GitHub)과 병행 공개</li>
+      </ul>
+      <div class="process-tag-row">
+        <span class="process-tag-label">// USED PROCESS</span>
+        <a href="process/librarying.html" class="process-tag tag-libr">LIBRARYING</a>
+        <a href="process/lorebook.html" class="process-tag">LOREBOOK</a>
+      </div>
+      <a href="https://whtdrgongmail.github.io/FEWKbooks3rd/#home" target="_blank" rel="noopener" class="project-link">온라인 미리보기 →</a>
+    </div>
+    <div class="project-sidebar">
+      <div class="progress-bar">
+        <div class="progress-bar-label"><span>집필·QA</span><span>92%</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill green" style="--bar-w:92%"></div></div>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">2026.05</span>
+        <span class="project-metric-label">출간 예정</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num">560~700p</span>
+        <span class="project-metric-label">예상 분량</span>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">TRPG</span>
+        <span class="project-tag">Book</span>
+        <span class="project-tag">Cyberpunk</span>
+        <span class="project-tag">Original IP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 08. FEWK World Book 출판 ═══ -->
+  <div class="project-card is-live">
+    <div class="project-body">
+      <div class="project-header">
+        <span class="project-status soon">◆ COMING SOON</span>
+        <span class="project-type">Physical Publication · World Setting Book</span>
+        <span class="trilogy-badge">FEWK 3판 #2</span>
+      </div>
+      <h3 class="project-title">FEWK: World Book</h3>
+      <p class="project-title-en">Kingdom of Far East White — World Book 3rd Edition</p>
+      <p class="project-desc">
+        FEWK 세계관의 완전한 설정집. 세계법칙·역사연대기·지리·사회정치경제·일상문화·러너 생태·세력도감을 망라한 10부 구성.
+        현재 170 항목 작성 완료, 최대 600 항목 목표. 6스타일지구·동백국·사이버펑크 로어의 완결판.
+      </p>
+      <ul class="project-features">
+        <li>10부 구성 · 170항목 완료 (목표 300~600)</li>
+        <li>6스타일지구 · 러너 생태 · 세력 도감 수록</li>
+        <li>역사 연대기 · 사회·정치·경제 · 일상문화 망라</li>
+        <li>Core Rulebook과 동시 출간 예정</li>
+      </ul>
+      <div class="process-tag-row">
+        <span class="process-tag-label">// USED PROCESS</span>
+        <a href="process/librarying.html" class="process-tag tag-libr">LIBRARYING</a>
+        <a href="process/character.html" class="process-tag">CHARACTER</a>
+        <a href="process/lorebook.html" class="process-tag">LOREBOOK</a>
+      </div>
+    </div>
+    <div class="project-sidebar">
+      <div class="progress-bar">
+        <div class="progress-bar-label"><span>집필</span><span>75%</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill green" style="--bar-w:75%"></div></div>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num green">2026.06</span>
+        <span class="project-metric-label">출간 예정</span>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num">170 / 600</span>
+        <span class="project-metric-label">항목 완성</span>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">TRPG</span>
+        <span class="project-tag">Lore Book</span>
+        <span class="project-tag">Worldbuilding</span>
+        <span class="project-tag">Original IP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 09 (구 07). 아이동월드 ═══ -->
+  <div class="project-card is-dev">
+    <div class="project-body">
+      <div class="project-header">
+        <span class="project-status dev">◆ IN DEV</span>
+        <span class="project-type">Interactive Platform</span>
+      </div>
+      <h3 class="project-title">아이동월드</h3>
+      <p class="project-title-en">IdolDong World</p>
+      <p class="project-desc">
+        배니월드의 기술과 팬덤 설계 노하우를 확장한 차세대 아이돌 팬덤 인터랙티브 플랫폼.
+        세계관 기반 캐릭터 액티비티, 팬덤 커뮤니티, 디지털 굿즈를 통합합니다.
+      </p>
+      <ul class="project-features">
+        <li>배니월드 기반 팬덤 플랫폼 확장</li>
+        <li>Idol Character Fandom Activity 시스템</li>
+        <li>글로벌 멀티 그룹 지원 설계</li>
+      </ul>
+    </div>
+    <div class="project-sidebar">
+      <div class="progress-bar">
+        <div class="progress-bar-label"><span>기획</span><span>—</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:15%"></div></div>
+      </div>
+      <div class="project-metric">
+        <span class="project-metric-num">TBD</span>
+        <span class="project-metric-label">Target Launch</span>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Web</span>
+        <span class="project-tag">Fandom</span>
+        <span class="project-tag">K-POP</span>
+        <span class="project-tag">Multi-Group</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:13px; color:var(--text-muted); opacity:0.6;">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; Home</a>
+    <a href="about.html">About</a>
+    <a href="ceo.html">CEO</a>
+    <a href="ip.html">IP</a>
+    <a href="process.html">Process</a>
+    <a href="knowledge.html">Knowledge</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+// ── Scroll Progress Bar ──
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+
+// ── Progress bar 애니메이션 ──
+function animateBars(container) {
+  container.querySelectorAll('.progress-bar-fill').forEach(bar => {
+    const w = getComputedStyle(bar).getPropertyValue('--bar-w').trim();
+    bar.style.width = w;
+  });
+  container.classList.add('progress-animated');
+}
+
+// ── Reveal + Progress + Stagger ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('visible');
+    animateBars(e.target);
+    observer.unobserve(e.target);
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// project-card 개별 stagger (섹션 내 카드 순차 등장)
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach((card, i) => {
+      setTimeout(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, i * 100);
+    });
+    cardObs.disconnect();
+  });
+}, { threshold: 0.05 });
+const projectSection = document.getElementById('projects');
+if (projectSection) cardObs.observe(projectSection);
+
+// project-card 초기 상태
+document.querySelectorAll('.project-card').forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(20px)';
+  card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+});
+</script>
+</body>
+</html>

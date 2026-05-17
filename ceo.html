@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="김동은 — 메제웍스 대표, 하이브 세계관 파트장 출신, 20년차 게임 개발자, IP 전략가. 세계관 컨설팅 전문가 약력.">
+<title>CEO Profile — 김동은 | MEJE WORKS</title>
+<meta property="og:title" content="CEO 김동은 | MEJE WORKS">
+<meta property="og:description" content="하이브 세계관 파트장 출신, BTS World 개발총괄. 20년+ 게임 개발 · 30회+ 강연 · IP 전략가">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/ceo.html">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/ceo.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/ceo.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/ceo.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/ceo.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/ceo.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/ceo.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/ceo.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/ceo.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/ceo.html">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── CEO PAGE HERO ── */
+#hero {
+  max-width: 100%;
+  padding: 120px 40px 100px;
+  border-bottom: 1px solid var(--border-dim);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, var(--accent-dim), transparent);
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-title {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 8px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.hero-sub {
+  font-family: var(--display);
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 300;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.hero-desc {
+  font-family: var(--mono), var(--sans);
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 2;
+  max-width: 580px;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+.hero-desc strong { color: var(--text-dim); font-weight: 400; }
+
+.hero-grid {
+  display: flex;
+  gap: 12px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+
+.hero-tag {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 5px 14px;
+  letter-spacing: 0.08em;
+}
+
+/* ── TIMELINE ── */
+.timeline { margin-top: 8px; }
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-dim);
+}
+.timeline-item:last-child { border-bottom: none; }
+
+.timeline-year {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent-dim);
+  letter-spacing: 0.05em;
+  padding-top: 2px;
+}
+
+.timeline-content {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.timeline-content strong {
+  color: var(--text);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 2px;
+}
+.timeline-content .sub {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── EXPERTISE GRID ── */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.expertise-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 28px 24px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.expertise-card:hover {
+  background: var(--bg-3);
+  border-color: var(--border);
+}
+
+.expertise-card-icon {
+  font-family: var(--mono);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.expertise-card-title {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.expertise-card-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* ── LINK CARD ── */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.link-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s, border-color 0.2s;
+}
+.link-card:hover {
+  background: var(--bg-3);
+  border-color: var(--accent-dim);
+}
+.link-card-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.link-card-title {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.link-card-url {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  #hero { padding: 100px 20px 80px; }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .link-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 60px 1fr; gap: 12px; }
+}
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="ceo.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="en/ceo.html">EN</a><span class="sep">&middot;</span>
+    <a href="ja/ceo.html">JA</a><span class="sep">&middot;</span>
+    <a href="zh-tw/ceo.html">繁</a><span class="sep">&middot;</span>
+    <a href="zh-cn/ceo.html">简</a><span class="sep">&middot;</span>
+    <a href="ar/ceo.html">AR</a><span class="sep">&middot;</span>
+    <a href="fa/ceo.html">FA</a><span class="sep">&middot;</span>
+    <a href="ur/ceo.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="ceo.html" class="active">CEO</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="knowledge.html">Knowledge</a></li>
+  </ul>
+  <span class="nav-badge">CEO Profile</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <p class="hero-eyebrow">CEO & Worldbuilding Strategist</p>
+  <h1 class="hero-title">김동은</h1>
+  <p class="hero-sub">Kim Dong-eun</p>
+  <p class="hero-desc">
+    세계관을 짓는 사람들의 스튜디오, 메제웍스 대표.<br>
+    <strong>IP 전략 · K-콘텐츠 기획 · 팬덤 시스템 · AI 번역 방법론</strong><br>
+    1999년부터 이어온 게임 개발자의 시선으로, 세계관의 언어를 설계합니다.
+  </p>
+
+  <div class="stats-row" style="max-width:700px; width:100%; margin-top:48px;">
+    <div class="stat-box">
+      <span class="stat-num">20+</span>
+      <span class="stat-label">Years in IP</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">30+</span>
+      <span class="stat-label">Lectures</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">10+</span>
+      <span class="stat-label">Consulting</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">537</span>
+      <span class="stat-label">Articles</span>
+    </div>
+  </div>
+
+  <div class="hero-grid">
+    <span class="hero-tag">Worldbuilding</span>
+    <span class="hero-tag">K-POP IP</span>
+    <span class="hero-tag">Fandom Strategy</span>
+    <span class="hero-tag">Digital Art</span>
+    <span class="hero-tag">Transmedia</span>
+    <span class="hero-tag">AI Translation</span>
+  </div>
+</section>
+
+<!-- ── PROFILE ── -->
+<section class="section reveal" id="profile">
+  <div class="sec-head">
+    <p class="sec-label">Profile</p>
+    <h2 class="sec-title">약력</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">whoami </span><span class="flag">--full</span>
+  </div>
+
+  <div class="profile-grid">
+    <div class="profile-item">
+      <p class="profile-item-label">Current Role</p>
+      <div class="profile-item-value">
+        <strong>(주)메제웍스 대표</strong>
+        세계관 IP 전략가 · 디지털 아트 작가
+      </div>
+    </div>
+    <div class="profile-item">
+      <p class="profile-item-label">Previous — HYBE</p>
+      <div class="profile-item-value">
+        <strong>하이브 세계관 라이브러리 파트장</strong>
+        BTS World 개발총괄 본부장
+      </div>
+    </div>
+    <div class="profile-item">
+      <p class="profile-item-label">Previous — Games</p>
+      <div class="profile-item-value">
+        <strong>NHN Games · KTH</strong>
+        1999년~ 20년 이상 게임 개발자
+      </div>
+    </div>
+    <div class="profile-item">
+      <p class="profile-item-label">Academia</p>
+      <div class="profile-item-value">
+        <strong>건국대 · 성공회대 겸임교수 역임</strong>
+        '게임기획론' 전공 강의
+      </div>
+    </div>
+    <div class="profile-item" style="grid-column: 1 / -1;">
+      <p class="profile-item-label">Heritage</p>
+      <div class="profile-item-value">
+        한국 TRPG 1세대 — 하이텔 RPG 동호회, 천리안 검과 마법 동호회 개설자
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAREER TIMELINE ── -->
+<section class="section reveal" id="career">
+  <div class="sec-head">
+    <p class="sec-label">Career</p>
+    <h2 class="sec-title">경력 타임라인</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">git log </span><span class="flag">--career --oneline</span>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-year">2021–</span>
+      <div class="timeline-content">
+        <strong>(주)메제웍스 대표이사</strong>
+        세계관 전략 컨설팅, IP 기획, K-콘텐츠 팬덤 설계
+        <span class="sub">창업 · 독립</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2018–21</span>
+      <div class="timeline-content">
+        <strong>HYBE (하이브)</strong>
+        세계관 라이브러리 파트장 · BTS World 개발총괄 본부장
+        <span class="sub">K-POP 세계관 아키텍처</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2010s</span>
+      <div class="timeline-content">
+        <strong>NHN Games · KTH</strong>
+        게임 기획 및 개발
+        <span class="sub">온라인 게임 프로듀싱</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">1999–</span>
+      <div class="timeline-content">
+        <strong>게임 개발자 커리어 시작</strong>
+        하이텔 RPG 동호회 · 천리안 검과 마법 동호회 개설
+        <span class="sub">한국 TRPG 1세대</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LECTURES & CONTRIBUTIONS ── -->
+<section class="section reveal" id="lectures">
+  <div class="sec-head">
+    <p class="sec-label">Lectures & Media</p>
+    <h2 class="sec-title">강연 · 기고 · 출연</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">git log </span><span class="flag">--lectures --all</span>
+  </div>
+
+  <!-- 업계 강연 -->
+  <div class="cat-block">
+    <h3 class="cat-title">업계 강연</h3>
+    <ul class="log-list">
+      <li class="log-item"><span class="year">2023.09</span> 삼성경제연구소 CX포럼 초빙강연</li>
+      <li class="log-item"><span class="year">2022.06</span> DBR Mini Conference 교육강연</li>
+      <li class="log-item"><span class="year">2022.08</span> CMS 국제 콘텐츠 마케팅 서밋 스피커</li>
+      <li class="log-item"><span class="year">2022.05</span> NC소프트 기업강연</li>
+      <li class="log-item"><span class="year">2021.12</span> LG전자 BIG 임직원 강연</li>
+      <li class="log-item"><span class="year">2022</span> IGM MMPS 기업 세계관 강연</li>
+      <li class="log-item"><span class="year">2022</span> BBQ 메타버스 트렌드 임직원 강연</li>
+      <li class="log-item"><span class="year">2022</span> 비마이비 강연 — 세계관을 구축하라</li>
+    </ul>
+  </div>
+
+  <!-- 학계 강연 -->
+  <div class="cat-block">
+    <h3 class="cat-title">학계 강연</h3>
+    <ul class="log-list">
+      <li class="log-item"><span class="year">2022.09</span> KAIST 콜로키움 강연</li>
+      <li class="log-item"><span class="year">22–23</span> 연세대 ISSU 강연 — 메타버스 팬덤</li>
+      <li class="log-item"><span class="year">2022</span> 서울옥션 초빙강연 (2회)</li>
+      <li class="log-item"><span class="year">2022.08</span> 동양대 공간디자인학교수회 강연</li>
+      <li class="log-item"><span class="year">2022</span> 건국대학원 문화콘텐츠학회 종강 총회 강연</li>
+      <li class="log-item"><span class="year">2022</span> 건국대 BK21 교육연구단 초청 특강</li>
+      <li class="log-item"><span class="year">2022</span> 경희대 호텔관광대학원 스마트기술 세미나 강연</li>
+      <li class="log-item"><span class="year">2022</span> 덕성여대 미술사학도 특강 — 메타버스 아트</li>
+      <li class="log-item"><span class="year">2022</span> 덕성여대 게임학과 특강 — 게임적 세계관의 기획</li>
+    </ul>
+  </div>
+
+  <!-- 기관/예술 강연·자문 -->
+  <div class="cat-block">
+    <h3 class="cat-title">기관 · 예술 강연 · 자문</h3>
+    <ul class="log-list">
+      <li class="log-item"><span class="year">2022</span> 한콘진 메타버스포럼 위원 · 포럼 좌장</li>
+      <li class="log-item"><span class="year">2022.12</span> KISTEP 한국과학기술기획평가원 기술강연</li>
+      <li class="log-item"><span class="year">2022.02</span> KOBACO 한국관광홍보학회 교수 강연</li>
+      <li class="log-item"><span class="year">2022</span> 한국관광공사 마케팅 사업 심사위원 위촉</li>
+      <li class="log-item"><span class="year">2022</span> 한국문화관광연구원 인터뷰</li>
+      <li class="log-item"><span class="year">2023.04</span> 한빛 캘리그라피 예술인 강연</li>
+      <li class="log-item"><span class="year">2022</span> 최인아책방 북토크 강연</li>
+      <li class="log-item"><span class="year">2021</span> 삼일로 창고극장 예술인 강연 — 게임과 심리학</li>
+      <li class="log-item"><span class="year">2021</span> 인천문화재단 예술인 강연</li>
+    </ul>
+  </div>
+
+  <!-- 업계 자문 · 컨설팅 -->
+  <div class="cat-block">
+    <h3 class="cat-title">업계 자문 · 컨설팅</h3>
+    <ul class="log-list">
+      <li class="log-item"><span class="year">2025</span> K-POP 기획사 — 아이돌 IP 팬덤 액티비티 플랫폼</li>
+      <li class="log-item"><span class="year">2024</span> 그라비티 — 라그나로크 세계관 라이브러리 · 월드북</li>
+      <li class="log-item"><span class="year">2023</span> 그라비티 — 라그나로크 IP 확장 세계관 제작</li>
+      <li class="log-item"><span class="year">2022</span> LG전자 — 메타버스 뮤지엄 자문 · 기획 · 공간 설계</li>
+      <li class="log-item"><span class="year">2022</span> LG전자 — 웹3.0 고객가치 사업기회 발굴 리포트</li>
+      <li class="log-item"><span class="year">2022</span> LG전자 — 게이밍모니터 고객 이벤트 유형</li>
+      <li class="log-item"><span class="year">2022</span> LG생활건강 피부연구소 — 피부MBTI 콘텐츠 자문</li>
+      <li class="log-item"><span class="year">2022</span> 호콜릭 메타버스크라 — 작가 · 좌장</li>
+      <li class="log-item"><span class="year">2022</span> 피네이션 — 캐릭터 기반 세계관 컨설팅</li>
+      <li class="log-item"><span class="year">2022</span> 코리안리서치 — 신규 메타버스 기획 자문</li>
+    </ul>
+  </div>
+
+  <!-- 집필/기고/방송 -->
+  <div class="cat-block">
+    <h3 class="cat-title">집필 · 기고 · 방송</h3>
+    <ul class="log-list">
+      <li class="log-item"><span class="year">2022.02</span> '현명한 NFT투자자' 저서 출간 · 교보문고 이달의 책 선정</li>
+      <li class="log-item"><span class="year">연재중</span> 브런치 537편+ 연재 — 세계관 · IP · 팬덤 · 게임기획</li>
+      <li class="log-item"><span class="year">2021.03</span> 동아 비즈니스 리뷰 스페셜 리포트 — 부캐 커뮤니티</li>
+      <li class="log-item"><span class="year">2021.12</span> 동아 비즈니스 리뷰 스페셜 리포트 — 팬덤 세계관</li>
+      <li class="log-item"><span class="year">2022.03</span> 제일기획 사보 — 메타버스의 세계관은 어떻게 만들어지는가</li>
+      <li class="log-item"><span class="year">2022.06</span> 포스텍 융복합 웹진X — 떠오르는 작가 게재</li>
+      <li class="log-item"><span class="year">2023.07</span> 포스텍 융복합 웹진X — AI와 직업</li>
+      <li class="log-item"><span class="year">2022.03</span> MKTV 김미경의 레벨업 유튜브 인터뷰 (3편)</li>
+      <li class="log-item"><span class="year">2022.05</span> 머니맵 · 웅달책방TV · 달란트투자TV · IGM 유튜브 인터뷰</li>
+      <li class="log-item"><span class="year">2021.12</span> 머니투데이 · TTimes 인터뷰 (6편)</li>
+      <li class="log-item"><span class="year">2022</span> 다음 인터비즈 — 엔터업계는 왜 세계관을 구축하려 할까</li>
+      <li class="log-item"><span class="year">2022</span> 웹진 고해상도 — 메타버스에 있어 IP는 왜 중요한가</li>
+      <li class="log-item"><span class="year">2022</span> K-POP GENERATION 다큐멘터리 Ep.4 세계관 자문 · 인터뷰</li>
+    </ul>
+  </div>
+
+  <!-- 예술 활동 -->
+  <div class="cat-block">
+    <h3 class="cat-title">예술 활동</h3>
+    <ul class="log-list">
+      <li class="log-item"><span class="year">2022</span> 세계 지식 포럼 30인의 예술인 선정</li>
+      <li class="log-item"><span class="year">2022</span> 서울디자인재단 DDP 기성작가 초대전 출품</li>
+      <li class="log-item"><span class="year">2022</span> 이함갤러리, 프랑스 파리 '메종 드 노엘' 전시 출품</li>
+      <li class="log-item"><span class="year">2022</span> 이윤아트 전시회 작품 출품</li>
+      <li class="log-item"><span class="year">2022</span> WeSA 예술 자문</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── EXPERTISE ── -->
+<section class="section reveal" id="expertise">
+  <div class="sec-head">
+    <p class="sec-label">Expertise</p>
+    <h2 class="sec-title">전문 분야</h2>
+  </div>
+
+  <div class="expertise-grid">
+    <div class="expertise-card">
+      <span class="expertise-card-icon" style="color:var(--accent);">&gt;_</span>
+      <h3 class="expertise-card-title">세계관 전략</h3>
+      <p class="expertise-card-desc">하이브 6개 그룹 세계관 구축, 그라비티 라그나로크 월드북 개발. 7단계 절차적 세계관 생성 프로세스와 4계층 아키텍처 설계</p>
+    </div>
+    <div class="expertise-card">
+      <span class="expertise-card-icon" style="color:var(--green);">//</span>
+      <h3 class="expertise-card-title">K-콘텐츠 기획</h3>
+      <p class="expertise-card-desc">BTS World 개발총괄, 아이돌 IP 팬덤 액티비티 플랫폼 기획·운영. DAU 41% 전환, 유료전환 33.5% 달성. 43개국 글로벌 서비스</p>
+    </div>
+    <div class="expertise-card">
+      <span class="expertise-card-icon" style="color:#7a9fbf;">AI</span>
+      <h3 class="expertise-card-title">AI 번역 방법론</h3>
+      <p class="expertise-card-desc">AI Hyper-Localization 파이프라인으로 40개 이상 언어 동시 지원. 웹소설·웹툰 39개국 글로벌 확장, 번역 품질 관리 시스템 구축 경험</p>
+    </div>
+    <div class="expertise-card">
+      <span class="expertise-card-icon" style="color:var(--accent);">{ }</span>
+      <h3 class="expertise-card-title">게임 기획</h3>
+      <p class="expertise-card-desc">NHN게임즈·KTH 등 MMORPG 20년 경력. 건국대·성공회대 겸임교수(게임기획론). PC통신 시대 한국 TRPG 1세대 커뮤니티 빌더</p>
+    </div>
+    <div class="expertise-card">
+      <span class="expertise-card-icon" style="color:var(--green);">ART</span>
+      <h3 class="expertise-card-title">디지털 아트</h3>
+      <p class="expertise-card-desc">디지털 아트 창작, 비주얼 IP 전략, 세계관 기반 아트 디렉션</p>
+    </div>
+    <div class="expertise-card">
+      <span class="expertise-card-icon" style="color:#7a9fbf;">BIZ</span>
+      <h3 class="expertise-card-title">기업 강연 & 컨설팅</h3>
+      <p class="expertise-card-desc">삼성·LG·KAIST·하이브·넷마블·크래프톤 등 30회+ 강연. LG전자·그라비티 등 브랜드·게임 IP 세계관 컨설팅 수행</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── LINKS ── -->
+<section class="section reveal" id="links">
+  <div class="sec-head">
+    <p class="sec-label">Links</p>
+    <h2 class="sec-title">외부 링크</h2>
+  </div>
+
+  <div class="link-grid">
+    <a href="https://brunch.co.kr/@whtdrgon" target="_blank" rel="noopener" class="link-card">
+      <p class="link-card-label">Brunch</p>
+      <p class="link-card-title">브런치 — 김동은WhtDrgon</p>
+      <p class="link-card-url">brunch.co.kr/@whtdrgon · 글 537편</p>
+    </a>
+    <a href="works.html" class="link-card">
+      <p class="link-card-label">Projects</p>
+      <p class="link-card-title">출시 콘텐츠 / 프로젝트</p>
+      <p class="link-card-url">meje.kr/works.html</p>
+    </a>
+    <a href="mailto:Contact@meje.kr" class="link-card">
+      <p class="link-card-label">Email</p>
+      <p class="link-card-title">Contact@meje.kr</p>
+      <p class="link-card-url">비즈니스 문의</p>
+    </a>
+    <a href="index.html" class="link-card">
+      <p class="link-card-label">Home</p>
+      <p class="link-card-title">MEJE WORKS 메인</p>
+      <p class="link-card-url">meje.kr</p>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:13px; color:var(--text-muted); opacity:0.6;">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; Home</a>
+    <a href="about.html">About</a>
+    <a href="works.html">Works</a>
+    <a href="ip.html">IP</a>
+    <a href="process.html">Process</a>
+    <a href="knowledge.html">Knowledge</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

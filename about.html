@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="(주)메제웍스 회사소개 — 세계관 전략 컨설팅, IP 기획, K-콘텐츠 팬덤 설계 스튜디오. 메제웍스의 사업 영역과 비전.">
+<title>회사소개 | MEJE WORKS</title>
+<meta property="og:title" content="회사소개 | MEJE WORKS">
+<meta property="og:description" content="(주)메제웍스 — 세계관 전략 컨설팅, IP 기획, K-콘텐츠 팬덤 설계 스튜디오">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/about.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/about.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/about.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/about.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/about.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/about.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/about.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/about.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/about.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/about.html">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── ABOUT PAGE HERO ── */
+#about-hero {
+  max-width: 100%;
+  padding: 120px 40px 100px;
+  border-bottom: 1px solid var(--border-dim);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#about-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, var(--accent-dim), transparent);
+}
+
+.about-hero-badge {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--green);
+  border: 1px solid rgba(76,175,125,0.3);
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  animation: fadeUp 0.8s ease both;
+}
+.about-hero-badge::before { content: '● '; }
+
+.about-hero-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 8px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.about-hero-sub {
+  font-family: var(--mono);
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 36px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.about-hero-desc {
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 2;
+  max-width: 640px;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+/* ── COMPANY INFO GRID ── */
+.info-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2px;
+}
+
+.info-row {
+  display: contents;
+}
+
+.info-label {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 16px 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.info-value {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+.info-value strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ── BUSINESS AREA CARDS ── */
+.biz-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.biz-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 32px 24px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.biz-card:hover {
+  background: var(--bg-3);
+  border-color: var(--border);
+}
+
+.biz-card-icon {
+  font-family: var(--mono);
+  font-size: 22px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.biz-card-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent-dim);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+
+.biz-card-title {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.biz-card-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.biz-card-tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.biz-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  border: 1px solid var(--border-dim);
+  padding: 2px 8px;
+}
+
+/* ── VISION BLOCK ── */
+.vision-block {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 40px;
+  position: relative;
+}
+
+.vision-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.vision-text {
+  font-family: var(--display);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.vision-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* ── PARTNERS INLINE ── */
+.partners-block {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 32px;
+  text-align: center;
+}
+
+.partners-block-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.partner-chip {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-dim);
+  border: 1px solid var(--border-dim);
+  padding: 6px 16px;
+  background: var(--bg-3);
+  transition: border-color 0.2s;
+}
+.partner-chip:hover {
+  border-color: var(--accent-dim);
+}
+
+/* ── TEAM SECTION ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.team-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team-card-role {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.team-card-name {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.team-card-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.team-card-link {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent-dim);
+  text-decoration: none;
+  margin-top: auto;
+  transition: color 0.2s;
+}
+.team-card-link:hover { color: var(--accent); }
+
+/* ── PROCESS FLOW ── */
+.process-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.process-step {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 24px 20px;
+  position: relative;
+  transition: background 0.2s, border-color 0.2s;
+}
+.process-step:hover {
+  background: var(--bg-3);
+  border-color: var(--border);
+}
+
+.process-step-num {
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 300;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.process-step-title {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.process-step-sub {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.process-step-asset {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent-dim);
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-dim);
+}
+
+.process-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 18px;
+  color: var(--accent-dim);
+  background: none;
+  border: none;
+}
+
+/* ── CASE STUDY ── */
+.case-block {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  padding: 40px;
+}
+
+.case-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--green);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.case-title {
+  font-family: var(--display);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.case-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.case-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.case-stat {
+  background: var(--bg-3);
+  border: 1px solid var(--border-dim);
+  padding: 20px;
+  text-align: center;
+}
+
+.case-stat-num {
+  font-family: var(--mono);
+  font-size: 24px;
+  color: var(--green);
+  font-weight: 400;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.case-stat-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+/* ── FANDOM FUNNEL ── */
+.funnel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 24px;
+}
+
+.funnel-step {
+  background: var(--bg-3);
+  border: 1px solid var(--border-dim);
+  padding: 16px;
+  text-align: center;
+}
+
+.funnel-step-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.funnel-step-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.funnel-step-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── IMAGE PLACEHOLDER ── */
+.img-placeholder {
+  background: var(--bg-3);
+  border: 1px dashed var(--border);
+  padding: 40px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 2;
+}
+.img-placeholder .hint {
+  display: block;
+  font-size: 12px;
+  color: var(--accent-dim);
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  #about-hero { padding: 100px 20px 80px; }
+  .biz-grid { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+  .info-label { padding: 10px 20px; }
+  .team-grid { grid-template-columns: 1fr; }
+  .process-flow { grid-template-columns: repeat(2, 1fr); }
+  .process-arrow { display: none; }
+  .case-stats { grid-template-columns: 1fr; }
+  .funnel-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="about.html" class="active">KR</a><span class="sep">&middot;</span>
+    <a href="en/about.html">EN</a><span class="sep">&middot;</span>
+    <a href="ja/about.html">JA</a><span class="sep">&middot;</span>
+    <a href="zh-tw/about.html">繁</a><span class="sep">&middot;</span>
+    <a href="zh-cn/about.html">简</a><span class="sep">&middot;</span>
+    <a href="ar/about.html">AR</a><span class="sep">&middot;</span>
+    <a href="fa/about.html">FA</a><span class="sep">&middot;</span>
+    <a href="ur/about.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="knowledge.html">Knowledge</a></li>
+  </ul>
+  <span class="nav-badge">Company</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section id="about-hero">
+  <span class="about-hero-badge">About MEJE WORKS</span>
+  <h1 class="about-hero-title">세계관을 짓는<br>사람들의 스튜디오</h1>
+  <p class="about-hero-sub">IP STRATEGY · K-CONTENTS · FANDOM DESIGN</p>
+  <p class="about-hero-desc">
+    (주)메제웍스는 세계관 전략 기반의 IP 컨설팅 스튜디오입니다.<br>
+    K-콘텐츠의 글로벌 확장, 팬덤 시스템 설계, 트랜스미디어 스토리텔링을 통해<br>
+    IP의 언어를 설계하고 세계관의 구조를 짓습니다.
+  </p>
+</section>
+
+<!-- ── COMPANY OVERVIEW ── -->
+<section class="section reveal" id="overview">
+  <div class="sec-head">
+    <p class="sec-label">Overview</p>
+    <h2 class="sec-title">회사 개요</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">cat </span><span class="flag">company.info</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-row">
+      <div class="info-label">회사명</div>
+      <div class="info-value"><strong>(주)메제웍스</strong>&nbsp;&nbsp;MEJE WORKS Corp.</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">설립</div>
+      <div class="info-value">2021년 11월 2일</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">대표</div>
+      <div class="info-value">김동은 (Kim Dong-eun)</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">사업 영역</div>
+      <div class="info-value">세계관 전략 컨설팅 · IP 기획 · K-콘텐츠 팬덤 설계 · AI 번역 방법론</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">주소</div>
+      <div class="info-value">서울특별시 강남구 역삼로 217. 합동빌딩 503호(역삼동)</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">연락처</div>
+      <div class="info-value"><a href="mailto:Contact@meje.kr" style="color:var(--accent); text-decoration:none;">Contact@meje.kr</a> · 0507-1420-1205</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HISTORY ── -->
+<section class="section reveal" id="history">
+  <div class="sec-head">
+    <p class="sec-label">History</p>
+    <h2 class="sec-title">회사 연혁</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">git log </span><span class="flag">--company --oneline</span>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-year">2025</span>
+      <div class="timeline-content">
+        <strong>아이돌 IP 팬덤 액티비티 '배니월드' 출시</strong>
+        43개국 서비스 · 100일 시즌 운영 성공 · DAU 전환 41%
+        <span class="sub">K-POP 팬덤 플랫폼 검증</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2024</span>
+      <div class="timeline-content">
+        <strong>그라비티 세계관 라이브러리 · 월드북 개발</strong>
+        라그나로크 IP 세계관 라이브러리 시스템 구축
+        <span class="sub">AI 기반 사용자 활동 실시간 분석 시스템 특허 출원</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2023</span>
+      <div class="timeline-content">
+        <strong>그라비티 라그나로크 IP 확장 세계관 제작</strong>
+        삼성경제연구소 CX포럼 초빙강연
+        <span class="sub">게임 IP 확장 본격화</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2022</span>
+      <div class="timeline-content">
+        <strong>LG전자 · LG생활건강 브랜드 세계관 구축</strong>
+        기업·학계 강연 30회+ · 저서 출간 · 겸임교수 역임
+        <span class="sub">컨설팅 사업 확립</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2021.11</span>
+      <div class="timeline-content">
+        <strong>(주)메제웍스 설립</strong>
+        서울 강남구 역삼동
+        <span class="sub">창업 · IP 전략 스튜디오 출발</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI TECHNOLOGY ── -->
+<section class="section reveal" id="tech">
+  <div class="sec-head">
+    <p class="sec-label">Technology</p>
+    <h2 class="sec-title">AI 기술</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">cat </span><span class="flag">tech/ai-stack.yaml</span>
+  </div>
+
+  <div class="ascii-diagram" style="text-align:center; margin-bottom:2px;">
+<span class="dim">┌───────────────────────────────────────────────────────────┐</span>
+<span class="dim">│</span>            <span class="hl">MEJE AI Technology Stack</span>                      <span class="dim">│</span>
+<span class="dim">├───────────────────────────────────────────────────────────┤</span>
+<span class="dim">│</span>                                                           <span class="dim">│</span>
+<span class="dim">│</span>  <span class="bl">AI Fandom Analytics</span>        <span class="dim">│</span>  <span class="gr">AI Hyper-Localization</span>     <span class="dim">│</span>
+<span class="dim">│</span>  실시간 팬덤 활동 분석       <span class="dim">│</span>  40개 언어 동시 번역       <span class="dim">│</span>
+<span class="dim">│</span>  키워드 클라우드 · 전파 추적 <span class="dim">│</span>  콘텐츠 로컬라이제이션     <span class="dim">│</span>
+<span class="dim">│</span>                              <span class="dim">│</span>                            <span class="dim">│</span>
+<span class="dim">├──────────────────────────────┼────────────────────────────┤</span>
+<span class="dim">│</span>  <span class="hl">AI Worldbuilding Engine</span>     <span class="dim">│</span>  <span class="gr">AI Survey Generator</span>       <span class="dim">│</span>
+<span class="dim">│</span>  7단계 세계관 생성 자동화    <span class="dim">│</span>  실시간 팬 반응 기반       <span class="dim">│</span>
+<span class="dim">│</span>  데이터→위키→시각화→세계관  <span class="dim">│</span>  AI 설문 자동 생성·배포    <span class="dim">│</span>
+<span class="dim">│</span>                              <span class="dim">│</span>                            <span class="dim">│</span>
+<span class="dim">└───────────────────────────────────────────────────────────┘</span>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px;">
+    <div style="background:var(--bg-2); border:1px solid var(--border-dim); padding:24px;">
+      <p style="font-family:var(--mono); font-size:12px; color:var(--accent); letter-spacing:0.15em; margin-bottom:12px;">PATENT</p>
+      <p style="font-size:14px; font-weight:700; color:var(--text); margin-bottom:8px;">AI 기반 사용자 활동 실시간 분석 시스템</p>
+      <p style="font-family:var(--mono); font-size:13px; color:var(--text-muted); line-height:1.8;">
+        특허출원 10-2024-0194262<br>
+        SYSTEM FOR ANALYSING REAL-TIME<br>
+        FANDOM ACTIVITY BASED ON AI
+      </p>
+    </div>
+    <div style="background:var(--bg-2); border:1px solid var(--border-dim); padding:24px;">
+      <p style="font-family:var(--mono); font-size:12px; color:var(--green); letter-spacing:0.15em; margin-bottom:12px;">CAPABILITY</p>
+      <p style="font-size:14px; font-weight:700; color:var(--text); margin-bottom:8px;">AI Hyper-Localization Pipeline</p>
+      <p style="font-family:var(--mono); font-size:13px; color:var(--text-muted); line-height:1.8;">
+        40개 이상 언어 동시 지원<br>
+        콘텐츠·게임·팬덤 플랫폼<br>
+        글로벌 로컬라이제이션
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM ── -->
+<section class="section reveal" id="team">
+  <div class="sec-head">
+    <p class="sec-label">Team</p>
+    <h2 class="sec-title">핵심 구성원</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">who </span><span class="flag">--core-team</span>
+  </div>
+
+  <div class="ascii-diagram" style="text-align:center; margin-bottom:2px; font-size:13px; line-height:1.6;">
+<span class="dim">"PC통신 시대부터 메타버스까지 30년간</span>
+<span class="dim"> 온라인에서 인간이 어떻게 관계 맺는가를 설계해온 전문가 집단"</span>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-card" style="grid-column: 1 / -1;">
+      <span class="team-card-role">CEO & Worldbuilding Strategist</span>
+      <p class="team-card-name">김동은 · Kim Dong-eun</p>
+      <p class="team-card-desc">
+        하이브 세계관 라이브러리 파트장 출신. BTS World 개발총괄 본부장.
+        NHN게임즈·KTH 등 20년+ 게임 개발. 건국대·성공회대 겸임교수.
+        한국 TRPG 1세대 커뮤니티 빌더. 브런치 537편, 저서 1권.
+      </p>
+      <a href="ceo.html" class="team-card-link">→ CEO Profile 상세보기</a>
+    </div>
+    <div class="team-card">
+      <span class="team-card-role">CTO · AI & Game Engine</span>
+      <p class="team-card-name">Chief Technology Officer</p>
+      <p class="team-card-desc">
+        전) 넷마블몬스터 R&D 부사장.
+        전) 스마일게이트메가포트 AI부서 이사.
+        게임·AI 분야 탑클래스 엔지니어링 리드.
+      </p>
+    </div>
+    <div class="team-card">
+      <span class="team-card-role">Art Director · Visual & UX</span>
+      <p class="team-card-name">Art Director</p>
+      <p class="team-card-desc">
+        BTS World UI/UX 파트장 출신.
+        캐릭터 디자인 · 비주얼 아트 총괄.
+        연예·팬덤·게임·스토리텔링 비주얼 전문.
+      </p>
+    </div>
+    <div class="team-card">
+      <span class="team-card-role">CSO · Business & Content</span>
+      <p class="team-card-name">Chief Strategy Officer</p>
+      <p class="team-card-desc">
+        방송·콘텐츠·엔터 산업 전문.
+        사업 전략 및 파트너십 총괄.
+      </p>
+    </div>
+    <div class="team-card">
+      <span class="team-card-role">CFO · Finance & Operations</span>
+      <p class="team-card-name">Chief Financial Officer</p>
+      <p class="team-card-desc">
+        한양대 경영대학원 MBA.
+        전) 엔터 산업 재무팀장.
+        재무·경영 관리 총괄.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── MISSION ── -->
+<section class="section reveal" id="mission">
+  <div class="sec-head">
+    <p class="sec-label">Mission</p>
+    <h2 class="sec-title">사명</h2>
+  </div>
+
+  <div class="vision-block" style="border-left-color: var(--green);">
+    <p class="vision-label" style="color:var(--green);">Our Mission</p>
+    <p class="vision-text">"그 누구도 외로워서는 안 된다"</p>
+    <p class="vision-sub">
+      메제웍스는 세계관 기반의 커뮤니티를 조성하여 현대인들을 연결하고 위로합니다.
+      PC통신 시대부터 메타버스까지 — 30년간 '온라인에서 인간이 어떻게 관계 맺고 위로받는가'를
+      설계해온 경험을 바탕으로, 엔터테인먼트가 단순한 유흥을 넘어 '소셜 정서 안전망'이 되는 세상을 만들어갑니다.
+      아이돌 캐릭터를 돌보는 작은 행동이 무너진 일상의 리듬을 되살리고,
+      팬덤 안에서 시작된 소통이 사회적 연결로 확장되는 — 은유의 세계관으로 고립을 해제합니다.
+    </p>
+  </div>
+</section>
+
+<!-- ── VISION ── -->
+<section class="section reveal" id="vision">
+  <div class="sec-head">
+    <p class="sec-label">Vision</p>
+    <h2 class="sec-title">비전</h2>
+  </div>
+
+  <div class="vision-block">
+    <p class="vision-label">Mission Statement</p>
+    <p class="vision-text">"콘텐츠의 세계관은 설계되어야 한다."</p>
+    <p class="vision-sub">
+      모든 위대한 IP는 탄탄한 세계관 위에 세워집니다. 메제웍스는 세계관을 감(感)이 아닌 구조(構造)로 접근합니다.
+      20년 이상의 게임 개발 경험과 K-POP 세계관 아키텍처 노하우를 결합하여,
+      IP가 팬덤과 만나는 지점을 전략적으로 설계합니다.
+    </p>
+  </div>
+
+  <div class="ascii-diagram" style="margin-top: 2px; text-align: center;">
+<span class="dim">┌─────────────────────────────────────────────────┐</span>
+<span class="dim">│</span>       <span class="hl">MEJE Worldbuilding Architecture</span>          <span class="dim">│</span>
+<span class="dim">├─────────────────────────────────────────────────┤</span>
+<span class="dim">│</span>                                                 <span class="dim">│</span>
+<span class="dim">│</span>  <span class="hl">L4</span> FANDOM   <span class="dim">│</span> <span class="gr">Fan Activity · Community</span>     <span class="dim">│</span>
+<span class="dim">│</span>              <span class="dim">├─────────────────────────────┤</span>
+<span class="dim">│</span>  <span class="hl">L3</span> CONTENT  <span class="dim">│</span> <span class="bl">Story · Character · Visual</span>   <span class="dim">│</span>
+<span class="dim">│</span>              <span class="dim">├─────────────────────────────┤</span>
+<span class="dim">│</span>  <span class="hl">L2</span> SYSTEM   <span class="dim">│</span> Rules · Timeline · Geography <span class="dim">│</span>
+<span class="dim">│</span>              <span class="dim">├─────────────────────────────┤</span>
+<span class="dim">│</span>  <span class="hl">L1</span> CORE     <span class="dim">│</span> <span class="hl">IP Identity · Core Values</span>    <span class="dim">│</span>
+<span class="dim">│</span>                                                 <span class="dim">│</span>
+<span class="dim">└─────────────────────────────────────────────────┘</span>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="section reveal" id="process">
+  <div class="sec-head">
+    <p class="sec-label">Process</p>
+    <h2 class="sec-title">세계관 콘텐츠 프로세스</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">pipeline </span><span class="flag">--worldbuilding --stages=7</span>
+  </div>
+
+  <div class="process-flow">
+    <div class="process-step">
+      <span class="process-step-num">01</span>
+      <p class="process-step-title">IP 용어 WIKI</p>
+      <p class="process-step-sub">세계관 용어 정의 · 데이터 구조화</p>
+      <p class="process-step-asset">→ 지식 자산</p>
+    </div>
+    <div class="process-step">
+      <span class="process-step-num">02</span>
+      <p class="process-step-title">세계관 설정집</p>
+      <p class="process-step-sub">Universe Settings · Campaign Book</p>
+      <p class="process-step-asset">→ 설정 자산</p>
+    </div>
+    <div class="process-step">
+      <span class="process-step-num">03</span>
+      <p class="process-step-title">캐릭터 디자인</p>
+      <p class="process-step-sub">비주얼 시스템 · MD 설계</p>
+      <p class="process-step-asset">→ MD/상품 자산</p>
+    </div>
+    <div class="process-step">
+      <span class="process-step-num">04</span>
+      <p class="process-step-title">팬덤 액티비티</p>
+      <p class="process-step-sub">인터랙티브 콘텐츠 · 데일리 루틴</p>
+      <p class="process-step-asset">→ 글로벌 콘텐츠</p>
+    </div>
+  </div>
+
+  <div style="margin-top:2px; display:grid; grid-template-columns:repeat(3,1fr); gap:2px;">
+    <div class="process-step">
+      <span class="process-step-num">05</span>
+      <p class="process-step-title">데이터 분석</p>
+      <p class="process-step-sub">Preprocessed CSV · Visual View</p>
+      <p class="process-step-asset">→ 인사이트</p>
+    </div>
+    <div class="process-step">
+      <span class="process-step-num">06</span>
+      <p class="process-step-title">수익 모델 설계</p>
+      <p class="process-step-sub">디지털 굿즈 · 광고 · 게임 재화</p>
+      <p class="process-step-asset">→ BM 전환</p>
+    </div>
+    <div class="process-step">
+      <span class="process-step-num">07</span>
+      <p class="process-step-title">IP 확장</p>
+      <p class="process-step-sub">공연 · 패션 · 캐릭터 크로스미디어</p>
+      <p class="process-step-asset">→ 글로벌 IP</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── CASE STUDY: IDOL CHARACTER FANDOM ACTIVITY ── -->
+<section class="section reveal" id="case">
+  <div class="sec-head">
+    <p class="sec-label">Case Study</p>
+    <h2 class="sec-title">Idol Character Fandom Activity</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">cat </span><span class="flag">cases/idol-fandom-activity.log</span>
+  </div>
+
+  <div class="case-block">
+    <p class="case-label">Live Project — 2025</p>
+    <h3 class="case-title">K-POP Idol 팬덤 인터랙티브 플랫폼</h3>
+    <p class="case-desc">
+      K-POP Idol 그룹을 위한 디지털 인터랙티브 팬덤 플랫폼.<br>
+      세계관 기반 데일리 콘텐츠 설계(깨우기·밥 먹기·잠 재우기 루틴)로<br>
+      팬 참여를 극대화하고, 비과금 마케팅으로 자연 성장을 유도.
+    </p>
+
+    <div class="case-stats">
+      <div class="case-stat">
+        <span class="case-stat-num">177.6%</span>
+        <span class="case-stat-label">IP 커뮤니티 게시물 증가</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-num">41%</span>
+        <span class="case-stat-label">1회→매일 방문 전환율</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-num">26.39%</span>
+        <span class="case-stat-label">가입→구매 전환율</span>
+      </div>
+    </div>
+
+    <!-- 팬덤 퍼널 -->
+    <div class="funnel-grid">
+      <div class="funnel-step">
+        <p class="funnel-step-label">STEP 1</p>
+        <p class="funnel-step-name">뮤직 시청취자</p>
+        <p class="funnel-step-desc">관심 증가 · 팬덤 유입</p>
+      </div>
+      <div class="funnel-step">
+        <p class="funnel-step-label">STEP 2</p>
+        <p class="funnel-step-name">싱글 스판</p>
+        <p class="funnel-step-desc">경험 · 결속 강화</p>
+      </div>
+      <div class="funnel-step">
+        <p class="funnel-step-label">STEP 3</p>
+        <p class="funnel-step-name">멀티 스판</p>
+        <p class="funnel-step-desc">팬층 확장 · 유대감</p>
+      </div>
+      <div class="funnel-step">
+        <p class="funnel-step-label">STEP 4</p>
+        <p class="funnel-step-name">소셜 인플루언서</p>
+        <p class="funnel-step-desc">바이럴 · 리텐션</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 16px; font-family: var(--mono); font-size: 13px; color: var(--text-muted);">
+      예시: <a href="https://vanneeworld.com/" target="_blank" rel="noopener" style="color: var(--accent-dim); text-decoration: none;">vanneeworld.com →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUSINESS AREAS ── -->
+<section class="section reveal" id="business">
+  <div class="sec-head">
+    <p class="sec-label">Business</p>
+    <h2 class="sec-title">사업 영역</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">ls </span><span class="flag">consulting/ --sort=category</span>
+  </div>
+
+  <div class="biz-grid">
+    <div class="biz-card">
+      <span class="biz-card-icon" style="color:var(--accent);">&gt;_</span>
+      <p class="biz-card-num">01</p>
+      <h3 class="biz-card-title">세계관 전략 컨설팅</h3>
+      <p class="biz-card-desc">IP 세계관 설계, 4계층 세계관 아키텍처, 트랜스미디어 확장 전략. 게임·웹소설·K-POP 등 장르별 맞춤 세계관 구축.</p>
+      <div class="biz-card-tags">
+        <span class="biz-tag">Worldbuilding</span>
+        <span class="biz-tag">Transmedia</span>
+        <span class="biz-tag">4-Layer</span>
+      </div>
+    </div>
+
+    <div class="biz-card">
+      <span class="biz-card-icon" style="color:var(--green);">//</span>
+      <p class="biz-card-num">02</p>
+      <h3 class="biz-card-title">K-콘텐츠 팬덤 설계</h3>
+      <p class="biz-card-desc">K-POP 아이돌 세계관, 팬 액티비티 설계, 팬덤 2분 점유 전략. 팬이 세계관에 참여하는 구조를 만듭니다.</p>
+      <div class="biz-card-tags">
+        <span class="biz-tag">K-POP</span>
+        <span class="biz-tag">Fandom</span>
+        <span class="biz-tag">Fan Activity</span>
+      </div>
+    </div>
+
+    <div class="biz-card">
+      <span class="biz-card-icon" style="color:#7a9fbf;">AI</span>
+      <p class="biz-card-num">03</p>
+      <h3 class="biz-card-title">AI 번역 방법론</h3>
+      <p class="biz-card-desc">웹소설·웹툰 39개국 글로벌 확장, AI 기반 콘텐츠 로컬라이제이션, 번역 품질 관리 시스템 구축.</p>
+      <div class="biz-card-tags">
+        <span class="biz-tag">Localization</span>
+        <span class="biz-tag">39 Languages</span>
+        <span class="biz-tag">QA</span>
+      </div>
+    </div>
+
+    <div class="biz-card">
+      <span class="biz-card-icon" style="color:var(--accent);">{ }</span>
+      <p class="biz-card-num">04</p>
+      <h3 class="biz-card-title">IP 기획 & 프로듀싱</h3>
+      <p class="biz-card-desc">오리지널 IP 개발, 세계관 기반 콘텐츠 기획, 게임·영상·출판 등 크로스미디어 프로듀싱.</p>
+      <div class="biz-card-tags">
+        <span class="biz-tag">IP Dev</span>
+        <span class="biz-tag">Producing</span>
+        <span class="biz-tag">Cross-media</span>
+      </div>
+    </div>
+
+    <div class="biz-card">
+      <span class="biz-card-icon" style="color:var(--green);">◆</span>
+      <p class="biz-card-num">05</p>
+      <h3 class="biz-card-title">기업 강연 & 교육</h3>
+      <p class="biz-card-desc">삼성, LG, KAIST, 하이브 등 30회 이상 강연. 세계관 전략, 팬덤 설계, 게임 기획론 전문 교육.</p>
+      <div class="biz-card-tags">
+        <span class="biz-tag">Lecture</span>
+        <span class="biz-tag">Workshop</span>
+        <span class="biz-tag">Education</span>
+      </div>
+    </div>
+
+    <div class="biz-card">
+      <span class="biz-card-icon" style="color:#7a9fbf;">ART</span>
+      <p class="biz-card-num">06</p>
+      <h3 class="biz-card-title">디지털 아트</h3>
+      <p class="biz-card-desc">디지털 아트 창작, IP 비주얼 전략, 디지털 자산과 세계관의 접점을 설계합니다.</p>
+      <div class="biz-card-tags">
+        <span class="biz-tag">Digital Art</span>
+        <span class="biz-tag">Visual IP</span>
+        <span class="biz-tag">Creative</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KEY DIFFERENTIATORS ── -->
+<section class="section reveal" id="diff">
+  <div class="sec-head">
+    <p class="sec-label">Differentiators</p>
+    <h2 class="sec-title">메제웍스만의 강점</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">diff </span><span class="flag">--advantage meje vs others</span>
+  </div>
+
+  <div class="info-grid" style="grid-template-columns: 40px 1fr;">
+    <div class="info-label" style="justify-content: center; color: var(--accent); font-size: 14px;">01</div>
+    <div class="info-value">
+      <div>
+        <strong>실전 경험 기반의 세계관 전략</strong><br>
+        <span style="color:var(--text-muted); font-size:12px;">하이브 세계관 라이브러리 파트장, BTS World 개발총괄 등 K-POP IP 최전선에서의 실무 경험</span>
+      </div>
+    </div>
+    <div class="info-label" style="justify-content: center; color: var(--accent); font-size: 14px;">02</div>
+    <div class="info-value">
+      <div>
+        <strong>20년+ 게임 개발자 시선의 IP 설계</strong><br>
+        <span style="color:var(--text-muted); font-size:12px;">1999년부터 이어온 게임 기획·개발 경험. 인터랙티브 미디어의 관점으로 세계관을 구조화</span>
+      </div>
+    </div>
+    <div class="info-label" style="justify-content: center; color: var(--accent); font-size: 14px;">03</div>
+    <div class="info-value">
+      <div>
+        <strong>학계와 산업을 잇는 브리지</strong><br>
+        <span style="color:var(--text-muted); font-size:12px;">건국대·성공회대 겸임교수 역임, 537편의 브런치 아티클, 저서 출간</span>
+      </div>
+    </div>
+    <div class="info-label" style="justify-content: center; color: var(--accent); font-size: 14px;">04</div>
+    <div class="info-value">
+      <div>
+        <strong>AI 시대의 콘텐츠 확장 방법론</strong><br>
+        <span style="color:var(--text-muted); font-size:12px;">AI 번역·로컬라이제이션으로 39개국 글로벌 확장, 기술과 서사의 교차점을 설계</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PARTNERS ── -->
+<section class="section reveal" id="partners">
+  <div class="sec-head">
+    <p class="sec-label">Partners</p>
+    <h2 class="sec-title">주요 파트너 & 고객사</h2>
+  </div>
+
+  <div class="partners-block">
+    <p class="partners-block-label">Trusted By</p>
+    <div class="partners-logos">
+      <span class="partner-chip">HYBE</span>
+      <span class="partner-chip">삼성</span>
+      <span class="partner-chip">LG</span>
+      <span class="partner-chip">KAIST</span>
+      <span class="partner-chip">넷마블</span>
+      <span class="partner-chip">카카오</span>
+      <span class="partner-chip">네이버</span>
+      <span class="partner-chip">크래프톤</span>
+      <span class="partner-chip">CJ ENM</span>
+      <span class="partner-chip">한국콘텐츠진흥원</span>
+      <span class="partner-chip">서울산업진흥원</span>
+      <span class="partner-chip">건국대</span>
+      <span class="partner-chip">성공회대</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM ── -->
+<section class="section reveal" id="team">
+  <div class="sec-head">
+    <p class="sec-label">Team</p>
+    <h2 class="sec-title">핵심 구성원</h2>
+  </div>
+
+  <div class="terminal-prompt">
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">who </span><span class="flag">--core-team</span>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-card" style="grid-column: 1 / -1;">
+      <span class="team-card-role">CEO & Worldbuilding Strategist</span>
+      <p class="team-card-name">김동은 · Kim Dong-eun</p>
+      <p class="team-card-desc">
+        하이브 세계관 라이브러리 파트장 출신. 20년+ 게임 개발 경력.
+        세계관 전략 컨설팅, IP 기획, K-콘텐츠 팬덤 설계 전문.
+        건국대·성공회대 겸임교수 역임. 브런치 537편, 저서 1권.
+      </p>
+      <a href="ceo.html" class="team-card-link">→ CEO Profile 상세보기</a>
+    </div>
+    <!-- 추가 구성원은 필요 시 확장 -->
+  </div>
+
+</section>
+
+<!-- ── CONTACT CTA ── -->
+<section class="section reveal" id="contact">
+  <div class="sec-head">
+    <p class="sec-label">Contact</p>
+    <h2 class="sec-title">문의</h2>
+  </div>
+
+  <div class="vision-block">
+    <p class="vision-label">Get in Touch</p>
+    <p class="vision-text">세계관 전략이 필요할 때,<br>메제웍스에 문의하세요.</p>
+    <p class="vision-sub">
+      IP 컨설팅, 세계관 전략, 강연 요청, 협업 제안 등<br>
+      어떤 문의든 환영합니다.
+    </p>
+    <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <a href="mailto:Contact@meje.kr" style="font-family: var(--mono); font-size: 13px; color: var(--accent); border: 1px solid var(--accent-dim); padding: 8px 20px; text-decoration: none; transition: all 0.2s;">Contact@meje.kr →</a>
+      <a href="tel:0507-1420-1205" style="font-family: var(--mono); font-size: 13px; color: var(--text-muted); border: 1px solid var(--border); padding: 8px 20px; text-decoration: none; transition: all 0.2s;">0507-1420-1205</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:13px; color:var(--text-muted); opacity:0.6;">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; Home</a>
+    <a href="ceo.html">CEO</a>
+    <a href="works.html">Works</a>
+    <a href="ip.html">IP</a>
+    <a href="process.html">Process</a>
+    <a href="knowledge.html">Knowledge</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

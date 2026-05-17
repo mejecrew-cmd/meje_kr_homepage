@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEJE Works Procedural Creation Pipeline. Five process series: Librarying, Seoyeongak, Character, Lorebook, Storytelling 100.">
+<title>プロセス — Procedural Creation Pipeline | MEJE WORKS</title>
+<meta property="og:title" content="Process — Procedural Creation Pipeline | MEJE WORKS">
+<meta property="og:description" content="Five process series of MEJE Works. Input assets for 100-day fandom activity operation.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/ja/process.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/process.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/process.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/process.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/process.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/process.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/process.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/process.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/process.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/process.html">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="apple-touch-icon" href="../img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+#process-hero { max-width: 100%; padding: 120px 40px 64px; border-bottom: 1px solid var(--border-dim); text-align: center; }
+.process-hero-badge { font-family: var(--mono); font-size: 13px; color: var(--accent); border: 1px solid var(--accent-dim); padding: 3px 10px; display: inline-block; margin-bottom: 24px; letter-spacing: 0.1em; }
+.process-hero-badge::before { content: '● '; }
+.process-hero-title { font-family: var(--display); font-size: clamp(36px, 6vw, 64px); font-weight: 700; color: var(--text); margin-bottom: 16px; }
+.process-hero-sub { font-family: var(--display); font-size: clamp(15px, 2vw, 20px); color: var(--text-dim); font-weight: 400; margin-bottom: 24px; }
+.process-hero-desc { font-family: var(--sans); font-size: 14px; color: var(--text-muted); max-width: 640px; margin: 0 auto; line-height: 2; }
+#pipeline { padding: 64px 40px 48px; border-bottom: 1px solid var(--border-dim); }
+.pipeline-label { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.14em; margin-bottom: 6px; }
+.pipeline-title { font-family: var(--display); font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.pipeline-desc { font-size: 13px; color: var(--text-muted); max-width: 640px; line-height: 1.9; margin-bottom: 40px; }
+.pipeline-grid { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: stretch; max-width: 1200px; margin: 0 auto; }
+.pipe-col { display: flex; flex-direction: column; gap: 2px; }
+.pipe-col-label { font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; padding: 4px 0; border-bottom: 1px dashed var(--border-dim); }
+.pipe-node { background: var(--bg-2); border: 1px solid var(--border-dim); padding: 16px 18px; text-decoration: none; display: block; transition: border-color 0.2s, background 0.2s; }
+.pipe-node:hover { border-color: var(--accent-dim); background: var(--bg-3); }
+.pipe-node-title { font-family: var(--display); font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; letter-spacing: 0.02em; }
+.pipe-node-en { font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 6px; }
+.pipe-node-desc { font-family: var(--sans); font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+.pipe-arrow { font-family: var(--mono); font-size: 18px; color: var(--accent-dim); align-self: center; padding: 0 14px; user-select: none; }
+@media (max-width: 768px) { .pipeline-grid { grid-template-columns: 1fr; gap: 2px; } .pipe-arrow { text-align: center; padding: 4px 0; transform: rotate(90deg); } }
+.process-section { padding: 64px 40px 48px; border-bottom: 1px solid var(--border-dim); }
+.process-section:last-of-type { border-bottom: none; }
+.process-cat-label { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.14em; margin-bottom: 6px; }
+.process-cat-title { font-family: var(--display); font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.process-cat-desc { font-family: var(--sans); font-size: 13px; color: var(--text-muted); margin-bottom: 32px; max-width: 640px; line-height: 1.9; }
+.process-list { display: flex; flex-direction: column; gap: 2px; }
+.process-row { display: grid; grid-template-columns: 80px 1fr 200px 140px; background: var(--bg-2); border: 1px solid var(--border-dim); padding: 24px 28px; text-decoration: none; transition: background 0.2s, border-color 0.2s; align-items: center; gap: 24px; }
+.process-row:hover { background: var(--bg-3); border-color: var(--accent-dim); }
+.process-row-num { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 0.1em; }
+.process-row-name { display: flex; flex-direction: column; gap: 4px; }
+.process-row-name-ko { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--text); }
+.process-row-name-en { font-family: var(--mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.1em; }
+.process-row-desc { font-family: var(--sans); font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+.process-row-meta { font-family: var(--mono); font-size: 11px; color: var(--text-dim); line-height: 1.7; }
+.process-row-arrow { font-family: var(--mono); font-size: 12px; color: var(--accent-dim); text-align: right; letter-spacing: 0.06em; }
+.process-row:hover .process-row-arrow { color: var(--accent); }
+@media (max-width: 900px) { .process-row { grid-template-columns: 1fr; gap: 12px; } .process-row-arrow { text-align: left; } }
+#principles { padding: 64px 40px 80px; }
+.principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 32px; }
+.principle-card { background: var(--bg-2); border: 1px solid var(--border-dim); padding: 28px 24px; }
+.principle-icon { font-family: var(--mono); font-size: 13px; color: var(--accent); margin-bottom: 12px; letter-spacing: 0.1em; }
+.principle-title { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.principle-desc { font-family: var(--sans); font-size: 13px; color: var(--text-muted); line-height: 1.85; }
+@media (max-width: 768px) { .principles-grid { grid-template-columns: 1fr; } #process-hero { padding: 100px 20px 48px; } #pipeline, .process-section, #principles { padding: 48px 20px 40px; } }
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="../process.html">KR</a><span class="sep">&middot;</span>
+    <a href="../en/process.html">EN</a><span class="sep">&middot;</span>
+    <a href="process.html" class="active">JA</a><span class="sep">&middot;</span>
+    <a href="../zh-tw/process.html">繁</a><span class="sep">&middot;</span>
+    <a href="../zh-cn/process.html">简</a><span class="sep">&middot;</span>
+    <a href="../ar/process.html">AR</a><span class="sep">&middot;</span>
+    <a href="../fa/process.html">FA</a><span class="sep">&middot;</span>
+    <a href="../ur/process.html">UR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="about.html">会社情報</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html">実績</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="process.html" class="active">プロセス</a></li>
+    <li><a href="knowledge.html">ナレッジ</a></li>
+  </ul>
+  <span class="nav-badge">プロセス</span>
+</nav>
+
+<main>
+
+<section id="process-hero">
+  <span class="process-hero-badge">MEJE Works · B2B 世界観IP制作</span>
+  <h1 class="process-hero-title">プロセス</h1>
+  <p class="process-hero-sub">世界観IP制作パイプライン · 5プロセス連載</p>
+  <p class="process-hero-desc">
+    MEJE WorksのB2B世界観IP制作を動かす5つのプロセス。<br>
+    世界観 · キャラクター · 100シナリオはそれ自体が目的ではなく、 &mdash;<br>
+    それらは <strong style="color:var(--accent);">input assets for 100日ファンダムアクティビティ運営</strong>.
+  </p>
+</section>
+
+<section style="padding: 32px 40px; border-bottom: 1px solid var(--border-dim); background: var(--bg-2);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <p style="font-family: var(--mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.16em; margin-bottom: 16px;">// MEJE WORKS · END-TO-END PIPELINE</p>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-family: var(--mono); font-size: 12px;">
+      <span style="padding: 8px 14px; background: var(--bg-3); border: 1px solid var(--border-dim); color: var(--text-dim); letter-spacing: 0.08em;">CRAWLING</span>
+      <span style="color: var(--text-dim); padding: 0 2px;">→</span>
+      <span style="padding: 8px 14px; background: var(--bg-3); border: 1px solid var(--border-dim); color: var(--text-dim); letter-spacing: 0.08em;">MONITORING</span>
+      <span style="color: var(--text-dim); padding: 0 2px;">→</span>
+      <span style="padding: 8px 16px; background: rgba(201,168,76,0.08); border: 1px solid var(--accent); color: var(--accent); letter-spacing: 0.08em; font-weight: 500;">★ WORLDVIEW IP PRODUCTION (5 PROCESS)</span>
+      <span style="color: var(--text-dim); padding: 0 2px;">→</span>
+      <a href="ip.html#services" style="padding: 8px 14px; background: var(--bg-3); border: 1px solid var(--border-dim); color: var(--text-dim); letter-spacing: 0.08em; text-decoration: none; transition: border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='var(--accent-dim)'; this.style.color='var(--accent)';" onmouseout="this.style.borderColor='var(--border-dim)'; this.style.color='var(--text-dim)';">100-DAY FANDOM ACTIVITY →</a>
+    </div>
+    <p style="margin-top: 16px; font-family: var(--sans); font-size: 12px; color: var(--text-muted); line-height: 1.8;">
+      This page covers the middle stage &mdash; <strong style="color: var(--accent);">世界観IP制作</strong> &mdash; in five processes.
+      These output assets feed the next stage, <a href="ip.html#services" style="color: var(--accent); text-decoration: none;">100日ファンダムアクティビティ運営</a>.
+      Self-IP outputs (FEWK series, etc.) can be found in <a href="works.html" style="color: var(--accent); text-decoration: none;">実績</a>.
+    </p>
+  </div>
+</section>
+
+<section id="pipeline" class="reveal">
+  <p class="pipeline-label">// pipeline_overview</p>
+  <h2 class="pipeline-title">パイプライン一望</h2>
+  <p class="pipeline-desc">
+    From input preparation to organization, then to publication and short-story series.
+    The five processes form sister works, sharing a single skeleton on which procedural IP creation flows.
+  </p>
+
+  <div class="pipeline-grid">
+    <div class="pipe-col">
+      <div class="pipe-col-label">[ INPUT ]</div>
+      <a href="process/seoyeongak.html" class="pipe-node">
+        <div class="pipe-node-title">Seoyeongak</div>
+        <div class="pipe-node-en">SEOYEONGAK · 6 STEPS</div>
+        <p class="pipe-node-desc">Deep-read foreign source works into translation &amp; adaptation assets</p>
+      </a>
+      <a href="process/character.html" class="pipe-node">
+        <div class="pipe-node-title">Character Build</div>
+        <div class="pipe-node-en">CHARACTER · 12 STEPS</div>
+        <p class="pipe-node-desc">From a one-line seed to a fully realized character</p>
+      </a>
+    </div>
+
+    <div class="pipe-arrow">→</div>
+
+    <div class="pipe-col">
+      <div class="pipe-col-label">[ SORTING ]</div>
+      <a href="process/librarying.html" class="pipe-node" style="min-height:100%;">
+        <div class="pipe-node-title">Librarying</div>
+        <div class="pipe-node-en">LIBRARYING · 4 STAGES</div>
+        <p class="pipe-node-desc">Scattered materials into an Obsidian Vault of 1,500 entries. The single source of truth for everything downstream.</p>
+      </a>
+    </div>
+
+    <div class="pipe-arrow">→</div>
+
+    <div class="pipe-col">
+      <div class="pipe-col-label">[ OUTPUT ]</div>
+      <a href="process/lorebook.html" class="pipe-node">
+        <div class="pipe-node-title">LOREBOOK</div>
+        <div class="pipe-node-en">LOREBOOK · 6 PHASES</div>
+        <p class="pipe-node-desc">Vault into a B5 hardcover (~450 pp) plus a web edition</p>
+      </a>
+      <a href="process/storytelling100.html" class="pipe-node">
+        <div class="pipe-node-title">Storytelling 100</div>
+        <div class="pipe-node-en">STORYTELLING100 · 7 STAGES</div>
+        <p class="pipe-node-desc">Vault and character sheets into 100 everyday-cross-section stories</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="process-section reveal" id="series">
+  <p class="process-cat-label">// process_series</p>
+  <h2 class="process-cat-title">5プロセス連載</h2>
+  <p class="process-cat-desc">
+    Each process is unfolded into a 14-part series. Self-contained per episode,
+    with inputs, outputs, pass criteria, and human/AI division of labor explicitly stated each episode so they can be applied to the reader's own IP.
+  </p>
+
+  <div class="process-list">
+
+    <a href="process/seoyeongak.html" class="process-row">
+      <div class="process-row-num">01 / INPUT</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">Seoyeongak Process Series</span>
+        <span class="process-row-name-en">SEOYEONGAK · 書淵閣</span>
+      </div>
+      <div class="process-row-desc">
+        A 6-step process to convert a foreign source work into about 35 translation and adaptation assets.
+        Pride and Prejudice walked end-to-end across 14 episodes.
+      </div>
+      <div class="process-row-meta">
+        14 chapters / ~140K chars<br>
+        <span class="process-row-arrow">詳細 →</span>
+      </div>
+    </a>
+
+    <a href="process/character.html" class="process-row">
+      <div class="process-row-num">02 / INPUT</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">Character Process Series</span>
+        <span class="process-row-name-en">CHARACTER BUILD</span>
+      </div>
+      <div class="process-row-desc">
+        From a one-line seed to a fully realized character in 12 steps.
+        Output across five media (library, TRPG, screenplay, animation, web novel).
+      </div>
+      <div class="process-row-meta">
+        14 chapters / ~120K chars<br>
+        <span class="process-row-arrow">詳細 →</span>
+      </div>
+    </a>
+
+    <a href="process/librarying.html" class="process-row">
+      <div class="process-row-num">03 / SORTING</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">Librarying Series</span>
+        <span class="process-row-name-en">LIBRARYING</span>
+      </div>
+      <div class="process-row-desc">
+        A 4-stage pipeline that draws keywords from scattered IP materials &mdash;
+        rulebooks, short stories, design docs, external wikis &mdash; into an Obsidian Vault of 1,500 entries.
+      </div>
+      <div class="process-row-meta">
+        14 chapters / ~170K chars<br>
+        <span class="process-row-arrow">詳細 →</span>
+      </div>
+    </a>
+
+    <a href="process/lorebook.html" class="process-row">
+      <div class="process-row-num">04 / OUTPUT</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">LOREBOOK Process Series</span>
+        <span class="process-row-name-en">LOREBOOK</span>
+      </div>
+      <div class="process-row-desc">
+        A 6-phase process turning a Vault or IP materials into a B5 hardcover (~450 pp)
+        and a static web edition. Five variants on top of the 12-part standard.
+      </div>
+      <div class="process-row-meta">
+        14 chapters + appendix<br>
+        <span class="process-row-arrow">詳細 →</span>
+      </div>
+    </a>
+
+    <a href="process/storytelling100.html" class="process-row">
+      <div class="process-row-num">05 / OUTPUT</div>
+      <div class="process-row-name">
+        <span class="process-row-name-ko">Storytelling 100 Process Series</span>
+        <span class="process-row-name-en">STORYTELLING 100</span>
+      </div>
+      <div class="process-row-desc">
+        A 7-stage process that uses a Vault and character sheets to write 100 everyday-cross-section short stories.
+        A world is explained by rulebooks but comes alive through short fiction.
+      </div>
+      <div class="process-row-meta">
+        14 chapters / ~170K chars<br>
+        <span class="process-row-arrow">詳細 →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section id="principles" class="reveal">
+  <p class="pipeline-label">// shared_principles</p>
+  <h2 class="pipeline-title">5プロセスが共有する原則</h2>
+  <p class="pipeline-desc">
+    The five processes produce different outputs but rest on the same skeleton:
+    the producer-AI collaboration 4 axes, single .md source, and pass-line gates at every step.
+  </p>
+
+  <div class="principles-grid">
+    <div class="principle-card">
+      <div class="principle-icon">&gt;_ COLLAB</div>
+      <div class="principle-title">プロデューサー + AI協働者</div>
+      <p class="principle-desc">
+        At every step, the producer's role &mdash; decisions, compression, pass-line judgment &mdash;
+        is kept distinct from the AI's role &mdash; first drafts, format conversion, repetitive work.
+        The collaboration 4 axes (spec, intent, expected effect, limit) appear in the same format at every step.
+      </p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon"># SOURCE</div>
+      <div class="principle-title">単一 .md ソース</div>
+      <p class="principle-desc">
+        A single Obsidian Vault folder is the single source of truth for every output.
+        The same materials are converted to a print PDF, a static site, and multilingual editions.
+        Materials do not split into two streams when moved across media.
+      </p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon">// GATE</div>
+      <div class="principle-title">合格線ゲート</div>
+      <p class="principle-desc">
+        Each step entry is gated by both automated checks and human review.
+        To prevent defects in one step from cascading into the next,
+        gates are mandatory &mdash; no temporary bypasses.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ +82-507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; ホーム</a>
+    <a href="about.html">会社情報</a>
+    <a href="works.html">実績</a>
+    <a href="ip.html">IP</a>
+    <a href="process.html">プロセス</a>
+    <a href="knowledge.html">ナレッジ</a>
+    <a href="privacy.html">プライバシー</a>
+    <a href="terms.html">利用規約</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# macOS / Google Drive
+.DS_Store
+.AppleDouble
+.LSOverride
+desktop.ini
+.tmp.drive*
+*.tmp.driveupload
+*.tmp.drivedownload
+Icon?
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Claude
+.claude/
+
+# OS
+Thumbs.db
+ehthumbs.db

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEJE WORKS — 打造世界观的创意工作室。IP Strategy · K-Contents · Fandom Design。">
+<title>MEJE WORKS | TMI — 了解更多</title>
+<!-- OG / Social -->
+<meta property="og:title" content="MEJE WORKS | 美热工作室">
+<meta property="og:description" content="打造世界观的创意工作室 — IP Strategy · K-Contents · Fandom Design">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/zh-cn/tmi.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MEJE WORKS | 美热工作室">
+<meta name="twitter:description" content="打造世界观的创意工作室 — IP Strategy · K-Contents · Fandom Design">
+<meta name="twitter:image" content="https://meje.kr/img/og-cover.png">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/tmi.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/tmi.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/tmi.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/tmi.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/tmi.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/tmi.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/tmi.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/tmi.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/tmi.html">
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="apple-touch-icon" href="../img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+/* ── INDEX-SPECIFIC: SNAP SCROLL ── */
+.snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* ── HERO SECTION ── */
+.hero-logo-img {
+  width: min(320px, 60vw);
+  opacity: 0;
+  animation: fadeUp 1.2s ease 0.3s forwards;
+}
+
+.hero-terminal {
+  margin-top: 48px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 2.4;
+  opacity: 0;
+  animation: fadeUp 1s ease 0.8s forwards;
+}
+.hero-terminal .hl { color: var(--accent); }
+.hero-terminal .dim { color: var(--text-muted); }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1.4s forwards, pulse 2s ease-in-out 2.2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* ── DIRECTORY SECTION ── */
+.dir-section {
+  background: var(--bg);
+  padding: 0 40px;
+}
+
+.dir-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.dir-header {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  padding: 12px 16px;
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  border-left: 2px solid var(--green);
+}
+.dir-header .ps { color: var(--green); }
+.dir-header .cmd { color: var(--text-dim); }
+
+.dir-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.dir-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 32px 28px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dir-card:hover {
+  background: var(--bg-3);
+  border-color: var(--accent-dim);
+}
+
+.dir-card-type {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.dir-card-title {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.dir-card-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.dir-card-arrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent-dim);
+  margin-top: auto;
+  transition: color 0.2s;
+}
+.dir-card:hover .dir-card-arrow { color: var(--accent); }
+
+/* ── PARTNERS SECTION ── */
+.partners-section {
+  background: #fff;
+}
+
+.partners-title {
+  font-family: var(--display);
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.partners-img {
+  max-width: min(1000px, 85vw);
+  height: auto;
+}
+
+/* ── CONTACT SECTION ── */
+.contact-section {
+  background: var(--bg);
+  padding: 0 40px;
+}
+
+.contact-container {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-label {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.contact-label::before { content: '// '; opacity: 0.5; }
+
+.contact-title {
+  font-family: var(--display);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 40px;
+}
+
+.contact-cell {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 16px 20px;
+}
+
+.contact-cell-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.contact-cell-value {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.contact-cell-value a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-cell.full { grid-column: 1 / -1; }
+
+.privacy-link {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 8px 24px;
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+}
+.privacy-link:hover {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+.copyright {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  opacity: 0.4;
+  position: absolute;
+  bottom: 20px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .dir-section { padding: 0 20px; }
+  .dir-grid { grid-template-columns: 1fr; }
+  .contact-section { padding: 0 20px; }
+  .contact-info { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="snap-container">
+
+  <!-- ── SECTION 1: HERO / LOGO ── -->
+  <section class="snap-section" style="background:#000;">
+    <a href="index.html" style="text-decoration:none;"><img src="../img/logo.png" alt="MEJE WORKS" class="hero-logo-img"></a>
+    <div class="hero-terminal">
+      <span class="dim">$</span> <span class="hl">meje</span> <span>--version</span><br>
+      <span class="dim">打造世界观的创意工作室</span><br>
+      <span class="dim">IP Strategy · K-Contents · Fandom Design</span>
+    </div>
+    <p class="scroll-hint">SCROLL ↓</p>
+  </section>
+
+  <!-- ── SECTION 2: DIRECTORY ── -->
+  <section class="snap-section dir-section">
+    <div class="dir-container">
+      <div class="dir-header">
+        <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">ls -la ./pages/</span>
+      </div>
+      <div class="dir-grid">
+        <a href="ceo.html" class="dir-card">
+          <span class="dir-card-type">// about</span>
+          <h2 class="dir-card-title">CEO Profile</h2>
+          <p class="dir-card-desc">代表 金东恩 — 前HYBE世界观部门主管、20年游戏开发者、IP策略师</p>
+          <span class="dir-card-arrow">→ ceo.html</span>
+        </a>
+        <a href="works.html" class="dir-card">
+          <span class="dir-card-type">// portfolio</span>
+          <h2 class="dir-card-title">Works of MEJE</h2>
+          <p class="dir-card-desc">VANNEE World、鹦鹉医院大亨、幽灵餐厅、FEWK — 以世界观为基础的游戏与粉丝平台项目</p>
+          <span class="dir-card-arrow">→ works.html</span>
+        </a>
+        <a href="knowledge.html" class="dir-card">
+          <span class="dir-card-type">// knowledge</span>
+          <h2 class="dir-card-title">Knowledge</h2>
+          <p class="dir-card-desc">讲座稿・布朗奇书・杂志 — 创作方法论、AI实务、IP策略典藏</p>
+          <span class="dir-card-arrow">→ knowledge.html</span>
+        </a>
+        <a href="about.html" class="dir-card">
+          <span class="dir-card-type">// company</span>
+          <h2 class="dir-card-title">公司介绍</h2>
+          <p class="dir-card-desc">公司介绍、业务范围、愿景与核心成员</p>
+          <span class="dir-card-arrow">→ about.html</span>
+        </a>
+        <a href="ip.html" class="dir-card">
+          <span class="dir-card-type">// proposals</span>
+          <h2 class="dir-card-title">IP Partnership</h2>
+          <p class="dir-card-desc">世界观资料库・角色设计・粉丝活动 — IP合作伙伴介绍</p>
+          <span class="dir-card-arrow">→ ip.html</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION 3: PARTNERS (WHITE) ── -->
+  <section class="snap-section partners-section">
+    <h2 class="partners-title">MEJE PARTNERS</h2>
+    <img src="../img/partners.png" alt="MEJE Partners" class="partners-img">
+  </section>
+
+  <!-- ── SECTION 4: CONTACT ── -->
+  <section class="snap-section contact-section">
+    <div class="contact-container">
+      <p class="contact-label">Contact</p>
+      <h2 class="contact-title">联系我们</h2>
+      <div class="contact-info">
+        <div class="contact-cell">
+          <p class="contact-cell-label">公司</p>
+          <p class="contact-cell-value">MEJE Works Corp.</p>
+        </div>
+        <div class="contact-cell">
+          <p class="contact-cell-label">电子邮件</p>
+          <p class="contact-cell-value"><a href="mailto:Contact@meje.kr">Contact@meje.kr</a></p>
+        </div>
+        <div class="contact-cell">
+          <p class="contact-cell-label">电话</p>
+          <p class="contact-cell-value">0507-1420-1205</p>
+        </div>
+        <div class="contact-cell">
+          <p class="contact-cell-label">营业执照</p>
+          <p class="contact-cell-value">772-87-02365</p>
+        </div>
+        <div class="contact-cell full">
+          <p class="contact-cell-label">地址</p>
+          <p class="contact-cell-value">韩国首尔市江南区驛三路217号503室</p>
+        </div>
+      </div>
+      <a href="privacy.html" class="privacy-link">隐私政策 →</a>
+      <a href="terms.html" class="privacy-link" style="margin-left:16px;">使用条款 →</a>
+    </div>
+    <p class="copyright">&copy; MEJE Works Corp. All Rights Reserved.</p>
+  </section>
+
+</div>
+
+</body>
+</html>
