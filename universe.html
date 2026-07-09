@@ -11,6 +11,15 @@
 <meta property="og:url" content="https://meje.kr/universe.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ko" href="https://meje.kr/universe.html">
+<link rel="alternate" hreflang="en" href="https://meje.kr/en/universe.html">
+<link rel="alternate" hreflang="ja" href="https://meje.kr/ja/universe.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://meje.kr/zh-tw/universe.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://meje.kr/zh-cn/universe.html">
+<link rel="alternate" hreflang="ar" href="https://meje.kr/ar/universe.html">
+<link rel="alternate" hreflang="fa" href="https://meje.kr/fa/universe.html">
+<link rel="alternate" hreflang="ur" href="https://meje.kr/ur/universe.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/universe.html">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="apple-touch-icon" href="img/logo.png">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
@@ -177,6 +186,7 @@
 .lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
 .lang-bar a:hover { color:var(--text-sub); }
 .lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
 @media (max-width: 900px) {
   .read-order { grid-template-columns: repeat(2, 1fr); }
 }
@@ -196,6 +206,13 @@
   <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
   <div class="lang-bar">
     <a href="universe.html" class="active">KR</a>
+    <span class="sep">&middot;</span><a href="en/universe.html">EN</a>
+    <span class="sep">&middot;</span><a href="ja/universe.html">JA</a>
+    <span class="sep">&middot;</span><a href="zh-tw/universe.html">繁</a>
+    <span class="sep">&middot;</span><a href="zh-cn/universe.html">简</a>
+    <span class="sep">&middot;</span><a href="ar/universe.html">AR</a>
+    <span class="sep">&middot;</span><a href="fa/universe.html">FA</a>
+    <span class="sep">&middot;</span><a href="ur/universe.html">UR</a>
   </div>
   <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
   <ul class="nav-links">

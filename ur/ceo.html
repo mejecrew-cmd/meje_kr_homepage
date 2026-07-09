@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kim Dong-eun — CEO of MEJE Works, former HYBE Worldbuilding Library Head, 20+ year game developer, IP strategist. Worldbuilding consulting expert profile.">
-<title>سی ای او Profile — Kim Dong-eun | MEJE کام</title>
-<meta property="og:title" content="CEO Profile — Kim Dong-eun | MEJE Works">
-<meta property="og:description" content="Former HYBE Worldbuilding Library Head, BTS World Development Director. 20+ years game dev · 30+ lectures · IP strategist">
+<meta name="description" content="ملف ممثل MEJE Works.">
+<title>CEO — Kim Dong-eun</title>
+<meta property="og:title" content="CEO — Kim Dong-eun">
+<meta property="og:description" content="ملف ممثل MEJE Works.">
 <meta property="og:image" content="https://meje.kr/img/og-cover.png">
 <meta property="og:url" content="https://meje.kr/ur/ceo.html">
-<meta property="og:type" content="profile">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
 <link rel="alternate" hreflang="ko" href="https://meje.kr/ceo.html">
 <link rel="alternate" hreflang="en" href="https://meje.kr/en/ceo.html">
 <link rel="alternate" hreflang="ja" href="https://meje.kr/ja/ceo.html">
@@ -19,594 +18,80 @@
 <link rel="alternate" hreflang="ar" href="https://meje.kr/ar/ceo.html">
 <link rel="alternate" hreflang="fa" href="https://meje.kr/fa/ceo.html">
 <link rel="alternate" hreflang="ur" href="https://meje.kr/ur/ceo.html">
+<link rel="alternate" hreflang="x-default" href="https://meje.kr/ceo.html">
 <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
 <link rel="apple-touch-icon" href="../img/logo.png">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;700&family=Vazirmatn:wght@400;500;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <style>
-/* ── LANG BAR ── */
 .lang-bar { display:flex; gap:8px; align-items:center; }
-.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
-.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
 .lang-bar a.active { color:var(--accent); }
-.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
-
-/* ── CEO PAGE HERO ── */
-#hero {
-  max-width: 100%;
-  padding: 120px 40px 100px;
-  border-bottom: 1px solid var(--border-dim);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-#hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 1px; height: 48px;
-  background: linear-gradient(to bottom, var(--accent-dim), transparent);
-}
-
-.hero-eyebrow {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--accent);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  animation: fadeUp 0.8s ease both;
-}
-
-.hero-title {
-  font-family: var(--display);
-  font-size: clamp(48px, 8vw, 80px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  color: var(--text);
-  margin-bottom: 8px;
-  animation: fadeUp 0.8s ease 0.1s both;
-}
-
-.hero-sub {
-  font-family: var(--display);
-  font-size: clamp(18px, 2.5vw, 28px);
-  font-weight: 300;
-  color: var(--text-dim);
-  letter-spacing: 0.1em;
-  margin-bottom: 40px;
-  animation: fadeUp 0.8s ease 0.2s both;
-}
-
-.hero-desc {
-  font-family: var(--mono), var(--sans);
-  font-size: 14px;
-  color: var(--text-dim);
-  line-height: 2;
-  max-width: 580px;
-  animation: fadeUp 0.8s ease 0.3s both;
-}
-.hero-desc strong { color: var(--text-dim); font-weight: 400; }
-
-.hero-grid {
-  display: flex;
-  gap: 12px;
-  margin-top: 48px;
-  flex-wrap: wrap;
-  justify-content: center;
-  animation: fadeUp 0.8s ease 0.4s both;
-}
-
-.hero-tag {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  padding: 5px 14px;
-  letter-spacing: 0.08em;
-}
-
-/* ── TIMELINE ── */
-.timeline { margin-top: 8px; }
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-dim);
-}
-.timeline-item:last-child { border-bottom: none; }
-
-.timeline-year {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--accent-dim);
-  letter-spacing: 0.05em;
-  padding-top: 2px;
-}
-
-.timeline-content {
-  font-size: 13px;
-  color: var(--text-dim);
-  line-height: 1.6;
-}
-.timeline-content strong {
-  color: var(--text);
-  font-weight: 500;
-  display: block;
-  margin-bottom: 2px;
-}
-.timeline-content .sub {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--text-muted);
-}
-
-/* ── EXPERTISE GRID ── */
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-}
-
-.expertise-card {
-  background: var(--bg-2);
-  border: 1px solid var(--border-dim);
-  padding: 28px 24px;
-  transition: background 0.2s, border-color 0.2s;
-}
-.expertise-card:hover {
-  background: var(--bg-3);
-  border-color: var(--border);
-}
-
-.expertise-card-icon {
-  font-family: var(--mono);
-  font-size: 20px;
-  margin-bottom: 16px;
-  display: block;
-}
-
-.expertise-card-title {
-  font-family: var(--display);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-
-.expertise-card-desc {
-  font-size: 13px;
-  color: var(--text-dim);
-  line-height: 1.7;
-}
-
-/* ── LINK CARD ── */
-.link-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-}
-
-.link-card {
-  background: var(--bg-2);
-  border: 1px solid var(--border-dim);
-  padding: 24px;
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.2s, border-color 0.2s;
-}
-.link-card:hover {
-  background: var(--bg-3);
-  border-color: var(--accent-dim);
-}
-.link-card-label {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--accent);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.link-card-title {
-  font-size: 14px;
-  color: var(--text);
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-.link-card-url {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--text-muted);
-}
-
-@media (max-width: 768px) {
-  #hero { padding: 100px 20px 80px; }
-  .expertise-grid { grid-template-columns: 1fr; }
-  .link-grid { grid-template-columns: 1fr; }
-  .timeline-item { grid-template-columns: 60px 1fr; gap: 12px; }
-}
+.lang-bar .sep { color:var(--text-dim); opacity:0.45; font-size:8px; }
+.loc-main { padding: 120px 40px 80px; max-width: 1180px; margin: 0 auto; }
+.loc-hero { padding: 80px 0 64px; border-bottom: 1px solid var(--border-dim); }
+.loc-eyebrow { font-family:var(--mono); color:var(--accent); font-size:12px; letter-spacing:0.16em; margin-bottom:18px; }
+.loc-title { font-family:var(--display); font-size:clamp(36px, 6vw, 72px); line-height:1.05; margin-bottom:22px; color:var(--text); }
+.loc-lead { max-width:760px; color:var(--text-muted); line-height:2; font-size:16px; }
+.loc-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:2px; margin-top:48px; }
+.loc-card { display:block; min-height:180px; padding:28px; background:var(--bg-2); border:1px solid var(--border-dim); text-decoration:none; color:var(--text); }
+.loc-card h2 { font-family:var(--display); font-size:21px; margin-bottom:12px; color:var(--text); }
+.loc-card p { color:var(--text-muted); line-height:1.8; font-size:14px; }
+.loc-card[href]:hover { border-color:var(--accent-dim); background:var(--bg-3); }
+@media (max-width: 820px) { .loc-main { padding:96px 20px 56px; } .loc-grid { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
-
-<!-- ── NAV ── -->
 <nav class="site-nav">
   <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
-  <div class="lang-bar">
-    <a href="../ceo.html">KR</a><span class="sep">&middot;</span>
-    <a href="../en/ceo.html">EN</a><span class="sep">&middot;</span>
-    <a href="../ja/ceo.html">JA</a><span class="sep">&middot;</span>
-    <a href="../zh-tw/ceo.html">繁</a><span class="sep">&middot;</span>
-    <a href="../zh-cn/ceo.html">简</a><span class="sep">&middot;</span>
-    <a href="../ar/ceo.html">AR</a><span class="sep">&middot;</span>
-    <a href="../fa/ceo.html">FA</a><span class="sep">&middot;</span>
-    <a href="ceo.html" class="active">UR</a>
-  </div>
+  <div class="lang-bar"><a href="../ceo.html">KR</a><span class="sep">&middot;</span><a href="../en/ceo.html">EN</a><span class="sep">&middot;</span><a href="../ja/ceo.html">JA</a><span class="sep">&middot;</span><a href="../zh-tw/ceo.html">繁</a><span class="sep">&middot;</span><a href="../zh-cn/ceo.html">简</a><span class="sep">&middot;</span><a href="../ar/ceo.html">AR</a><span class="sep">&middot;</span><a href="../fa/ceo.html">FA</a><span class="sep">&middot;</span><a href="../ur/ceo.html" class="active">UR</a></div>
   <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
   <ul class="nav-links">
     <li><a href="index.html">ہوم</a></li>
     <li><a href="about.html">تعارف</a></li>
-    <li><a href="ceo.html" class="active">سی ای او</a></li>
     <li><a href="works.html">کام</a></li>
-    <li><a href="ip.html">آئی پی</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="process.html">عمل</a></li>
+    <li><a href="knowledge.html">علم</a></li>
+    <li><a href="ceo.html" class="active">CEO</a></li>
+    <li><a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a></li>
   </ul>
-  <span class="nav-badge">سی ای او Profile</span>
+  <span class="nav-badge">CEO</span>
 </nav>
-
-<main>
-
-<!-- ── HERO ── -->
-<section id="hero">
-  <p class="hero-eyebrow">سی ای او & Worldbuilding Strategist</p>
-  <h1 class="hero-title">Kim Dong-eun</h1>
-  <p class="hero-sub">김동은</p>
-  <p class="hero-desc">
-    CEO of MEJE Works, a studio that builds worlds.<br>
-    <strong>آئی پی Strategy · K-Content Planning · Fandom Systems · AI Translation Methodology</strong><br>
-    Designing the language of worldbuilding through the lens of a game developer since 1999.
-  </p>
-
-  <div class="stats-row" style="max-width:700px; width:100%; margin-top:48px;">
-    <div class="stat-box">
-      <span class="stat-num">20+</span>
-      <span class="stat-label">آئی پی میں سال</span>
+<main class="loc-main">
+  <section class="loc-hero">
+    <p class="loc-eyebrow">CEO</p>
+    <h1 class="loc-title">Kim Dong-eun · 김동은</h1>
+    <p class="loc-lead">ایسا تخلیق کار جو کھیل، K-POP IP، ورلڈ ڈیزائن اور AI ترجمہ سے دنیا کو قابل پیداوار ساخت میں بدلتا ہے۔</p>
+  </section>
+  <section class="loc-grid"><div class="loc-card">
+      <h2>MEJE Works</h2>
+      <p>CEO</p>
     </div>
-    <div class="stat-box">
-      <span class="stat-num">30+</span>
-      <span class="stat-label">Lectures</span>
+<div class="loc-card">
+      <h2>HYBE</h2>
+      <p>Worldview Library تجربہ</p>
     </div>
-    <div class="stat-box">
-      <span class="stat-num">10+</span>
-      <span class="stat-label">Consulting</span>
+<div class="loc-card">
+      <h2>BTS WORLD</h2>
+      <p>ترقیاتی قیادت کا تجربہ</p>
     </div>
-    <div class="stat-box">
-      <span class="stat-num">537</span>
-      <span class="stat-label">Articles</span>
-    </div>
-  </div>
-
-  <div class="hero-grid">
-    <span class="hero-tag">Worldbuilding</span>
-    <span class="hero-tag">K-POP آئی پی</span>
-    <span class="hero-tag">Fandom Strategy</span>
-    <span class="hero-tag">Digital Art</span>
-    <span class="hero-tag">Transmedia</span>
-    <span class="hero-tag">AI Translation</span>
-  </div>
-</section>
-
-<!-- ── PROFILE ── -->
-<section class="section reveal" id="profile">
-  <div class="sec-head">
-    <p class="sec-label">Profile</p>
-    <h2 class="sec-title">Biography</h2>
-  </div>
-
-  <div class="terminal-prompt">
-    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">whoami </span><span class="flag">--full</span>
-  </div>
-
-  <div class="profile-grid">
-    <div class="profile-item">
-      <p class="profile-item-label">Current Role</p>
-      <div class="profile-item-value">
-        <strong>CEO, MEJE Works Corp.</strong>
-        Worldbuilding IP Strategist · Digital Artist
-      </div>
-    </div>
-    <div class="profile-item">
-      <p class="profile-item-label">Previous — HYBE</p>
-      <div class="profile-item-value">
-        <strong>Head of Worldbuilding Library, HYBE</strong>
-        Director of BTS World Development
-      </div>
-    </div>
-    <div class="profile-item">
-      <p class="profile-item-label">Previous — Games</p>
-      <div class="profile-item-value">
-        <strong>NHN Games · KTH</strong>
-        Game developer with 20+ years of experience since 1999
-      </div>
-    </div>
-    <div class="profile-item">
-      <p class="profile-item-label">Academia</p>
-      <div class="profile-item-value">
-        <strong>Former Adjunct Professor, Konkuk Univ. · Sungkonghoe Univ.</strong>
-        Lectured on Game Design Theory
-      </div>
-    </div>
-    <div class="profile-item" style="grid-column: 1 / -1;">
-      <p class="profile-item-label">Heritage</p>
-      <div class="profile-item-value">
-        Korea's 1st-generation TRPG pioneer — Founded RPG clubs on Hitel and Chollian (early Korean online communities)
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CAREER TIMELINE ── -->
-<section class="section reveal" id="career">
-  <div class="sec-head">
-    <p class="sec-label">Career</p>
-    <h2 class="sec-title">Career Timeline</h2>
-  </div>
-
-  <div class="terminal-prompt">
-    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">git log </span><span class="flag">--career --oneline</span>
-  </div>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="timeline-year">2021–</span>
-      <div class="timeline-content">
-        <strong>CEO, MEJE Works Corp.</strong>
-        Worldbuilding strategy consulting, IP planning, K-content fandom design
-        <span class="sub">Founded · Independent</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-year">2018–21</span>
-      <div class="timeline-content">
-        <strong>HYBE</strong>
-        Head of Worldbuilding Library · Director of BTS World Development
-        <span class="sub">K-POP Worldbuilding Architecture</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-year">2010s</span>
-      <div class="timeline-content">
-        <strong>NHN Games · KTH</strong>
-        Game planning and development
-        <span class="sub">Online Game Producing</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-year">1999–</span>
-      <div class="timeline-content">
-        <strong>Career began as a game developer</strong>
-        Founded RPG clubs on Hitel and Chollian (Sword &amp; Magic Club)
-        <span class="sub">Korea's 1st-generation TRPG</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── LECTURES & CONTRIBUTIONS ── -->
-<section class="section reveal" id="lectures">
-  <div class="sec-head">
-    <p class="sec-label">Lectures & Media</p>
-    <h2 class="sec-title">Lectures · Publications · Appearances</h2>
-  </div>
-
-  <div class="terminal-prompt">
-    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">git log </span><span class="flag">--lectures --all</span>
-  </div>
-
-  <!-- Industry Lectures -->
-  <div class="cat-block">
-    <h3 class="cat-title">Industry Lectures</h3>
-    <ul class="log-list">
-      <li class="log-item"><span class="year">2023.09</span> Samsung Economic Research Institute (SERI) CX Forum — Invited Lecture</li>
-      <li class="log-item"><span class="year">2022.06</span> Dong-A Business Review (DBR) Mini Conference — Educational Lecture</li>
-      <li class="log-item"><span class="year">2022.08</span> CMS International Content Marketing Summit — Speaker</li>
-      <li class="log-item"><span class="year">2022.05</span> NCSOFT — Corporate Lecture</li>
-      <li class="log-item"><span class="year">2021.12</span> LG Electronics BIG — Employee Lecture</li>
-      <li class="log-item"><span class="year">2022</span> IGM MMPS — Corporate Worldbuilding Lecture</li>
-      <li class="log-item"><span class="year">2022</span> BBQ — Metaverse Trends Employee Lecture</li>
-      <li class="log-item"><span class="year">2022</span> Be My B — Lecture: Build Your Worldview</li>
-    </ul>
-  </div>
-
-  <!-- Academic Lectures -->
-  <div class="cat-block">
-    <h3 class="cat-title">Academic Lectures</h3>
-    <ul class="log-list">
-      <li class="log-item"><span class="year">2022.09</span> KAIST Colloquium — Lecture</li>
-      <li class="log-item"><span class="year">22–23</span> Yonsei University ISSU — Lecture on Metaverse Fandom</li>
-      <li class="log-item"><span class="year">2022</span> Seoul Auction — Invited Lecture (2 sessions)</li>
-      <li class="log-item"><span class="year">2022.08</span> Dongyang University — Spatial Design Faculty Lecture</li>
-      <li class="log-item"><span class="year">2022</span> Konkuk University Graduate School — Cultural Content Association Year-End Lecture</li>
-      <li class="log-item"><span class="year">2022</span> Konkuk University BK21 Research Group — Invited Special Lecture</li>
-      <li class="log-item"><span class="year">2022</span> Kyung Hee University — Hotel &amp; Tourism Graduate School Smart Technology Seminar</li>
-      <li class="log-item"><span class="year">2022</span> Duksung Women's University — Art History Special Lecture: Metaverse Art</li>
-      <li class="log-item"><span class="year">2022</span> Duksung Women's University — Game Studies Special Lecture: Game-Based Worldbuilding Design</li>
-    </ul>
-  </div>
-
-  <!-- Institutional / Art Lectures & Advisory -->
-  <div class="cat-block">
-    <h3 class="cat-title">Institutional · Art Lectures · Advisory</h3>
-    <ul class="log-list">
-      <li class="log-item"><span class="year">2022</span> KOCCA (Korea Creative Content Agency) — Metaverse Forum Committee Member &amp; Moderator</li>
-      <li class="log-item"><span class="year">2022.12</span> KISTEP (Korea Institute of S&amp;T Evaluation and Planning) — Technology Lecture</li>
-      <li class="log-item"><span class="year">2022.02</span> KOBACO — Korea Tourism PR Association Faculty Lecture</li>
-      <li class="log-item"><span class="year">2022</span> Korea Tourism Organization — Marketing Project Review Committee Member</li>
-      <li class="log-item"><span class="year">2022</span> Korea Culture &amp; Tourism Research Institute — Interview</li>
-      <li class="log-item"><span class="year">2023.04</span> Hanbit Calligraphy — Artists' Lecture</li>
-      <li class="log-item"><span class="year">2022</span> Choi In-ah Bookstore — Book Talk Lecture</li>
-      <li class="log-item"><span class="year">2021</span> Samilro Changgo Theater — Artists' Lecture: Games and Psychology</li>
-      <li class="log-item"><span class="year">2021</span> Incheon Foundation for Arts &amp; Culture — Artists' Lecture</li>
-    </ul>
-  </div>
-
-  <!-- Industry Advisory & Consulting -->
-  <div class="cat-block">
-    <h3 class="cat-title">Industry Advisory · Consulting</h3>
-    <ul class="log-list">
-      <li class="log-item"><span class="year">2025</span> K-POP Agency — Idol IP Fandom Activity Platform</li>
-      <li class="log-item"><span class="year">2024</span> Gravity — Ragnarok Worldbuilding Library &amp; World Book</li>
-      <li class="log-item"><span class="year">2023</span> Gravity — Ragnarok IP Expanded Worldbuilding</li>
-      <li class="log-item"><span class="year">2022</span> LG Electronics — Metaverse Museum Advisory, Planning &amp; Spatial Design</li>
-      <li class="log-item"><span class="year">2022</span> LG Electronics — Web 3.0 Customer Value Business Opportunity Report</li>
-      <li class="log-item"><span class="year">2022</span> LG Electronics — Gaming Monitor Customer Event Strategy</li>
-      <li class="log-item"><span class="year">2022</span> LG Household &amp; Health Care Skin Research Lab — Skin MBTI Content Advisory</li>
-      <li class="log-item"><span class="year">2022</span> Holycrick Metaverskra — Author · Chair</li>
-      <li class="log-item"><span class="year">2022</span> P Nation — Character-Based Worldbuilding Consulting</li>
-      <li class="log-item"><span class="year">2022</span> Korean Research — New Metaverse Planning Advisory</li>
-    </ul>
-  </div>
-
-  <!-- Publications / Media / Broadcasts -->
-  <div class="cat-block">
-    <h3 class="cat-title">Publications · Columns · Broadcasts</h3>
-    <ul class="log-list">
-      <li class="log-item"><span class="year">2022.02</span> Published book "The Wise NFT Investor" (현명한 NFT투자자) — Selected as Kyobo Bookstore's Book of the Month</li>
-      <li class="log-item"><span class="year">Ongoing</span> Brunch 537+ articles — Worldbuilding, IP, Fandom, Game Design</li>
-      <li class="log-item"><span class="year">2021.03</span> Dong-A Business Review Special Report — Sub-Character Communities</li>
-      <li class="log-item"><span class="year">2021.12</span> Dong-A Business Review Special Report — Fandom Worldbuilding</li>
-      <li class="log-item"><span class="year">2022.03</span> Cheil Worldwide Magazine — How Metaverse Worldbuilding Is Made</li>
-      <li class="log-item"><span class="year">2022.06</span> POSTECH Convergence Webzine X — Featured as Emerging Writer</li>
-      <li class="log-item"><span class="year">2023.07</span> POSTECH Convergence Webzine X — AI and Jobs</li>
-      <li class="log-item"><span class="year">2022.03</span> MKTV Kim Mi-kyung's Level Up YouTube — Interview (3 episodes)</li>
-      <li class="log-item"><span class="year">2022.05</span> MoneyMap · Woongdal Bookstore TV · Dalant Investment TV · IGM YouTube — Interviews</li>
-      <li class="log-item"><span class="year">2021.12</span> Money Today · TTimes — Interviews (6 articles)</li>
-      <li class="log-item"><span class="year">2022</span> Daum InterBiz — Why the Entertainment Industry Is Building Worldviews</li>
-      <li class="log-item"><span class="year">2022</span> Webzine High Resolution — Why IP Matters in the Metaverse</li>
-      <li class="log-item"><span class="year">2022</span> K-POP GENERATION Documentary Ep.4 — Worldbuilding Advisory &amp; Interview</li>
-    </ul>
-  </div>
-
-  <!-- Art Activities -->
-  <div class="cat-block">
-    <h3 class="cat-title">Art Activities</h3>
-    <ul class="log-list">
-      <li class="log-item"><span class="year">2022</span> Selected as one of 30 Artists at the World Knowledge Forum</li>
-      <li class="log-item"><span class="year">2022</span> Seoul Design Foundation DDP — Established Artist Invitational Exhibition</li>
-      <li class="log-item"><span class="year">2022</span> E-Ham Gallery — "Maison de Noel" Exhibition in Paris, France</li>
-      <li class="log-item"><span class="year">2022</span> Lee Yoon Art — Exhibition Participation</li>
-      <li class="log-item"><span class="year">2022</span> WeSA — Art Advisory</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ── EXPERTISE ── -->
-<section class="section reveal" id="expertise">
-  <div class="sec-head">
-    <p class="sec-label">Expertise</p>
-    <h2 class="sec-title">Areas of Expertise</h2>
-  </div>
-
-  <div class="expertise-grid">
-    <div class="expertise-card">
-      <span class="expertise-card-icon" style="color:var(--accent);">&gt;_</span>
-      <h3 class="expertise-card-title">Worldbuilding Strategy</h3>
-      <p class="expertise-card-desc">Built worldviews for 6 HYBE groups; developed Gravity's Ragnarok World Book. Designed a 7-step procedural worldbuilding process and 4-layer architecture</p>
-    </div>
-    <div class="expertise-card">
-      <span class="expertise-card-icon" style="color:var(--green);">//</span>
-      <h3 class="expertise-card-title">K-Content Planning</h3>
-      <p class="expertise-card-desc">Led BTS World development; planned and operated idol IP fandom activity platforms. Achieved 41% DAU conversion and 33.5% paid conversion. Global service across 43 countries</p>
-    </div>
-    <div class="expertise-card">
-      <span class="expertise-card-icon" style="color:#7a9fbf;">AI</span>
-      <h3 class="expertise-card-title">AI Translation Methodology</h3>
-      <p class="expertise-card-desc">Supports 40+ languages simultaneously via AI Hyper-Localization pipeline. Experience in global expansion of web novels and webtoons across 39 countries with translation quality management systems</p>
-    </div>
-    <div class="expertise-card">
-      <span class="expertise-card-icon" style="color:var(--accent);">{ }</span>
-      <h3 class="expertise-card-title">Game Design</h3>
-      <p class="expertise-card-desc">20 years of MMORPG experience at NHN Games, KTH, and more. Adjunct professor at Konkuk Univ. and Sungkonghoe Univ. (Game Design Theory). Korea's 1st-generation TRPG community builder from the PC communication era</p>
-    </div>
-    <div class="expertise-card">
-      <span class="expertise-card-icon" style="color:var(--green);">ART</span>
-      <h3 class="expertise-card-title">Digital Art</h3>
-      <p class="expertise-card-desc">Digital art creation, visual IP strategy, worldbuilding-based art direction</p>
-    </div>
-    <div class="expertise-card">
-      <span class="expertise-card-icon" style="color:#7a9fbf;">BIZ</span>
-      <h3 class="expertise-card-title">Corporate Lectures & Consulting</h3>
-      <p class="expertise-card-desc">30+ lectures at Samsung, LG, KAIST, HYBE, Netmarble, Krafton, and more. Conducted brand and game IP worldbuilding consulting for LG Electronics, Gravity, and others</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── LINKS ── -->
-<section class="section reveal" id="links">
-  <div class="sec-head">
-    <p class="sec-label">Links</p>
-    <h2 class="sec-title">External Links</h2>
-  </div>
-
-  <div class="link-grid">
-    <a href="https://brunch.co.kr/@whtdrgon" target="_blank" rel="noopener" class="link-card">
-      <p class="link-card-label">Brunch</p>
-      <p class="link-card-title">Brunch — Kim Dong-eun (WhtDrgon)</p>
-      <p class="link-card-url">brunch.co.kr/@whtdrgon · 537 articles</p>
-    </a>
-    <a href="works.html" class="link-card">
-      <p class="link-card-label">پروجیکٹس</p>
-      <p class="link-card-title">Released Content / پروجیکٹس</p>
-      <p class="link-card-url">meje.kr/works.html</p>
-    </a>
-    <a href="mailto:Contact@meje.kr" class="link-card">
-      <p class="link-card-label">Email</p>
-      <p class="link-card-title">Contact@meje.kr</p>
-      <p class="link-card-url">Business inquiries</p>
-    </a>
-    <a href="index.html" class="link-card">
-      <p class="link-card-label">ہوم</p>
-      <p class="link-card-title">MEJE WORKS Main</p>
-      <p class="link-card-url">meje.kr</p>
-    </a>
-  </div>
-</section>
-
+<div class="loc-card">
+      <h2>حوزه‌ها</h2>
+      <p>ورلڈ اسٹریٹیجی · IP منصوبہ بندی · فینڈم ڈیزائن · AI ترجمہ</p>
+    </div></section>
 </main>
-
-<!-- ── FOOTER ── -->
 <footer>
   <p class="footer-logo">MEJE<span>.</span>KR</p>
-  <div class="footer-contact">
-    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
-    Rm 503, 217 Yeoksam-ro, Gangnam-gu, Seoul, South Korea ｜ 0507-1420-1205
-  </div>
+  <div class="footer-contact">MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205</div>
   <div class="footer-links">
-    <a href="index.html">&larr; ہوم</a>
+    <a href="index.html">ہوم</a>
     <a href="about.html">تعارف</a>
     <a href="works.html">کام</a>
-    <a href="ip.html">آئی پی</a>
     <a href="process.html">عمل</a>
     <a href="knowledge.html">علم</a>
-    <a href="privacy.html">رازداری</a>
-    <a href="terms.html">شرائط</a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
   </div>
   <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
 </footer>
-
-<script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
 </body>
 </html>

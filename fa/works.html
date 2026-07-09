@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MEJE WORKS development projects — VANNEE World, Parrot Hospital Tycoon, Ghost Restaurant, Parrot Mart Tycoon, IdolDong World. Worldview-based games & fandom platforms.">
-<title>پروژه‌ها — Projects | MEJE WORKS</title>
-<meta property="og:title" content="Works — Projects | MEJE WORKS">
-<meta property="og:description" content="VANNEE World, Parrot Hospital, Ghost Restaurant — worldview-based games & fandom platforms">
+<meta name="description" content="پروژه‌ها و IPهای عمومی MEJE Works.">
+<title>کارها — MEJE Works</title>
+<meta property="og:title" content="کارها — MEJE Works">
+<meta property="og:description" content="پروژه‌ها و IPهای عمومی MEJE Works.">
 <meta property="og:image" content="https://meje.kr/img/og-cover.png">
 <meta property="og:url" content="https://meje.kr/fa/works.html">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="ko" href="https://meje.kr/works.html">
 <link rel="alternate" hreflang="en" href="https://meje.kr/en/works.html">
 <link rel="alternate" hreflang="ja" href="https://meje.kr/ja/works.html">
@@ -22,799 +21,77 @@
 <link rel="alternate" hreflang="x-default" href="https://meje.kr/works.html">
 <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
 <link rel="apple-touch-icon" href="../img/logo.png">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;700&family=Vazirmatn:wght@400;500;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <style>
-/* ── WORKS HERO ── */
-#works-hero {
-  max-width: 100%;
-  padding: 120px 40px 80px;
-  border-bottom: 1px solid var(--border-dim);
-  text-align: center;
-}
-
-.works-hero-badge {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--green);
-  border: 1px solid rgba(76,175,125,0.3);
-  padding: 3px 10px;
-  display: inline-block;
-  margin-bottom: 24px;
-  letter-spacing: 0.1em;
-  animation: fadeUp 0.8s ease both;
-}
-.works-hero-badge::before { content: '● '; }
-
-.works-hero-title {
-  font-family: var(--display);
-  font-size: clamp(36px, 6vw, 64px);
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 16px;
-  animation: fadeUp 0.8s ease 0.1s both;
-}
-
-.works-hero-desc {
-  font-family: var(--mono), var(--sans);
-  font-size: 14px;
-  color: var(--text-muted);
-  max-width: 560px;
-  margin: 0 auto;
-  line-height: 2;
-  animation: fadeUp 0.8s ease 0.2s both;
-}
-
-/* ── PROJECT CARD ── */
-.project-card {
-  background: var(--bg-2);
-  border: 1px solid var(--border-dim);
-  padding: 48px 40px;
-  margin-bottom: 2px;
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 48px;
-  align-items: start;
-  position: relative;
-  transition: background 0.2s;
-}
-.project-card:hover { background: var(--bg-3); }
-
-.project-card.is-dev {
-  border-left: 2px solid var(--accent-dim);
-}
-.project-card.is-live {
-  border-left: 2px solid var(--green);
-}
-
-.project-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
-
-.project-status {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  padding: 3px 10px;
-  display: inline-block;
-}
-.project-status.live {
-  color: var(--green);
-  border: 1px solid rgba(76,175,125,0.3);
-}
-.project-status.dev {
-  color: var(--accent);
-  border: 1px solid var(--accent-dim);
-}
-.project-status.soon {
-  color: #7ecfff;
-  border: 1px solid rgba(126,207,255,0.35);
-  animation: soon-pulse 2s ease-in-out infinite;
-}
-@keyframes soon-pulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.55; }
-}
-
-.project-type {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-muted);
-  letter-spacing: 0.1em;
-}
-
-.project-title {
-  font-family: var(--display);
-  font-size: clamp(22px, 3vw, 32px);
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 4px;
-  line-height: 1.2;
-}
-
-.project-title-en {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-
-.project-desc {
-  font-family: var(--sans);
-  font-size: 14px;
-  color: var(--text-dim);
-  line-height: 1.9;
-  margin-bottom: 20px;
-}
-
-.project-features {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-
-.project-features li {
-  font-family: var(--mono), var(--sans);
-  font-size: 13px;
-  color: var(--text-dim);
-  padding: 8px 16px;
-  background: var(--bg);
-  border: 1px solid var(--border-dim);
-  transition: border-color 0.15s;
-}
-.project-features li:hover { border-color: var(--border); }
-.project-features li::before {
-  content: '› ';
-  color: var(--accent-dim);
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 16px;
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--accent-dim);
-  text-decoration: none;
-  border: 1px solid var(--border-dim);
-  padding: 6px 16px;
-  transition: all 0.2s;
-}
-.project-link:hover {
-  color: var(--accent);
-  border-color: var(--accent-dim);
-}
-
-/* ── PROJECT SIDEBAR (METRICS) ── */
-.project-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.project-metric {
-  background: var(--bg);
-  border: 1px solid var(--border-dim);
-  padding: 16px 20px;
-  text-align: center;
-}
-
-.project-metric-num {
-  font-family: var(--mono);
-  font-size: 22px;
-  color: var(--accent);
-  font-weight: 400;
-  display: block;
-  margin-bottom: 4px;
-}
-.project-metric-num.green { color: var(--green); }
-
-.project-metric-label {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-muted);
-  letter-spacing: 0.08em;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-top: 8px;
-}
-
-.project-tag {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-muted);
-  border: 1px solid var(--border-dim);
-  padding: 2px 8px;
-}
-
-/* ── PROGRESS BAR ── */
-.progress-bar {
-  background: var(--bg);
-  border: 1px solid var(--border-dim);
-  padding: 12px 20px;
-}
-
-.progress-bar-label {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-muted);
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-
-.progress-bar-track {
-  height: 3px;
-  background: var(--border-dim);
-  border-radius: 1px;
-  overflow: hidden;
-}
-
-.progress-bar-fill {
-  height: 100%;
-  border-radius: 1px;
-  background: var(--accent);
-  transition: width 1s ease;
-}
-.progress-bar-fill.green { background: var(--green); }
-
-/* ── TRILOGY LABEL ── */
-.trilogy-badge {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: #7a9fbf;
-  border: 1px solid rgba(122,159,191,0.3);
-  padding: 2px 8px;
-  letter-spacing: 0.1em;
-}
-
-@media (max-width: 768px) {
-  #works-hero { padding: 100px 20px 60px; }
-  .project-card {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 32px 24px;
-  }
-  .project-sidebar { flex-direction: row; flex-wrap: wrap; }
-  .project-metric { flex: 1; min-width: 120px; }
-}
 .lang-bar { display:flex; gap:8px; align-items:center; }
-.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
-.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
 .lang-bar a.active { color:var(--accent); }
-.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
+.lang-bar .sep { color:var(--text-dim); opacity:0.45; font-size:8px; }
+.loc-main { padding: 120px 40px 80px; max-width: 1180px; margin: 0 auto; }
+.loc-hero { padding: 80px 0 64px; border-bottom: 1px solid var(--border-dim); }
+.loc-eyebrow { font-family:var(--mono); color:var(--accent); font-size:12px; letter-spacing:0.16em; margin-bottom:18px; }
+.loc-title { font-family:var(--display); font-size:clamp(36px, 6vw, 72px); line-height:1.05; margin-bottom:22px; color:var(--text); }
+.loc-lead { max-width:760px; color:var(--text-muted); line-height:2; font-size:16px; }
+.loc-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:2px; margin-top:48px; }
+.loc-card { display:block; min-height:180px; padding:28px; background:var(--bg-2); border:1px solid var(--border-dim); text-decoration:none; color:var(--text); }
+.loc-card h2 { font-family:var(--display); font-size:21px; margin-bottom:12px; color:var(--text); }
+.loc-card p { color:var(--text-muted); line-height:1.8; font-size:14px; }
+.loc-card[href]:hover { border-color:var(--accent-dim); background:var(--bg-3); }
+@media (max-width: 820px) { .loc-main { padding:96px 20px 56px; } .loc-grid { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
-
-<div id="scroll-progress"></div>
-
-<!-- ── NAV ── -->
 <nav class="site-nav">
   <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
-  <div class="lang-bar">
-    <a href="../works.html">KR</a><span class="sep">&middot;</span>
-    <a href="../en/works.html">EN</a><span class="sep">&middot;</span>
-    <a href="../ja/works.html">JA</a><span class="sep">&middot;</span>
-    <a href="../zh-tw/works.html">繁</a><span class="sep">&middot;</span>
-    <a href="../zh-cn/works.html">简</a><span class="sep">&middot;</span>
-    <a href="../ar/works.html">AR</a><span class="sep">&middot;</span>
-    <a href="works.html" class="active">FA</a><span class="sep">&middot;</span>
-    <a href="../ur/works.html">UR</a>
-  </div>
+  <div class="lang-bar"><a href="../works.html">KR</a><span class="sep">&middot;</span><a href="../en/works.html">EN</a><span class="sep">&middot;</span><a href="../ja/works.html">JA</a><span class="sep">&middot;</span><a href="../zh-tw/works.html">繁</a><span class="sep">&middot;</span><a href="../zh-cn/works.html">简</a><span class="sep">&middot;</span><a href="../ar/works.html">AR</a><span class="sep">&middot;</span><a href="../fa/works.html" class="active">FA</a><span class="sep">&middot;</span><a href="../ur/works.html">UR</a></div>
   <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
   <ul class="nav-links">
     <li><a href="index.html">خانه</a></li>
     <li><a href="about.html">درباره</a></li>
-    <li><a href="ceo.html">مدیرعامل</a></li>
-    <li><a href="works.html" class="active">پروژه‌ها</a></li>
-    <li><a href="ip.html">مالکیت فکری</a></li>
+    <li><a href="works.html" class="active">کارها</a></li>
+    <li><a href="ip.html">IP</a></li>
     <li><a href="process.html">فرآیند</a></li>
     <li><a href="knowledge.html">دانش</a></li>
-    <li><a href="privacy.html">حریم خصوصی</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a></li>
   </ul>
-  <span class="nav-badge">پروژه‌ها</span>
+  <span class="nav-badge">WORKS</span>
 </nav>
-
-<main>
-
-<!-- ── HERO ── -->
-<section id="works-hero">
-  <span class="works-hero-badge">MEJE پروژه‌ها</span>
-  <h1 class="works-hero-title">پروژه‌ها</h1>
-  <p class="works-hero-desc">
-    Worldview-based games, fandom platforms, and interactive content.<br>
-    Projects designed and developed by MEJE Works.
-  </p>
-</section>
-
-<!-- ── PROJECT LIST ── -->
-<section class="section reveal" id="projects" style="padding-top:48px;">
-  <div class="sec-head">
-    <p class="sec-label">پروژه‌ها</p>
-    <h2 class="sec-title">پروژه‌های توسعه</h2>
-  </div>
-
-  <div class="terminal-prompt">
-    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">ls </span><span class="flag">projects/ --sort=status</span>
-  </div>
-
-  <!-- ═══ 01. 배니월드 ═══ -->
-  <div class="project-card is-live">
-    <div class="project-body">
-      <div class="project-header">
-        <span class="project-status live">● LIVE</span>
-        <span class="project-type">K-POP Fandom Platform</span>
-      </div>
-      <h3 class="project-title">VANNEE World</h3>
-      <p class="project-title-en">VANNEE World — Idol Character Fandom Activity</p>
-      <p class="project-desc">
-        A digital interactive fandom platform for K-POP idol groups.
-        Worldview-based daily content design (wake up · feed · put to sleep routines)
-        maximizes fan engagement, and non-paid marketing drives organic growth.
-      </p>
-      <ul class="project-features">
-        <li>Group + fandom worldview-linked daily content</li>
-        <li>Organic growth design via non-paid marketing</li>
-        <li>Collection · digital goods · secondary goods</li>
-        <li>Fandom funnel: viewer → single stan → multi stan → influencer</li>
-      </ul>
-      <a href="https://vanneeworld.com/" target="_blank" rel="noopener" class="project-link">vanneeworld.com →</a>
-      <span style="font-family:var(--mono); font-size:12px; color:var(--text-muted); margin-left:8px;">(Service ended · sample page)</span>
-    </div>
-    <div class="project-sidebar">
-      <div class="project-metric">
-        <span class="project-metric-num green">43</span>
-        <span class="project-metric-label">Countries</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">35.16%</span>
-        <span class="project-metric-label">D90 Retention</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">33.5%</span>
-        <span class="project-metric-label">Paid Conversion</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">1h 02m</span>
-        <span class="project-metric-label">Avg. Session</span>
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">Web</span>
-        <span class="project-tag">Fandom</span>
-        <span class="project-tag">K-POP</span>
-        <span class="project-tag">Interactive</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ 02. 앵무병원 타이쿤 ═══ -->
-  <div class="project-card is-live">
-    <div class="project-body">
-      <div class="project-header">
-        <span class="project-status live">● LIVE</span>
-        <span class="project-type">Mobile Simulation Tycoon</span>
-        <span class="trilogy-badge">Parrot Trilogy #1</span>
-      </div>
-      <h3 class="project-title">Parrot Hospital Tycoon</h3>
-      <p class="project-title-en">Parrot Hospital Tycoon</p>
-      <p class="project-desc">
-        A hospital management simulation featuring parrot characters.
-        Operate medical facilities and expand your hospital with 20+ imaginative diseases
-        such as cat headaches, snowman mutations, and lightning strikes.
-        4 staff types (doctor·nurse·employee·guard) and patient flow strategy are the core.
-      </p>
-      <ul class="project-features">
-        <li>20+ imaginative diseases · humor-concept treatment system</li>
-        <li>Patient stress system · raging patients & security</li>
-        <li>Foundation rating-based world map expansion</li>
-        <li>Comfort & interior system → revenue bonuses</li>
-      </ul>
-      <a href="https://play.google.com/store/apps/details?id=com.MEJEWorks.ParrotHospital&hl=ko" target="_blank" rel="noopener" class="project-link">Google Play →</a>
-      <a href="https://apps.apple.com/kr/app/앵무병원-방치형-힐링-타이쿤/id6757802365" target="_blank" rel="noopener" class="project-link" style="margin-left:8px;">App Store →</a>
-    </div>
-    <div class="project-sidebar">
-      <div class="project-metric">
-        <span class="project-metric-num green">169</span>
-        <span class="project-metric-label">Countries</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">~50K</span>
-        <span class="project-metric-label">Downloads</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">5.0</span>
-        <span class="project-metric-label">Google Play ★ (KR)</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">0.19%</span>
-        <span class="project-metric-label">Crash Rate</span>
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">Mobile</span>
-        <span class="project-tag">Tycoon</span>
-        <span class="project-tag">Simulation</span>
-        <span class="project-tag">Global</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ 03. 혼령식당 ═══ -->
-  <div class="project-card is-dev">
-    <div class="project-body">
-      <div class="project-header">
-        <span class="project-status dev">◆ IN DEV</span>
-        <span class="project-type">Mobile Merge Puzzle + Story RPG</span>
-      </div>
-      <h3 class="project-title">Ghost Restaurant</h3>
-      <p class="project-title-en">Ghost Restaurant — K-Food Soul Healing Fantasy</p>
-      <p class="project-desc">
-        Inherit your grandmother's hanok restaurant. By day, harvest, ferment, and cook ingredients (merge puzzle).
-        By night, serve soul food to ghost guests carrying han (恨). A dual-world game.
-        Conveys Korean culture through 80 omnibus episodes from the Joseon era to modern day.
-      </p>
-      <ul class="project-features">
-        <li>Day/Night dual merge system (economic resources + healing tools)</li>
-        <li>80 omnibus episodes · Korean culture storytelling</li>
-        <li>AI Hyper-Localization 70 languages simultaneous</li>
-        <li>Webtoon · web novel IP expansion in preparation</li>
-      </ul>
-    </div>
-    <div class="project-sidebar">
-      <div class="progress-bar">
-        <div class="progress-bar-label"><span>Plan/Scenario</span><span>80%</span></div>
-        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:80%"></div></div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-bar-label"><span>Graphics</span><span>75%</span></div>
-        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:75%"></div></div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-bar-label"><span>Programming</span><span>65%</span></div>
-        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:65%"></div></div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-bar-label"><span>Sound</span><span>60%</span></div>
-        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:60%"></div></div>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num">2026.11</span>
-        <span class="project-metric-label">Target Launch</span>
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">iOS</span>
-        <span class="project-tag">Android</span>
-        <span class="project-tag">Merge</span>
-        <span class="project-tag">Story RPG</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ 04. 앵무마트 타이쿤 ═══ -->
-  <div class="project-card is-live">
-    <div class="project-body">
-      <div class="project-header">
-        <span class="project-status soon">◆ COMING SOON</span>
-        <span class="project-type">Mobile Simulation Tycoon</span>
-        <span class="trilogy-badge">Parrot Trilogy #2</span>
-      </div>
-      <h3 class="project-title">Parrot Mart Tycoon</h3>
-      <p class="project-title-en">Parrot Mart Tycoon</p>
-      <p class="project-desc">
-        The second title of the Parrot trilogy. Build and operate a large mart with parrot characters.
-        Product display, customer service, checkout, logistics/warehouse, parking, theft events, promotions —
-        a deeper multi-layer management system than the predecessor.
-      </p>
-      <ul class="project-features">
-        <li>5-stage mart stages · distinct field strategies each</li>
-        <li>Auto-stocking logistics/warehouse system</li>
-        <li>Parking lot → attract bulk-purchase customers</li>
-        <li>Staff stamina/fatigue management · 12-tier facility upgrade</li>
-        <li>In-app purchase revenue model (strengthened from predecessor)</li>
-      </ul>
-    </div>
-    <div class="project-sidebar">
-      <div class="progress-bar">
-        <div class="progress-bar-label"><span>Overall development</span><span>98%</span></div>
-        <div class="progress-bar-track"><div class="progress-bar-fill green" style="--bar-w:98%"></div></div>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">2026.05</span>
-        <span class="project-metric-label">Launch</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num">169</span>
-        <span class="project-metric-label">Target Countries</span>
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">Mobile</span>
-        <span class="project-tag">Tycoon</span>
-        <span class="project-tag">Simulation</span>
-        <span class="project-tag">iOS</span>
-        <span class="project-tag">Android</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ 06. FEWK ═══ -->
-  <div class="project-card is-live">
-    <div class="project-body">
-      <div class="project-header">
-        <span class="project-status live">● LIVE</span>
-        <span class="project-type">Original IP · TRPG System</span>
-      </div>
-      <h3 class="project-title">FEWK</h3>
-      <p class="project-title-en">FEWK Core Rulebook 3rd Edition — Cyberpunk TRPG</p>
-      <p class="project-desc">
-        A cyberpunk original TRPG system developed by MEJEworks. Revised and published through 3rd Edition since the 1st Edition in 2021.
-        Composed of three books: Core Rulebook · World Book · Cyberpunk Pack.
-        Players act as "Runners" and explore a world entangled with corporations, government, and the underground.
-        Linked with our own 102 short-story worldview.
-      </p>
-      <ul class="project-features">
-        <li>Core Rulebook · World Book · Cyberpunk Pack 3-book system</li>
-        <li>102 in-house short stories magazine integration</li>
-        <li>Corporate · government · underground 3-axis worldview structure</li>
-        <li>SF satire of real social issues: fashion · advertising · body modification</li>
-      </ul>
-      <div class="process-tag-row">
-        <span class="process-tag-label">// USED PROCESS</span>
-        <a href="process/librarying.html" class="process-tag tag-libr">LIBRARYING</a>
-        <a href="process/character.html" class="process-tag">CHARACTER</a>
-        <a href="process/lorebook.html" class="process-tag">LOREBOOK</a>
-        <a href="process/storytelling100.html" class="process-tag">STORYTELLING 100</a>
-      </div>
-      <a href="https://whtdrgongmail.github.io/FEWKbooks3rd/#home" target="_blank" rel="noopener" class="project-link">FEWK 3rd Edition Rulebook →</a>
-      <a href="https://brunch.co.kr/magazine/fewk" target="_blank" rel="noopener" class="project-link" style="margin-left:8px;">Short Stories Magazine →</a>
-    </div>
-    <div class="project-sidebar">
-      <div class="project-metric">
-        <span class="project-metric-num green">3rd</span>
-        <span class="project-metric-label">Edition</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">102</span>
-        <span class="project-metric-label">Short Stories</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">3</span>
-        <span class="project-metric-label">Books (Core+World+CP)</span>
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">TRPG</span>
-        <span class="project-tag">Cyberpunk</span>
-        <span class="project-tag">Original مالکیت فکری</span>
-        <span class="project-tag">Novel</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ 07. FEWK Core Rulebook 출판 ═══ -->
-  <div class="project-card is-live">
-    <div class="project-body">
-      <div class="project-header">
-        <span class="project-status soon">◆ COMING SOON</span>
-        <span class="project-type">Physical Publication · TRPG Book</span>
-        <span class="trilogy-badge">FEWK 3rd Ed. #1</span>
-      </div>
-      <h3 class="project-title">FEWK: Core Rulebook</h3>
-      <p class="project-title-en">FEWK Core Rulebook 3rd Edition — B5 Hardcover</p>
-      <p class="project-desc">
-        Core rulebook of the FEWK 3rd Edition system. 560–700 pages B5 hardcover, scheduled for publication.
-        13-part structure: game basics · characters · checks · combat · resources · unique rules · equipment · growth · team play · GM guide · NPC catalog · scenario seeds · digital integration.
-        Currently v0.3.1 — Phase 7 QA in progress.
-      </p>
-      <ul class="project-features">
-        <li>560–700 pp · B5 hardcover · ~106 entries</li>
-        <li>13 parts + appendix · complete rule system</li>
-        <li>d6 Pool checks · genre resources · ego · luck token mechanics</li>
-        <li>Published alongside the online rulebook (GitHub)</li>
-      </ul>
-      <div class="process-tag-row">
-        <span class="process-tag-label">// USED PROCESS</span>
-        <a href="process/librarying.html" class="process-tag tag-libr">LIBRARYING</a>
-        <a href="process/lorebook.html" class="process-tag">LOREBOOK</a>
-      </div>
-      <a href="https://whtdrgongmail.github.io/FEWKbooks3rd/#home" target="_blank" rel="noopener" class="project-link">Online preview →</a>
-    </div>
-    <div class="project-sidebar">
-      <div class="progress-bar">
-        <div class="progress-bar-label"><span>Writing · QA</span><span>92%</span></div>
-        <div class="progress-bar-track"><div class="progress-bar-fill green" style="--bar-w:92%"></div></div>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">2026.05</span>
-        <span class="project-metric-label">Publication scheduled</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num">560~700p</span>
-        <span class="project-metric-label">Expected pages</span>
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">TRPG</span>
-        <span class="project-tag">Book</span>
-        <span class="project-tag">Cyberpunk</span>
-        <span class="project-tag">Original مالکیت فکری</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ 08. FEWK World Book 출판 ═══ -->
-  <div class="project-card is-live">
-    <div class="project-body">
-      <div class="project-header">
-        <span class="project-status soon">◆ COMING SOON</span>
-        <span class="project-type">Physical Publication · World Setting Book</span>
-        <span class="trilogy-badge">FEWK 3rd Ed. #2</span>
-      </div>
-      <h3 class="project-title">FEWK: World Book</h3>
-      <p class="project-title-en">Kingdom of Far East White — World Book 3rd Edition</p>
-      <p class="project-desc">
-        The complete setting book of the FEWK worldview. 10-part structure covering world laws, historical chronicle, geography, society/politics/economy, daily culture, runner ecosystems, and faction codex.
-        170 entries completed, target up to 600. The definitive edition of the 6 Style Districts, Dongbaek Kingdom, and cyberpunk lore.
-      </p>
-      <ul class="project-features">
-        <li>10 parts · 170 entries done (target 300–600)</li>
-        <li>6 Style Districts · Runner ecosystem · Faction codex included</li>
-        <li>Historical chronicle · society/politics/economy · daily culture</li>
-        <li>Scheduled for simultaneous publication with Core Rulebook</li>
-      </ul>
-      <div class="process-tag-row">
-        <span class="process-tag-label">// USED PROCESS</span>
-        <a href="process/librarying.html" class="process-tag tag-libr">LIBRARYING</a>
-        <a href="process/character.html" class="process-tag">CHARACTER</a>
-        <a href="process/lorebook.html" class="process-tag">LOREBOOK</a>
-      </div>
-    </div>
-    <div class="project-sidebar">
-      <div class="progress-bar">
-        <div class="progress-bar-label"><span>Writing</span><span>75%</span></div>
-        <div class="progress-bar-track"><div class="progress-bar-fill green" style="--bar-w:75%"></div></div>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num green">2026.06</span>
-        <span class="project-metric-label">Publication scheduled</span>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num">170 / 600</span>
-        <span class="project-metric-label">Entries done</span>
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">TRPG</span>
-        <span class="project-tag">Lore Book</span>
-        <span class="project-tag">Worldbuilding</span>
-        <span class="project-tag">Original مالکیت فکری</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ 09 (구 07). 아이동월드 ═══ -->
-  <div class="project-card is-dev">
-    <div class="project-body">
-      <div class="project-header">
-        <span class="project-status dev">◆ IN DEV</span>
-        <span class="project-type">Interactive Platform</span>
-      </div>
-      <h3 class="project-title">IdolDong World</h3>
-      <p class="project-title-en">IdolDong World</p>
-      <p class="project-desc">
-        A next-generation idol fandom interactive platform extending VANNEE World's tech and fandom design know-how.
-        Integrates worldview-based character activities, fandom community, and digital goods.
-      </p>
-      <ul class="project-features">
-        <li>Fandom platform expansion based on VANNEE World</li>
-        <li>Idol Character Fandom Activity system</li>
-        <li>Global multi-group support design</li>
-      </ul>
-    </div>
-    <div class="project-sidebar">
-      <div class="progress-bar">
-        <div class="progress-bar-label"><span>Planning</span><span>—</span></div>
-        <div class="progress-bar-track"><div class="progress-bar-fill" style="--bar-w:15%"></div></div>
-      </div>
-      <div class="project-metric">
-        <span class="project-metric-num">TBD</span>
-        <span class="project-metric-label">Target Launch</span>
-      </div>
-      <div class="project-tags">
-        <span class="project-tag">Web</span>
-        <span class="project-tag">Fandom</span>
-        <span class="project-tag">K-POP</span>
-        <span class="project-tag">Multi-Group</span>
-      </div>
-    </div>
-  </div>
-
-</section>
-
+<main class="loc-main">
+  <section class="loc-hero">
+    <p class="loc-eyebrow">WORKS</p>
+    <h1 class="loc-title">پروژه‌ها و انتشارات</h1>
+    <p class="loc-lead">IPهای داخلی، بازی‌ها، انتشارات و خط‌های سخنرانی عمومی MEJE Works.</p>
+  </section>
+  <section class="loc-grid"><a class="loc-card" href="https://idongworld.com/" target="_blank" rel="noopener">
+      <h2>Aidong World</h2>
+      <p>پروژه عمومی تازه با شخصیت‌ها و ویکی جهان.</p>
+    </a>
+<a class="loc-card" href="universe.html">
+      <h2>FEWK</h2>
+      <p>IP سایبرپانک داخلی با TRPG و ۱۰۲ داستان کوتاه.</p>
+    </a>
+<a class="loc-card" href="works.html">
+      <h2>Parrot Mart</h2>
+      <p>IP بازی مدیریتی در مرحله تست ناشر.</p>
+    </a>
+<a class="loc-card" href="https://books.meje.kr/" target="_blank" rel="noopener">
+      <h2>MEJE Books</h2>
+      <p>سایت خواندن متن‌های عمومی.</p>
+    </a></section>
 </main>
-
-<!-- ── FOOTER ── -->
 <footer>
   <p class="footer-logo">MEJE<span>.</span>KR</p>
-  <div class="footer-contact">
-    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
-    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ +82-507-1420-1205
-  </div>
-  <div class="footer-contact" style="margin-top:8px; font-size:13px; color:var(--text-muted); opacity:0.6;">
-    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
-    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
-  </div>
+  <div class="footer-contact">MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205</div>
   <div class="footer-links">
-    <a href="index.html">&larr; خانه</a>
+    <a href="index.html">خانه</a>
     <a href="about.html">درباره</a>
-    <a href="ceo.html">مدیرعامل</a>
-    <a href="ip.html">مالکیت فکری</a>
+    <a href="works.html">کارها</a>
     <a href="process.html">فرآیند</a>
     <a href="knowledge.html">دانش</a>
-    <a href="privacy.html">حریم خصوصی</a>
-    <a href="terms.html">شرایط</a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
   </div>
   <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
 </footer>
-
-<script>
-// ── Scroll Progress Bar ──
-const prog = document.getElementById('scroll-progress');
-window.addEventListener('scroll', () => {
-  const st = document.documentElement.scrollTop;
-  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
-}, { passive: true });
-
-// ── Progress bar 애니메이션 ──
-function animateBars(container) {
-  container.querySelectorAll('.progress-bar-fill').forEach(bar => {
-    const w = getComputedStyle(bar).getPropertyValue('--bar-w').trim();
-    bar.style.width = w;
-  });
-  container.classList.add('progress-animated');
-}
-
-// ── Reveal + Progress + Stagger ──
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add('visible');
-    animateBars(e.target);
-    observer.unobserve(e.target);
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// project-card 개별 stagger (섹션 내 카드 순차 등장)
-const cardObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const cards = document.querySelectorAll('.project-card');
-    cards.forEach((card, i) => {
-      setTimeout(() => {
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
-      }, i * 100);
-    });
-    cardObs.disconnect();
-  });
-}, { threshold: 0.05 });
-const projectSection = document.getElementById('projects');
-if (projectSection) cardObs.observe(projectSection);
-
-// project-card 초기 상태
-document.querySelectorAll('.project-card').forEach(card => {
-  card.style.opacity = '0';
-  card.style.transform = 'translateY(20px)';
-  card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-});
-</script>
 </body>
 </html>

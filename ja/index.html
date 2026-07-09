@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MEJE Works — 世界観をつくるスタジオ</title>
-<meta name="description" content="IP Strategy · K-Contents · Fandom Design · AI Technology. MEJE Works is a worldview-based IP production and operation studio.">
-<meta property="og:title" content="MEJE Works — A Studio That Builds Worlds">
-<meta property="og:description" content="IP Strategy · K-Contents · Fandom Design · AI Technology">
+<meta name="description" content="世界観設計、キャラクター、ファンダム活動までを一つの制作パイプラインで扱うMEJE Worksの公式サイトです。">
+<title>MEJE Works — 世界観IP制作スタジオ</title>
+<meta property="og:title" content="MEJE Works — 世界観IP制作スタジオ">
+<meta property="og:description" content="世界観設計、キャラクター、ファンダム活動までを一つの制作パイプラインで扱うMEJE Worksの公式サイトです。">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/ja/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://meje.kr/en/">
 <link rel="alternate" hreflang="ko" href="https://meje.kr/">
 <link rel="alternate" hreflang="en" href="https://meje.kr/en/">
 <link rel="alternate" hreflang="ja" href="https://meje.kr/ja/">
@@ -20,709 +21,73 @@
 <link rel="alternate" hreflang="x-default" href="https://meje.kr/">
 <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
 <link rel="apple-touch-icon" href="../img/logo.png">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
 <style>
-:root {
-  --bg:       #080808;
-  --bg-2:     #0f0f0f;
-  --surface:  #1a1a1a;
-  --border:   #2a2a2a;
-  --text:     #f0f0f0;
-  --text-sub: #aaa;
-  --text-dim: #777;
-  --accent:   #c9a84c;
-  --green:    #4caf7d;
-  --mono:     'JetBrains Mono', 'Courier New', monospace;
-  --sans:     'Pretendard', 'Noto Sans KR', sans-serif;
-  --display:  'DM Sans', 'Pretendard', sans-serif;
-}
-
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
-
-/* ── NOISE TEXTURE ── */
-body::before {
-  content: '';
-  position: fixed; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9999;
-}
-
-/* ── LAYOUT ── */
-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 12vh 8vw;
-  position: relative;
-}
-
-section.half { min-height: 60vh; }
-section.auto { min-height: auto; padding: 8vh 8vw; }
-
-/* ── NAV ── */
-nav {
-  position: fixed; top:0; left:0; right:0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 8vw;
-  z-index: 100;
-  background: rgba(8,8,8,0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-}
-.nav-logo {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text);
-  text-decoration: none;
-}
-.nav-links { display:flex; gap:28px; align-items:center; }
-.nav-links a {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-sub);
-  text-decoration: none;
-  letter-spacing: 0.06em;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--accent); }
-
-/* ── HERO ── */
-.hero { justify-content: center; align-items: center; text-align: center; }
-
-.hero-logo {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(48px, 10vw, 120px);
-  letter-spacing: 0.2em;
-  color: var(--text);
-  margin-bottom: 32px;
-  opacity: 0;
-  animation: fadeUp 1s ease 0.2s forwards;
-}
-
-.hero-tagline {
-  font-size: clamp(16px, 2.5vw, 24px);
-  color: var(--text-sub);
-  font-weight: 300;
-  letter-spacing: 0.04em;
-  margin-bottom: 16px;
-  opacity: 0;
-  animation: fadeUp 1s ease 0.5s forwards;
-}
-
-.hero-prompt {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--text-dim);
-  opacity: 0;
-  animation: fadeUp 1s ease 0.8s forwards;
-}
-.hero-prompt .hl { color: var(--accent); }
-
-.scroll-hint {
-  position: absolute;
-  bottom: 5vh;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-dim);
-  letter-spacing: 0.2em;
-  animation: pulse 2.5s ease infinite;
-}
-
-/* ── SECTION TITLES ── */
-.sec-label {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--accent);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.sec-title {
-  font-family: var(--display);
-  font-size: clamp(28px, 5vw, 56px);
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.2;
-  margin-bottom: 24px;
-}
-
-.sec-desc {
-  font-size: clamp(15px, 1.8vw, 18px);
-  color: var(--text-sub);
-  line-height: 1.8;
-  max-width: 640px;
-}
-
-/* ── WHAT WE DO ── */
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  margin-top: 64px;
-}
-.pillar {
-  background: var(--bg-2);
-  border: 1px solid var(--border);
-  padding: 48px 32px;
-  transition: border-color 0.3s, background 0.3s;
-}
-.pillar:hover {
-  border-color: var(--accent);
-  background: rgba(201,168,76,0.03);
-}
-.pillar-icon {
-  font-family: var(--mono);
-  font-size: 24px;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-.pillar-title {
-  font-family: var(--display);
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 12px;
-}
-.pillar-desc {
-  font-size: 13px;
-  color: var(--text-sub);
-  line-height: 1.7;
-}
-
-/* ── PROJECTS ── */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-top: 64px;
-}
-.project-card {
-  background: var(--bg-2);
-  border: 1px solid var(--border);
-  padding: 48px 32px;
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.3s;
-}
-.project-card:hover { border-color: var(--accent); }
-
-.project-status {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.project-status.live { color: var(--green); }
-.project-status.dev { color: var(--accent); }
-.project-status.ended { color: var(--text-dim); }
-
-.project-title {
-  font-family: var(--display);
-  font-size: clamp(20px, 2.5vw, 28px);
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 12px;
-}
-.project-genre {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-dim);
-  letter-spacing: 0.08em;
-  margin-bottom: 16px;
-}
-.project-desc {
-  font-size: 14px;
-  color: var(--text-sub);
-  line-height: 1.7;
-  flex: 1;
-}
-.project-link {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--accent);
-  text-decoration: none;
-  margin-top: 24px;
-  letter-spacing: 0.06em;
-}
-.project-link:hover { text-decoration: underline; }
-
-/* ── NUMBERS ── */
-.numbers-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  margin-top: 64px;
-}
-.number-cell {
-  background: var(--bg-2);
-  border: 1px solid var(--border);
-  padding: 48px 32px;
-  text-align: center;
-}
-.number-value {
-  font-family: var(--display);
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 12px;
-}
-.number-label {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-sub);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-/* ── ABOUT BRIEF ── */
-.about-brief {
-  max-width: 720px;
-}
-.about-brief .cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 40px;
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--accent);
-  text-decoration: none;
-  border: 1px solid var(--accent);
-  padding: 12px 28px;
-  letter-spacing: 0.06em;
-  transition: background 0.3s, color 0.3s;
-}
-.about-brief .cta:hover {
-  background: var(--accent);
-  color: var(--bg);
-}
-
-/* ── FOOTER ── */
-.landing-footer {
-  min-height: auto;
-  padding: 6vh 8vw;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 32px;
-}
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.footer-company {
-  font-family: var(--display);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: 0.1em;
-}
-.footer-info {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-dim);
-  line-height: 1.8;
-}
-.footer-info a {
-  color: var(--accent);
-  text-decoration: none;
-}
-.footer-info a:hover { text-decoration: underline; }
-
-.footer-right {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-}
-.footer-right a {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-dim);
-  text-decoration: none;
-  letter-spacing: 0.06em;
-}
-.footer-right a:hover { color: var(--text-sub); }
-
-.footer-copy {
-  width: 100%;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--text-dim);
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.04);
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(20px); }
-  to   { opacity:1; transform:translateY(0); }
-}
-@keyframes pulse {
-  0%, 100% { opacity:0.4; }
-  50%      { opacity:0.8; }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── LANG BAR ── */
 .lang-bar { display:flex; gap:8px; align-items:center; }
-.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
-.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
 .lang-bar a.active { color:var(--accent); }
-.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-  section { padding: 10vh 6vw; }
-  .pillars { grid-template-columns: 1fr 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .numbers-grid { grid-template-columns: 1fr 1fr; }
-  .landing-footer { flex-direction: column; }
-  .nav-links { gap: 16px; }
-}
-@media (max-width: 480px) {
-  .pillars { grid-template-columns: 1fr; }
-  .numbers-grid { grid-template-columns: 1fr 1fr; }
-}
+.lang-bar .sep { color:var(--text-dim); opacity:0.45; font-size:8px; }
+.loc-main { padding: 120px 40px 80px; max-width: 1180px; margin: 0 auto; }
+.loc-hero { padding: 80px 0 64px; border-bottom: 1px solid var(--border-dim); }
+.loc-eyebrow { font-family:var(--mono); color:var(--accent); font-size:12px; letter-spacing:0.16em; margin-bottom:18px; }
+.loc-title { font-family:var(--display); font-size:clamp(36px, 6vw, 72px); line-height:1.05; margin-bottom:22px; color:var(--text); }
+.loc-lead { max-width:760px; color:var(--text-muted); line-height:2; font-size:16px; }
+.loc-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:2px; margin-top:48px; }
+.loc-card { display:block; min-height:180px; padding:28px; background:var(--bg-2); border:1px solid var(--border-dim); text-decoration:none; color:var(--text); }
+.loc-card h2 { font-family:var(--display); font-size:21px; margin-bottom:12px; color:var(--text); }
+.loc-card p { color:var(--text-muted); line-height:1.8; font-size:14px; }
+.loc-card[href]:hover { border-color:var(--accent-dim); background:var(--bg-3); }
+@media (max-width: 820px) { .loc-main { padding:96px 20px 56px; } .loc-grid { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
-
-<!-- ── NAV ── -->
-<nav>
-  <a href="index.html" class="nav-logo">MEJE.KR</a>
-  <div class="lang-bar">
-    <a href="../index.html">KR</a><span class="sep">&middot;</span>
-    <a href="../en/index.html">EN</a><span class="sep">&middot;</span>
-    <a href="index.html" class="active">JA</a><span class="sep">&middot;</span>
-    <a href="../zh-tw/index.html">繁</a><span class="sep">&middot;</span>
-    <a href="../zh-cn/index.html">简</a><span class="sep">&middot;</span>
-    <a href="../ar/index.html">AR</a><span class="sep">&middot;</span>
-    <a href="../fa/index.html">FA</a><span class="sep">&middot;</span>
-    <a href="../ur/index.html">UR</a>
-  </div>
-  <div class="nav-links">
-    <a href="#projects">プロジェクト</a>
-    <a href="#about">会社情報</a>
-    <a href="process.html">プロセス</a>
-    <a href="knowledge.html">ナレッジ</a>
-    <a href="tmi.html">TMI</a>
-    <a href="mailto:Contact@meje.kr">Contact</a>
-  </div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar"><a href="../index.html">KR</a><span class="sep">&middot;</span><a href="../en/index.html">EN</a><span class="sep">&middot;</span><a href="../ja/index.html" class="active">JA</a><span class="sep">&middot;</span><a href="../zh-tw/index.html">繁</a><span class="sep">&middot;</span><a href="../zh-cn/index.html">简</a><span class="sep">&middot;</span><a href="../ar/index.html">AR</a><span class="sep">&middot;</span><a href="../fa/index.html">FA</a><span class="sep">&middot;</span><a href="../ur/index.html">UR</a></div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">ホーム</a></li>
+    <li><a href="about.html">会社情報</a></li>
+    <li><a href="works.html">実績</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="process.html">プロセス</a></li>
+    <li><a href="knowledge.html">知識</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a></li>
+  </ul>
+  <span class="nav-badge">WORLDVIEW IP STUDIO</span>
 </nav>
-
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-logo">MEJE</div>
-  <p class="hero-tagline">世界観をつくるスタジオ</p>
-  <p class="hero-prompt"><span class="hl">$</span> IP Strategy · K-Contents · Fandom Design · AI</p>
-  <p class="hero-prompt" style="margin-top: 14px; font-size: 12px; opacity: 0.7;">
-    <span class="hl">&gt;</span> 世界観 · キャラクター · 100シナリオで作る100日ファンダムアクティビティ
-  </p>
-  <div class="scroll-hint">SCROLL &darr;</div>
-</section>
-
-<!-- ── WHAT WE DO ── -->
-<section class="half reveal">
-  <p class="sec-label">// what_we_do</p>
-  <h2 class="sec-title">We Build Worlds.</h2>
-  <p class="sec-desc">
-    We design worldview for content IPs, create characters,<br>
-    and craft experiences where fandom lives and breathes.
-  </p>
-
-  <div class="pillars">
-    <div class="pillar">
-      <div class="pillar-icon">&gt;_</div>
-      <div class="pillar-title">IP Strategy</div>
-      <p class="pillar-desc">Worldview library design, character persona development, IP licensing structure consulting</p>
-    </div>
-    <div class="pillar">
-      <div class="pillar-icon">#</div>
-      <div class="pillar-title">K-Contents</div>
-      <p class="pillar-desc">Worldview-based IP expansion producing for games, webtoons, web novels, and broadcast content</p>
-    </div>
-    <div class="pillar">
-      <div class="pillar-icon">&hearts;</div>
-      <div class="pillar-title">Fandom Design</div>
-      <p class="pillar-desc">K-POP idol fandom activity platform development and real-time fandom analytics</p>
-    </div>
-    <div class="pillar">
-      <div class="pillar-icon">AI</div>
-      <div class="pillar-title">AI Technology</div>
-      <p class="pillar-desc">AI fandom analytics engine, AI hyper-localization, AI worldview builder</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── PROJECTS ── -->
-<section class="half reveal" id="projects">
-  <p class="sec-label">// projects</p>
-  <h2 class="sec-title">実績 of MEJE</h2>
-
-  <div class="projects-grid stagger reveal">
-    <div class="project-card">
-      <span class="project-status ended">&bull; SERVICE ENDED</span>
-      <h3 class="project-title">VANNEE World<br><span style="font-size:0.5em; font-weight:400; color:var(--text-dim);">VANNEE World</span></h3>
-      <p class="project-genre">Idol Fandom Activity Platform</p>
-      <p class="project-desc">K-POP idol group IP-based fandom activity platform. Service in 43 countries, 100-day season operation, 41% DAU conversion.</p>
-      <a href="https://vanneeworld.com/" class="project-link" target="_blank" rel="noopener">vanneeworld.com &nearr;</a>
-    </div>
-    <div class="project-card">
-      <span class="project-status live">&bull; LIVE</span>
-      <h3 class="project-title">Parrot Hospital Tycoon<br><span style="font-size:0.5em; font-weight:400; color:var(--text-dim);">Parrot Hospital Tycoon</span></h3>
-      <p class="project-genre">Casual Tycoon Game</p>
-      <p class="project-desc">Parrot character IP-based hospital management simulation. The first game title from our self IP world "Perotia".</p>
-      <a href="https://play.google.com/store/apps/details?id=com.MEJEWorks.ParrotHospital&hl=ko" class="project-link" target="_blank" rel="noopener">Google Play &nearr;</a>
-      <a href="https://apps.apple.com/kr/app/앵무병원-방치형-힐링-타이쿤/id6757802365" class="project-link" target="_blank" rel="noopener" style="margin-left:6px;">App Store &nearr;</a>
-    </div>
-    <div class="project-card">
-      <span class="project-status soon" style="color:#7ecfff; border:1px solid rgba(126,207,255,0.35); animation:soon-pulse 2s ease-in-out infinite;">&bull; COMING SOON · 2026.05</span>
-      <h3 class="project-title">Parrot Mart Tycoon<br><span style="font-size:0.5em; font-weight:400; color:var(--text-dim);">Parrot Mart Tycoon</span></h3>
-      <p class="project-genre">Mobile Simulation Tycoon · Parrot Trilogy #2</p>
-      <p class="project-desc">The second title of the Parrot trilogy. Large mart construction and management simulation. Launching May.</p>
-      <a href="works.html#projects" class="project-link">もっと見る →</a>
-    </div>
-    <div class="project-card">
-      <span class="project-status dev">&bull; IN DEVELOPMENT</span>
-      <h3 class="project-title">Ghost Restaurant<br><span style="font-size:0.5em; font-weight:400; color:var(--text-dim);">Ghost Restaurant</span></h3>
-      <p class="project-genre">Story-driven Tycoon Game</p>
-      <p class="project-desc">Restaurant management game based on Korean traditional ghost worldview. Webtoon · web novel IP expansion in preparation.</p>
-    </div>
-    <div class="project-card">
-      <span class="project-status live">&bull; LIVE</span>
-      <h3 class="project-title">FEWK<br><span style="font-size:0.5em; font-weight:400; color:var(--text-dim);">Cyberpunk TRPG System</span></h3>
-      <p class="project-genre">Original IP · TRPG · 3rd Edition</p>
-      <p class="project-desc">In-house cyberpunk TRPG system. Online 3rd Edition published. Core Rulebook · World Book scheduled for H1 publication.</p>
-      <a href="https://whtdrgongmail.github.io/FEWKbooks3rd/#home" class="project-link" target="_blank" rel="noopener">Online Rulebook &nearr;</a>
-      <a href="works.html#projects" class="project-link" style="margin-left:6px;">Publication schedule →</a>
-    </div>
-  </div>
-</section>
-
-<style>
-@keyframes soon-pulse { 0%,100%{opacity:1} 50%{opacity:.55} }
-</style>
-
-<!-- ── NUMBERS ── -->
-<section class="half reveal">
-  <p class="sec-label">// metrics</p>
-  <h2 class="sec-title">数字で見る</h2>
-
-  <div class="numbers-grid stagger reveal" id="numbers-grid">
-    <div class="number-cell">
-      <div class="number-value" data-count="25" data-suffix="+">25+</div>
-      <div class="number-label">IP歴</div>
-    </div>
-    <div class="number-cell">
-      <div class="number-value" data-count="43">43</div>
-      <div class="number-label">対応国数</div>
-    </div>
-    <div class="number-cell" style="cursor:pointer;" onclick="location.href='knowledge.html'">
-      <div class="number-value" data-count="30" data-suffix="+">30+</div>
-      <div class="number-label">講演・トーク</div>
-    </div>
-    <div class="number-cell">
-      <div class="number-value" data-count="1">1</div>
-      <div class="number-label">AI特許出願</div>
-    </div>
-  </div>
-</section>
-
-<!-- ── PROCESS ── -->
-<section class="half reveal" id="process">
-  <p class="sec-label">// process · B2B 世界観IP制作</p>
-  <h2 class="sec-title">プロセス</h2>
-  <p class="sec-desc">
-    MEJE WorksのB2B世界観IP制作領域で動く5つのプロセス。<br>
-    クローリング · モニタリングで集めた資料が世界観IPとして整理され、コンテンツへと流れます。
-  </p>
-
-  <div class="projects-grid" style="margin-top:32px; grid-template-columns:repeat(5,1fr);">
-    <a href="process/seoyeongak.html" class="project-card" style="text-decoration:none;">
-      <span class="project-status" style="color:var(--accent);">&bull; 01 / INPUT</span>
-      <h3 class="project-title" style="font-size:1.05em;">Seoyeongak</h3>
-      <p class="project-genre">Seoyeongak · 6 Steps</p>
-      <p class="project-desc">Foreign source → 35 translation/adaptation assets. Pride and Prejudice as case.</p>
+<main class="loc-main">
+  <section class="loc-hero">
+    <p class="loc-eyebrow">WORLDVIEW IP STUDIO</p>
+    <h1 class="loc-title">世界観を、運用できるIPへ。</h1>
+    <p class="loc-lead">MEJE Worksは、IP資料の整理、翻訳・設定化、キャラクター構築、100本規模の物語制作、ファンダム活動設計までを一つの流れで扱う制作スタジオです。</p>
+  </section>
+  <section class="loc-grid"><a class="loc-card" href="https://idongworld.com/" target="_blank" rel="noopener">
+      <h2>最新プロジェクト · Aidong World</h2>
+      <p>キャラクター、世界観、ウィキを連動させる最新プロジェクトです。</p>
     </a>
-    <a href="process/character.html" class="project-card" style="text-decoration:none;">
-      <span class="project-status" style="color:var(--accent);">&bull; 02 / INPUT</span>
-      <h3 class="project-title" style="font-size:1.05em;">Character</h3>
-      <p class="project-genre">Character · 12 Steps</p>
-      <p class="project-desc">Seed → full character build + five-media output.</p>
+<a class="loc-card" href="https://books.meje.kr/" target="_blank" rel="noopener">
+      <h2>読める原稿 · MEJE Books</h2>
+      <p>制作手順と講演原稿を本の単位で読める公開サイトです。</p>
     </a>
-    <a href="process/librarying.html" class="project-card" style="text-decoration:none;">
-      <span class="project-status" style="color:var(--green);">&bull; 03 / SORTING</span>
-      <h3 class="project-title" style="font-size:1.05em;">Librarying</h3>
-      <p class="project-genre">Librarying · 4 Stages</p>
-      <p class="project-desc">Scattered → Obsidian Vault, 1,500 entries. Single source of truth.</p>
-    </a>
-    <a href="process/lorebook.html" class="project-card" style="text-decoration:none;">
-      <span class="project-status" style="color:var(--accent);">&bull; 04 / OUTPUT</span>
-      <h3 class="project-title" style="font-size:1.05em;">LOREBOOK</h3>
-      <p class="project-genre">LOREBOOK · 6 Phases</p>
-      <p class="project-desc">Vault → B5 hardcover ~450 pp + web edition.</p>
-    </a>
-    <a href="process/storytelling100.html" class="project-card" style="text-decoration:none;">
-      <span class="project-status" style="color:var(--accent);">&bull; 05 / OUTPUT</span>
-      <h3 class="project-title" style="font-size:1.05em;">Storytelling 100</h3>
-      <p class="project-genre">Storytelling 100 · 7 Stages</p>
-      <p class="project-desc">Vault + characters → 100 everyday-cross-section stories.</p>
-    </a>
+<a class="loc-card" href="ip.html">
+      <h2>制作相談 · IP Partnership</h2>
+      <p>ブランド、ゲーム、エンターテインメントIPの世界観制作を相談できます。</p>
+    </a></section>
+</main>
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205</div>
+  <div class="footer-links">
+    <a href="index.html">ホーム</a>
+    <a href="about.html">会社情報</a>
+    <a href="works.html">実績</a>
+    <a href="process.html">プロセス</a>
+    <a href="knowledge.html">知識</a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
   </div>
-
-  <a href="process.html" class="cta" style="margin-top:32px; display:inline-block; padding:12px 28px; border:1px solid var(--accent); color:var(--accent); font-family:var(--mono); font-size:13px; letter-spacing:0.06em; text-decoration:none;">パイプライン全体を見る →</a>
-</section>
-
-<style>
-@media (max-width: 1024px) {
-  #process .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
-}
-@media (max-width: 600px) {
-  #process .projects-grid { grid-template-columns: 1fr !important; }
-}
-</style>
-
-<!-- ── KNOWLEDGE ── -->
-<section class="half reveal" id="knowledge">
-  <p class="sec-label">// knowledge</p>
-  <h2 class="sec-title">外部出版</h2>
-  <p class="sec-desc">
-    BrunchBook · Naverプレミアム · 各種マガジンに掲載された外部出版モ集。<br>
-    Over 30 published articles on AI, IP strategy, and original creation.
-  </p>
-
-  <div class="projects-grid" style="margin-top:32px;">
-    <div class="project-card">
-      <span class="project-status live">&bull; AI & Translation Practice</span>
-      <h3 class="project-title" style="font-size:1.1em;">AI-Era Creation · Translation · Team Ops</h3>
-      <p class="project-desc">AI translation practice guide, AICBOK (Dev team lead in the AI era), AI content diversity.</p>
-      <a href="knowledge.html#ai" class="project-link">もっと見る →</a>
-    </div>
-    <div class="project-card">
-      <span class="project-status live">&bull; IP & Fandom Strategy</span>
-      <h3 class="project-title" style="font-size:1.1em;">Fandom · Worldview · Game Planning</h3>
-      <p class="project-desc">The art of holding 2 minutes of fandom, Metaverse worldview magazine, Game planning magazine.</p>
-      <a href="knowledge.html#fandom" class="project-link">もっと見る →</a>
-    </div>
-    <div class="project-card">
-      <span class="project-status live">&bull; Original Fiction</span>
-      <h3 class="project-title" style="font-size:1.1em;">FEWK Short Stories · Experimental</h3>
-      <p class="project-desc">FEWK cyberpunk 102 short stories, MEJE Works experimental story magazine.</p>
-      <a href="knowledge.html" class="project-link">もっと見る →</a>
-    </div>
-  </div>
-
-  <a href="knowledge.html" class="cta" style="margin-top:32px; display:inline-block;">外部出版アーカイブ →</a>
-</section>
-
-<!-- ── ABOUT BRIEF ── -->
-<section class="half reveal" id="about">
-  <div class="about-brief">
-    <p class="sec-label">// about</p>
-    <h2 class="sec-title">世界をつくる人々の<br>スタジオ</h2>
-    <p class="sec-desc">
-      MEJE Worksは2021年設立の世界観IP制作 · 運営スタジオです。<br>
-      世界観 · キャラクター · 100シナリオを入力資産として、<br>
-       <strong style="color:var(--accent);">100-day fandom activity</strong> をクライアントと共に運営します。
-    </p>
-    <p class="sec-desc" style="margin-top:16px;">
-      Game, entertainment, and AI experts &mdash; from BTS World development lead,<br>
-      HYBE Worldview Library Part Lead, and Netmarble R&D &mdash; build the content world.
-    </p>
-    <p class="sec-desc" style="margin-top:20px; font-size:14px; color:var(--text-dim);">
-      "No one should be lonely" &mdash;<br>
-      We build community through worldview, connecting and comforting people.
-    </p>
-    <a href="tmi.html" class="cta">MEJEについて詳しく &rarr;</a>
-  </div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer class="landing-footer">
-  <div class="footer-left">
-    <div class="footer-company">MEJE Works Corp.</div>
-    <div class="footer-info">
-      MEJE Works Corp. | Kim Dong-eun | 772-87-02365<br>
-      503, 217, Yeoksam-ro, Gangnam-gu, Seoul<br>
-      <a href="mailto:Contact@meje.kr">Contact@meje.kr</a> · +82-507-1420-1205
-    </div>
-  </div>
-  <div class="footer-right">
-    <a href="privacy.html">プライバシー Policy</a>
-    <a href="terms.html">利用規約</a>
-    <a href="tmi.html">TMI</a>
-  </div>
-  <div class="footer-copy">
-    &copy; MEJE Works Corp. All Rights Reserved.
-  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
 </footer>
-
-<script>
-// ── 숫자 카운터 ──
-function animateCount(el) {
-  const target = parseInt(el.dataset.count, 10);
-  const suffix = el.dataset.suffix || '';
-  const duration = 1400;
-  const start = performance.now();
-  const update = (now) => {
-    const p = Math.min((now - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.floor(ease * target) + suffix;
-    if (p < 1) requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-}
-
-// ── Reveal + Stagger + Counter 통합 ──
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add('visible');
-    // 숫자 카운터
-    e.target.querySelectorAll('[data-count]').forEach(animateCount);
-    obs.unobserve(e.target);
-  });
-}, { threshold: 0.15 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
-
 </body>
 </html>
