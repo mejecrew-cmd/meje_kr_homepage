@@ -1066,9 +1066,17 @@ footer {
   letter-spacing: 0.08em;
   transition: background 0.2s, color 0.2s;
 }
+.proc-cta + .proc-cta {
+  margin-left: 8px;
+}
 .proc-cta:hover {
   background: var(--accent);
   color: var(--bg);
+}
+@media (max-width: 560px) {
+  .proc-cta + .proc-cta {
+    margin-left: 0;
+  }
 }
 
 /* ── Process Tag (used in Works project cards) ── */

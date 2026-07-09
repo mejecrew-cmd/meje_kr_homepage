@@ -151,6 +151,13 @@
 .book-card.magazine {
   border-left: 2px solid var(--accent-dim);
 }
+.book-card.books {
+  border-left: 2px solid #7ecfff;
+}
+.book-card.books .book-card-platform,
+.book-card.books .book-card-arrow {
+  color: #7ecfff;
+}
 
 .lang-bar { display:flex; gap:8px; align-items:center; }
 .lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
@@ -184,6 +191,7 @@
     <li><a href="ip.html">IP</a></li>
     <li><a href="process.html">Process</a></li>
     <li><a href="knowledge.html" class="active">Knowledge</a></li>
+    <li><a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a></li>
     <li><a href="universe.html">Universe</a></li>
   </ul>
   <span class="nav-badge">Knowledge</span>
@@ -196,7 +204,7 @@
   <span class="knowledge-hero-badge">MEJE Works</span>
   <h1 class="knowledge-hero-title">Knowledge</h1>
   <p class="knowledge-hero-desc">
-    MEJE의 제작 절차와 김동은WhtDrgon.의 강연고를 읽고 공부하는 자리.<br>
+    MEJE의 제작 절차와 김동은WhtDrgon.의 강연고를 읽고 공부하는 공개 지식 목록.<br>
     회사의 프로세스, 팬덤 설계, 세계관 제작 지식을 홈페이지 톤으로 정리합니다.
   </p>
 </section>
@@ -204,9 +212,9 @@
 <!-- ── KNOWLEDGE MAP ── -->
 <section class="knowledge-section reveal" id="knowledge-map" style="padding-top:32px;">
   <p class="knowledge-cat-label">// knowledge_map</p>
-  <h2 class="knowledge-cat-title">열람과 공부의 자리</h2>
+  <h2 class="knowledge-cat-title">열람과 공부를 위한 공개 목록</h2>
   <p class="knowledge-cat-desc">
-    내부 기술자산 원문은 노출하지 않고, 공개 가능한 수준의 프로세스·강연고·세계관 설정 입구를 연결합니다.
+    내부 기술자산 원문은 노출하지 않고, 공개 가능한 수준의 프로세스·강연고·세계관 설정 경로를 연결합니다.
     MEJE 강연고는 회사의 제작 절차와 노하우, 김동은 강연고는 대표이자 세계관 제작자의 이야기로 구분합니다.
   </p>
   <div class="book-grid">
@@ -225,6 +233,14 @@
         MEJE 대표 김동은WhtDrgon.의 최초 사용자 경험, 분위기공학, BM북 리뉴얼 원고를 분류합니다.
       </p>
       <span class="book-card-arrow">→ 강연고 보기</span>
+    </a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS</span>
+      <span class="book-card-title">공개 원고 읽기</span>
+      <p class="book-card-desc">
+        제작 절차, FTUE, BM, 세계관 원고를 책 단위 목차와 챕터 화면으로 읽는 공개 사이트입니다.
+      </p>
+      <span class="book-card-arrow">→ books.meje.kr</span>
     </a>
     <a href="universe.html" class="book-card magazine">
       <span class="book-card-platform">Universe Setting</span>
@@ -250,7 +266,7 @@
   <p class="knowledge-cat-label">// lecture_line_index</p>
   <h2 class="knowledge-cat-title">강연고 라인 분류</h2>
   <p class="knowledge-cat-desc">
-    홈페이지에 바로 노출할 것은 원문 파일이 아니라 학습 입구입니다.
+    홈페이지에 바로 노출할 것은 원문 파일이 아니라 공개 읽기 경로입니다.
     MEJE 강연고 라인은 회사의 제작 절차와 노하우, 김동은 강연고 라인은 대표 저자의 관찰과 창작론으로 분리합니다.
   </p>
   <div class="book-grid">
@@ -299,7 +315,7 @@
   <h2 class="knowledge-cat-title">공개 강연고 · 창작 방법론</h2>
   <p class="knowledge-cat-desc">
     IP 세계관 설계, 캐릭터 빌드, 절차적 창작 워크플로를 다루는 실전 가이드.
-    브런치 작품 목록과 대조해 제작 공정에 직접 연결되는 지식체계를 먼저 배치했습니다.
+    공개 매체와 MEJE Books를 함께 대조해 제작 공정에 직접 연결되는 지식체계를 먼저 배치했습니다.
   </p>
   <div class="book-grid">
 
@@ -313,6 +329,15 @@
       </p>
       <span class="book-card-arrow">→ 브런치북</span>
     </a>
+    <a href="https://books.meje.kr/books/meje-librarying/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · PROCESS 02</span>
+      <span class="book-card-title">MEJE 라이브러링<br>워크플로 백서</span>
+      <p class="book-card-desc">
+        라이브러링 공정을 책 단위 목차와 챕터 화면으로 읽는 MEJE Books 공개본입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
+    </a>
 
     <a href="https://brunch.co.kr/brunchbook/mejelore"
        target="_blank" rel="noopener" class="book-card">
@@ -323,6 +348,15 @@
         세계관을 읽히는 책으로 만드는 공정입니다.
       </p>
       <span class="book-card-arrow">→ 브런치북</span>
+    </a>
+    <a href="https://books.meje.kr/books/meje-lorebook/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · PROCESS 04</span>
+      <span class="book-card-title">MEJE 설정 프로세스<br>로어북</span>
+      <p class="book-card-desc">
+        세계관 설정집과 로어북 제작 공정을 챕터별 읽기 화면으로 정리한 공개본입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
     </a>
 
     <a href="https://contents.premium.naver.com/whtdrgon/mejeworks/contents?categoryId=19dd8026462000kih"
@@ -346,6 +380,24 @@
         네이버 강연고와 함께 읽는 공개 브런치북입니다.
       </p>
       <span class="book-card-arrow">→ 브런치북</span>
+    </a>
+    <a href="https://books.meje.kr/books/meje-character-process/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · PROCESS 05</span>
+      <span class="book-card-title">MEJE 캐릭터특화<br>프로세스</span>
+      <p class="book-card-desc">
+        캐릭터 창작 및 시트 제작 디자인 가이드를 목차와 챕터 단위로 읽는 공개본입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
+    </a>
+    <a href="https://books.meje.kr/books/meje-storytelling-100/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · PROCESS 06</span>
+      <span class="book-card-title">MEJE 스토리텔링 100</span>
+      <p class="book-card-desc">
+        세계관과 캐릭터 시트를 바탕으로 100개의 이야기 장면을 생산하는 공정 원고입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
     </a>
 
     <a href="https://brunch.co.kr/brunchbook/worldip"
@@ -439,6 +491,24 @@
       </p>
       <span class="book-card-arrow">→ 브런치북</span>
     </a>
+    <a href="https://books.meje.kr/books/meje-seoyeongak/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · PROCESS 03</span>
+      <span class="book-card-title">MEJE 서연각<br>번역 프로세스</span>
+      <p class="book-card-desc">
+        번역, 각색, 해설 자료집 제작 공정을 책 단위 목차와 챕터 화면으로 정리한 공개본입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
+    </a>
+    <a href="https://books.meje.kr/books/pride-and-prejudice-data/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · REFERENCE</span>
+      <span class="book-card-title">Pride and Prejudice<br>세계관 데이터</span>
+      <p class="book-card-desc">
+        서연각 공정의 기반 예시로 정리된 세계관 데이터와 설정 시트 자료입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
+    </a>
 
   </div>
 </section>
@@ -451,7 +521,7 @@
   <h2 class="knowledge-cat-title">IP & 팬덤 전략</h2>
   <p class="knowledge-cat-desc">
     세계관 기반 IP 설계, 최초 사용자 경험, 뉴콘텐츠 BM, 팬덤 커뮤니티를 읽는 지식체계.
-    브런치 작품 목록에서 누락되기 쉬운 최신 책들을 함께 연결합니다.
+    공개 매체와 MEJE Books 공개본을 함께 연결합니다.
   </p>
   <div class="book-grid">
 
@@ -465,6 +535,15 @@
       </p>
       <span class="book-card-arrow">→ 브런치북</span>
     </a>
+    <a href="https://books.meje.kr/books/new-content-ftue/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · FTUE</span>
+      <span class="book-card-title">FTUE 최초 사용자 경험</span>
+      <p class="book-card-desc">
+        뉴콘텐츠의 첫 화면, 첫 감정, 첫 관계를 설계하는 원고를 책 단위로 정리한 공개본입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
+    </a>
 
     <a href="https://brunch.co.kr/brunchbook/mejeworld"
        target="_blank" rel="noopener" class="book-card">
@@ -476,6 +555,15 @@
       </p>
       <span class="book-card-arrow">→ 브런치북</span>
     </a>
+    <a href="https://books.meje.kr/books/reading-the-world-through-universe/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · WORLDVIEW</span>
+      <span class="book-card-title">세계관으로<br>세계를 읽는 법</span>
+      <p class="book-card-desc">
+        세계관을 해석 렌즈, 조직 원리, 창작 공정, 사업 구조로 읽는 원고의 공개본입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
+    </a>
 
     <a href="https://brunch.co.kr/brunchbook/mejebmbook"
        target="_blank" rel="noopener" class="book-card">
@@ -486,6 +574,24 @@
         운영과 지속 가능성 분류에 둡니다.
       </p>
       <span class="book-card-arrow">→ 브런치북</span>
+    </a>
+    <a href="https://books.meje.kr/books/mobile-game-bm-renewal/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · BM</span>
+      <span class="book-card-title">모바일 게임<br>BM 리뉴얼</span>
+      <p class="book-card-desc">
+        과금 기획, 설계, 데이터 분석과 운영을 뉴콘텐츠 비즈니스 모델 관점에서 읽는 공개본입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
+    </a>
+    <a href="https://books.meje.kr/books/atmosphere-engineering/"
+       target="_blank" rel="noopener" class="book-card books">
+      <span class="book-card-platform">MEJE BOOKS · ESSAY</span>
+      <span class="book-card-title">분위기공학</span>
+      <p class="book-card-desc">
+        분위기, 감각, 관계가 이야기를 만드는 방식을 다루는 김동은WhtDrgon. 원고 라인입니다.
+      </p>
+      <span class="book-card-arrow">→ MEJE Books</span>
     </a>
 
     <a href="https://brunch.co.kr/magazine/universesetting"
@@ -598,7 +704,7 @@
       <span class="book-card-platform">BRUNCH MAGAZINE · PROJECT</span>
       <span class="book-card-title">아이동월드<br>베드타임 스토리</span>
       <p class="book-card-desc">
-        아이동월드 프로젝트의 이야기 확장 자리.
+        아이동월드 프로젝트의 이야기 확장 사례.
         현재는 Works의 아이동월드 프로젝트와 함께 참고할 프로젝트 기반 스토리 라인으로 둡니다.
       </p>
       <span class="book-card-arrow">→ 브런치 매거진</span>
@@ -626,6 +732,7 @@
     <a href="works.html">Works</a>
     <a href="ip.html">IP</a>
     <a href="knowledge.html">Knowledge</a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
     <a href="universe.html">Universe</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
