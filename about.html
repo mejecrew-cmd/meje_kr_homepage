@@ -314,6 +314,9 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2px;
 }
+.process-flow-secondary {
+  margin-top: 2px;
+}
 
 .process-step {
   background: var(--bg-2);
@@ -338,27 +341,29 @@
 
 .process-step-title {
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 6px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .process-step-sub {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
   letter-spacing: 0.05em;
+  line-height: 1.55;
 }
 
 .process-step-asset {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--accent-dim);
   margin-top: 10px;
   padding-top: 8px;
   border-top: 1px solid var(--border-dim);
+  line-height: 1.5;
 }
 
 .process-arrow {
@@ -497,6 +502,9 @@
   .process-arrow { display: none; }
   .case-stats { grid-template-columns: 1fr; }
   .funnel-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .process-flow { grid-template-columns: 1fr; }
 }
 .lang-bar { display:flex; gap:8px; align-items:center; }
 .lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
@@ -819,54 +827,60 @@
   </div>
 
   <div class="terminal-prompt">
-    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">pipeline </span><span class="flag">--worldbuilding --stages=7</span>
+    <span class="ps">crew@meje </span><span style="color:var(--text-muted);">~ </span><span class="cmd">pipeline </span><span class="flag">--worldbuilding --stages=8</span>
   </div>
 
   <div class="process-flow">
     <div class="process-step">
       <span class="process-step-num">01</span>
-      <p class="process-step-title">IP 용어 WIKI</p>
-      <p class="process-step-sub">세계관 용어 정의 · 데이터 구조화</p>
-      <p class="process-step-asset">→ 지식 자산</p>
+      <p class="process-step-title">IP 데이터 크롤링 기술</p>
+      <p class="process-step-sub">원천 IP · 공개 자료 · 팬덤 반응 수집</p>
+      <p class="process-step-asset">→ 입력 데이터</p>
     </div>
     <div class="process-step">
       <span class="process-step-num">02</span>
-      <p class="process-step-title">세계관 설정집</p>
-      <p class="process-step-sub">Universe Settings · Campaign Book</p>
-      <p class="process-step-asset">→ 설정 자산</p>
+      <p class="process-step-title">키워드/세계관 라이브러링</p>
+      <p class="process-step-sub">키워드 · 개념 · 관계 구조화</p>
+      <p class="process-step-asset">→ 지식 자산</p>
     </div>
     <div class="process-step">
       <span class="process-step-num">03</span>
-      <p class="process-step-title">캐릭터 디자인</p>
-      <p class="process-step-sub">비주얼 시스템 · MD 설계</p>
-      <p class="process-step-asset">→ MD/상품 자산</p>
+      <p class="process-step-title">서연각 번역 및 자료집</p>
+      <p class="process-step-sub">번역 · 각색 · 해설 자료화</p>
+      <p class="process-step-asset">→ 자료집</p>
     </div>
     <div class="process-step">
       <span class="process-step-num">04</span>
-      <p class="process-step-title">팬덤 액티비티</p>
-      <p class="process-step-sub">인터랙티브 콘텐츠 · 데일리 루틴</p>
-      <p class="process-step-asset">→ 글로벌 콘텐츠</p>
+      <p class="process-step-title">세계관 설정집/로어북 제작</p>
+      <p class="process-step-sub">Universe Bible · Lorebook</p>
+      <p class="process-step-asset">→ 설정 자산</p>
     </div>
   </div>
 
-  <div style="margin-top:2px; display:grid; grid-template-columns:repeat(3,1fr); gap:2px;">
+  <div class="process-flow process-flow-secondary">
     <div class="process-step">
       <span class="process-step-num">05</span>
-      <p class="process-step-title">데이터 분석</p>
-      <p class="process-step-sub">Preprocessed CSV · Visual View</p>
-      <p class="process-step-asset">→ 인사이트</p>
+      <p class="process-step-title">캐릭터 창작 및 시트 제작 디자인 가이드</p>
+      <p class="process-step-sub">서사 · 관계 · 말투 · 운용 시트</p>
+      <p class="process-step-asset">→ 캐릭터 자산</p>
     </div>
     <div class="process-step">
       <span class="process-step-num">06</span>
-      <p class="process-step-title">수익 모델 설계</p>
-      <p class="process-step-sub">디지털 굿즈 · 광고 · 게임 재화</p>
-      <p class="process-step-asset">→ BM 전환</p>
+      <p class="process-step-title">스토리텔링 100 생산</p>
+      <p class="process-step-sub">일상단면 · 관계 변화 · 참여형 장면</p>
+      <p class="process-step-asset">→ 이야기 자산</p>
     </div>
     <div class="process-step">
       <span class="process-step-num">07</span>
-      <p class="process-step-title">IP 확장</p>
-      <p class="process-step-sub">공연 · 패션 · 캐릭터 크로스미디어</p>
-      <p class="process-step-asset">→ 글로벌 IP</p>
+      <p class="process-step-title">캐릭터 디자인 및 IP 베이스 구축</p>
+      <p class="process-step-sub">톤앤매너 · 상품화 기준 · 운영 규칙</p>
+      <p class="process-step-asset">→ IP 베이스</p>
+    </div>
+    <div class="process-step">
+      <span class="process-step-num">08</span>
+      <p class="process-step-title">팬덤 액티비티 콘텐츠 제작</p>
+      <p class="process-step-sub">미션 · 이벤트 · 플랫폼 활동</p>
+      <p class="process-step-asset">→ 팬덤 콘텐츠</p>
     </div>
   </div>
 

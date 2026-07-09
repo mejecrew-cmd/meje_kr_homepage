@@ -54,9 +54,9 @@
 }
 .knowledge-hero-desc {
   font-family: var(--mono);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-muted);
-  max-width: 560px;
+  max-width: 700px;
   margin: 0 auto;
   line-height: 2;
 }
@@ -84,27 +84,27 @@
 }
 .knowledge-cat-desc {
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-muted);
   margin-bottom: 32px;
-  max-width: 640px;
-  line-height: 1.9;
+  max-width: 820px;
+  line-height: 1.85;
 }
 
 /* ── BOOK CARD GRID ── */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2px;
 }
 
 .book-card {
   background: var(--bg-2);
   border: 1px solid var(--border-dim);
-  padding: 28px 24px;
+  padding: 30px 26px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   transition: background 0.2s, border-color 0.2s;
   text-decoration: none;
 }
@@ -114,27 +114,27 @@
 }
 .book-card-platform {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-dim);
   letter-spacing: 0.1em;
 }
 .book-card-title {
   font-family: var(--display);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--text);
-  line-height: 1.4;
+  line-height: 1.35;
 }
 .book-card-desc {
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-muted);
-  line-height: 1.85;
+  line-height: 1.75;
   flex: 1;
 }
 .book-card-arrow {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--accent-dim);
   margin-top: 4px;
 }
@@ -214,7 +214,7 @@
       <span class="book-card-platform">MEJE 강연고 라인</span>
       <span class="book-card-title">제작 절차와 노하우</span>
       <p class="book-card-desc">
-        라이브러링, 서연각, 로어북, 신규창작, 스토리텔링100 등 MEJE의 제작 공정을 홈페이지용 개요로 정리합니다.
+        IP 데이터 크롤링부터 팬덤 액티비티 콘텐츠 제작까지 이어지는 MEJE의 8단계 제작 공정을 홈페이지용 개요로 정리합니다.
       </p>
       <span class="book-card-arrow">→ Process</span>
     </a>
@@ -256,18 +256,18 @@
   <div class="book-grid">
     <div class="book-card magazine">
       <span class="book-card-platform">MEJE PROCESS NOTES</span>
-      <span class="book-card-title">라이브러링 · 서연각 · 로어북</span>
+      <span class="book-card-title">데이터 · 라이브러링 · 자료집 · 로어북</span>
       <p class="book-card-desc">
-        자료를 모으고, 번역·각색하고, 세계관 백과로 정리하는 MEJE의 기본 제작 공정입니다.
+        IP 데이터를 수집하고, 키워드와 세계관을 라이브러링하고, 번역·자료집과 로어북으로 정리하는 MEJE의 기본 제작 공정입니다.
         공개 페이지에서는 Process 요약과 학습 순서로만 다룹니다.
       </p>
       <span class="book-card-arrow">→ 내부 기술자산 원문 비노출</span>
     </div>
     <div class="book-card magazine">
       <span class="book-card-platform">MEJE CREATION NOTES</span>
-      <span class="book-card-title">신규창작 · 스토리텔링100 · 팬덤 액티비티</span>
+      <span class="book-card-title">캐릭터 · 스토리100 · IP 베이스 · 팬덤 액티비티</span>
       <p class="book-card-desc">
-        캐릭터 빌드, 100일 시나리오, 팬덤 액티비티 설계를 MEJE의 제작 절차 관점에서 정리합니다.
+        캐릭터 창작, 시트 제작, 스토리텔링 100, IP 베이스 구축, 팬덤 액티비티 콘텐츠 설계를 MEJE의 제작 절차 관점에서 정리합니다.
         아이동월드는 이 라인의 최신 적용 사례로 둡니다.
       </p>
       <span class="book-card-arrow">→ Works / Process와 연결</span>
@@ -299,9 +299,31 @@
   <h2 class="knowledge-cat-title">공개 강연고 · 창작 방법론</h2>
   <p class="knowledge-cat-desc">
     IP 세계관 설계, 캐릭터 빌드, 절차적 창작 워크플로를 다루는 실전 가이드.
-    강연고와 브런치북 형태로 공개되어 있으며, 세계관 기반 창작자를 위한 체계를 제안합니다.
+    브런치 작품 목록과 대조해 제작 공정에 직접 연결되는 지식체계를 먼저 배치했습니다.
   </p>
   <div class="book-grid">
+
+    <a href="https://brunch.co.kr/brunchbook/librarying"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · PROCESS 02</span>
+      <span class="book-card-title">MEJE 라이브러링<br>워크플로 백서</span>
+      <p class="book-card-desc">
+        흩어진 원천 자료에서 키워드, 개념, 관계, 장소, 사건을 추출해 세계관 지식 구조로 묶는 공정.
+        8단계 제작 순서의 두 번째 축입니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
+    </a>
+
+    <a href="https://brunch.co.kr/brunchbook/mejelore"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · PROCESS 04</span>
+      <span class="book-card-title">MEJE 설정 프로세스<br>로어북</span>
+      <p class="book-card-desc">
+        라이브러링된 지식을 공식 설정집, 로어북, 공개 위키, 책 구조로 편집하는 방법론.
+        세계관을 읽히는 책으로 만드는 공정입니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
+    </a>
 
     <a href="https://contents.premium.naver.com/whtdrgon/mejeworks/contents?categoryId=19dd8026462000kih"
        target="_blank" rel="noopener" class="book-card naver">
@@ -313,6 +335,17 @@
         웹소설·시나리오·TRPG·게임 기획 모든 장르에 적용 가능한 캐릭터 빌드 실전서.
       </p>
       <span class="book-card-arrow">→ 네이버 프리미엄</span>
+    </a>
+
+    <a href="https://brunch.co.kr/brunchbook/mejecha"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · PROCESS 05</span>
+      <span class="book-card-title">MEJE 캐릭터특화<br>프로세스</span>
+      <p class="book-card-desc">
+        캐릭터를 서사, 욕망, 결핍, 관계, 말투, 시각 요소, 운용 시트 단위로 제작하는 공정.
+        네이버 강연고와 함께 읽는 공개 브런치북입니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
     </a>
 
     <a href="https://brunch.co.kr/brunchbook/worldip"
@@ -398,7 +431,7 @@
 
     <a href="https://brunch.co.kr/brunchbook/mejei18n"
        target="_blank" rel="noopener" class="book-card">
-      <span class="book-card-platform">BRUNCH BOOK · 연재중</span>
+      <span class="book-card-platform">BRUNCH BOOK · PROCESS 03</span>
       <span class="book-card-title">MEJE 서연각<br>번역 프로세스</span>
       <p class="book-card-desc">
         MEJEworks 산하 번역 조직 '서연각(書淵閣)'의 기획부터 납품까지 전 과정을 공개한 실무 가이드.
@@ -417,19 +450,75 @@
   <p class="knowledge-cat-label">// ip_fandom_strategy</p>
   <h2 class="knowledge-cat-title">IP & 팬덤 전략</h2>
   <p class="knowledge-cat-desc">
-    세계관 기반 IP 설계와 팬덤 점유 전략. 메타버스·게임 기획·팬덤 플랫폼 실무 경험을 바탕으로 작성된 매거진과 브런치북.
+    세계관 기반 IP 설계, 최초 사용자 경험, 뉴콘텐츠 BM, 팬덤 커뮤니티를 읽는 지식체계.
+    브런치 작품 목록에서 누락되기 쉬운 최신 책들을 함께 연결합니다.
   </p>
   <div class="book-grid">
 
+    <a href="https://brunch.co.kr/brunchbook/ftue"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · FTUE</span>
+      <span class="book-card-title">어느날부터 게임은 안멋져<br>FTUE</span>
+      <p class="book-card-desc">
+        게임과 뉴콘텐츠의 첫 2분을 설계하는 최초 사용자 경험 책.
+        튜토리얼, 첫 화면, 장르 관습, 비게이머 진입 장벽을 다룹니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
+    </a>
+
+    <a href="https://brunch.co.kr/brunchbook/mejeworld"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · WORLDVIEW</span>
+      <span class="book-card-title">세계관으로<br>세계를 읽는 법</span>
+      <p class="book-card-desc">
+        세계관을 설정집이 아니라 해석 렌즈, 조직 원리, 창작 공정, 사업 구조로 읽는 책.
+        팬덤과 커뮤니티를 설계하는 담당자에게 연결됩니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
+    </a>
+
+    <a href="https://brunch.co.kr/brunchbook/mejebmbook"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · BM</span>
+      <span class="book-card-title">MEJE 뉴콘텐츠<br>BM 가이드북</span>
+      <p class="book-card-desc">
+        플랫폼, 앱, 콘텐츠 산업의 수익 구조를 역사와 사례로 읽는 뉴콘텐츠 비즈니스 모델 가이드.
+        운영과 지속 가능성 분류에 둡니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
+    </a>
+
     <a href="https://brunch.co.kr/magazine/universesetting"
        target="_blank" rel="noopener" class="book-card magazine">
-      <span class="book-card-platform">BRUNCH MAGAZINE · 149편</span>
+      <span class="book-card-platform">BRUNCH MAGAZINE · 155편</span>
       <span class="book-card-title">하얀용<br>메타버스와 세계관 매거진</span>
       <p class="book-card-desc">
         세계관 설계, 메타버스 환경에서의 설정 구축, 유니버스 확장 전략을 폭넓게 다루는 대형 매거진.
         세계관 기획과 IP 창작에 관한 가장 방대한 아카이브.
       </p>
       <span class="book-card-arrow">→ 브런치 매거진</span>
+    </a>
+
+    <a href="https://brunch.co.kr/magazine/bmbook"
+       target="_blank" rel="noopener" class="book-card magazine">
+      <span class="book-card-platform">BRUNCH MAGAZINE · BM ARCHIVE</span>
+      <span class="book-card-title">하얀용BM북<br>매거진</span>
+      <p class="book-card-desc">
+        BM북 구판과 뉴콘텐츠 BM 가이드북으로 이어지는 수익 모델 아카이브.
+        현재 홈페이지에서는 최신 BM 가이드북을 중심 링크로 둡니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치 매거진</span>
+    </a>
+
+    <a href="https://brunch.co.kr/brunchbook/bmbook"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · OLD EDITION</span>
+      <span class="book-card-title">하얀용 BM북<br>구판본</span>
+      <p class="book-card-desc">
+        뉴콘텐츠 BM 가이드북으로 재정리되기 전의 구판본.
+        지식체계 누락을 막기 위해 아카이브 성격으로 연결합니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
     </a>
 
     <a href="https://brunch.co.kr/magazine/whtdrgongame"
@@ -454,9 +543,32 @@
   <p class="knowledge-cat-label">// original_fiction</p>
   <h2 class="knowledge-cat-title">오리지널 창작</h2>
   <p class="knowledge-cat-desc">
-    MEJEworks의 자체 세계관에서 파생된 창작물. FEWK 사이버펑크 유니버스와 실험적 스토리 매거진.
+    MEJEworks의 자체 세계관에서 파생된 창작물과 프로젝트 기반 스토리 사례.
+    페로티아, FEWK, 아이동월드까지 세계관이 실제 콘텐츠로 내려오는 경로를 보여줍니다.
   </p>
   <div class="book-grid">
+
+    <a href="https://brunch.co.kr/brunchbook/perrotia"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · PERROTIA</span>
+      <span class="book-card-title">앵무섬 페로티아에<br>어서오세요</span>
+      <p class="book-card-desc">
+        앵무 IP 세계관의 생활감과 캐릭터 톤을 읽는 창작 사례.
+        앵무병원·앵무마트로 이어지는 자체 IP 감각을 보강합니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
+    </a>
+
+    <a href="https://brunch.co.kr/brunchbook/lulu30perrotia"
+       target="_blank" rel="noopener" class="book-card">
+      <span class="book-card-platform">BRUNCH BOOK · PERROTIA</span>
+      <span class="book-card-title">도토리 여관 103호의<br>털 뭉치</span>
+      <p class="book-card-desc">
+        페로티아 세계관 안의 캐릭터와 공간을 작은 이야기 단위로 읽는 사례.
+        스토리텔링 100과 캐릭터 운용의 예시로 분류합니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치북</span>
+    </a>
 
     <a href="https://brunch.co.kr/magazine/fewk"
        target="_blank" rel="noopener" class="book-card magazine">
@@ -477,6 +589,17 @@
       <p class="book-card-desc">
         브랜드·아이덴티티·스토리화 세 키워드를 중심으로 운영되는 창작 실험 공간.
         다양한 형식의 단편을 통해 MEJEworks의 세계관과 창작 철학을 탐구합니다.
+      </p>
+      <span class="book-card-arrow">→ 브런치 매거진</span>
+    </a>
+
+    <a href="https://brunch.co.kr/magazine/idongworld"
+       target="_blank" rel="noopener" class="book-card magazine">
+      <span class="book-card-platform">BRUNCH MAGAZINE · PROJECT</span>
+      <span class="book-card-title">아이동월드<br>베드타임 스토리</span>
+      <p class="book-card-desc">
+        아이동월드 프로젝트의 이야기 확장 자리.
+        현재는 Works의 아이동월드 프로젝트와 함께 참고할 프로젝트 기반 스토리 라인으로 둡니다.
       </p>
       <span class="book-card-arrow">→ 브런치 매거진</span>
     </a>
