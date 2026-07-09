@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="LOREBOOK — A 4-stage pipeline that turns scattered IP materials into a 1,500-entry Obsidian Vault.">
-<title>LOREBOOK | MEJE WORKS Process</title>
+<meta name="description" content="Lorebook turns a Vault or collected IP archive into a publishable encyclopedia and public web edition.">
+<title>Lorebook Process | MEJE WORKS Process</title>
+<meta property="og:title" content="Lorebook Process | MEJE WORKS">
+<meta property="og:description" content="A six-phase process that turns a 1,500-entry Vault into a hardcover setting encyclopedia and static web edition.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/ja/process/lorebook.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="ko" href="https://meje.kr/process/lorebook.html">
 <link rel="alternate" hreflang="en" href="https://meje.kr/en/process/lorebook.html">
 <link rel="alternate" hreflang="ja" href="https://meje.kr/ja/process/lorebook.html">
@@ -17,22 +23,20 @@
 <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
 <link rel="apple-touch-icon" href="../../img/logo.png">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css">
 <style>
 .lang-bar { display:flex; gap:8px; align-items:center; }
-.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
 .lang-bar a.active { color:var(--accent); }
 .lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
-.pending-wrap { max-width: 720px; margin: 0 auto; padding: 40px; text-align:center; }
-.pending-wrap h1 { font-family: var(--display); font-size: 42px; font-weight: 700; margin-bottom: 8px; }
-.pending-wrap .meta { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.16em; margin-bottom: 24px; }
-.pending-wrap .lead { font-family: var(--sans); font-size: 14px; color: var(--text-dim); line-height: 2; margin-bottom: 32px; }
-.pending-wrap .cta-pair { display:flex; gap: 12px; justify-content:center; flex-wrap:wrap; }
-.pending-wrap .cta-link { display:inline-block; padding: 12px 24px; background: var(--bg-2); border: 1px solid var(--border-dim); color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; transition: border-color 0.2s; }
-.pending-wrap .cta-link:hover { border-color: var(--accent-dim); color: var(--accent); }
-.pending-wrap .cta-link.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-.pending-wrap .cta-link.primary:hover { background: transparent; color: var(--accent); }
+.proc-cta + .proc-cta { margin-left: 10px; }
+[dir="rtl"] .proc-cta + .proc-cta { margin-left: 0; margin-right: 10px; }
+@media (max-width: 640px) {
+  .proc-cta + .proc-cta { margin-left: 0; margin-top: 10px; }
+  [dir="rtl"] .proc-cta + .proc-cta { margin-right: 0; }
+}
 </style>
 </head>
 <body>
@@ -40,23 +44,19 @@
 <div id="scroll-progress"></div>
 
 <nav class="site-nav">
-  <a href="../../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <a href="../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
   <div class="lang-bar">
-    <a href="../../process/lorebook.html">KR</a><span class="sep">&middot;</span>
-    <a href="../../en/process/lorebook.html">EN</a><span class="sep">&middot;</span>
-    <a href="lorebook.html" class="active">JA</a><span class="sep">&middot;</span>
-    <a href="../../zh-tw/process/lorebook.html">繁</a><span class="sep">&middot;</span>
-    <a href="../../zh-cn/process/lorebook.html">简</a><span class="sep">&middot;</span>
-    <a href="../../ar/process/lorebook.html">AR</a><span class="sep">&middot;</span>
-    <a href="../../fa/process/lorebook.html">FA</a><span class="sep">&middot;</span>
-    <a href="../../ur/process/lorebook.html">UR</a>
+    <a href="../../process/lorebook.html">KR</a><span class="sep">&middot;</span><a href="../../en/process/lorebook.html">EN</a><span class="sep">&middot;</span><a href="../../ja/process/lorebook.html" class="active">JA</a><span class="sep">&middot;</span><a href="../../zh-tw/process/lorebook.html">繁</a><span class="sep">&middot;</span><a href="../../zh-cn/process/lorebook.html">简</a><span class="sep">&middot;</span><a href="../../ar/process/lorebook.html">AR</a><span class="sep">&middot;</span><a href="../../fa/process/lorebook.html">FA</a><span class="sep">&middot;</span><a href="../../ur/process/lorebook.html">UR</a>
   </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
   <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="../about.html">About</a></li>
     <li><a href="../works.html">Works</a></li>
+    <li><a href="../ip.html">IP</a></li>
     <li><a href="../process.html" class="active">Process</a></li>
     <li><a href="../knowledge.html">Knowledge</a></li>
+    <li><a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a></li>
   </ul>
   <span class="nav-badge">LOREBOOK</span>
 </nav>
@@ -64,22 +64,103 @@
 <main>
 
 <section class="proc-hero">
-  <div class="pending-wrap">
-    <div class="meta">// PROCESS 04 / OUTPUT · 6 PHASES</div>
-    <h1>LOREBOOK</h1>
-    <p class="lead">
-      A 6-phase process that turns a Vault or IP materials into
-      a B5 hardcover (~450 pages) plus a static web edition&mdash;
-      both from a single .md source. 9-14 months per cycle. 14 episodes plus appendix.
-      <br><br>
-      <strong>English translation pending.</strong>
-      The full Korean version is available with chapter index,
-      applied projects, and pipeline cross-links.
-    </p>
-    <div class="cta-pair">
-      <a href="../../process/lorebook.html" class="cta-link primary">한국어판 보기 (Korean) →</a>
-      <a href="../process.html" class="cta-link">← Back to Process</a>
+  <div class="proc-hero-meta">// PROCESS 04 / OUTPUT · 6 PHASES</div>
+  <h1 class="proc-hero-title">Lorebook Process</h1>
+  <p class="proc-hero-en">LOREBOOK</p>
+  <p class="proc-hero-lead">
+    Every creator eventually creates a world, and at some point wants to bind that world into a book. The Lorebook process compresses that work into a six-phase procedure.<br><br>
+    It takes a 1,500-entry Vault as input and produces a B5 hardcover book of roughly 450 pages together with a public web edition. The same markdown source remains the single source of truth.
+  </p>
+</section>
+
+<section class="proc-io">
+  <div class="proc-io-grid">
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">INPUT</div>
+      <div class="proc-io-box-title">Vault of 1,500 Entries or Collected IP Materials</div>
+      <p class="proc-io-box-desc">An Obsidian Vault with structured frontmatter, or a partially organized body of IP materials ready to be mapped into a book structure.</p>
     </div>
+    <div class="proc-io-arrow">→</div>
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">OUTPUT</div>
+      <div class="proc-io-box-title">Print Edition + Public Web Edition</div>
+      <p class="proc-io-box-desc">A B5 hardcover encyclopedia and a static website deployed from the same markdown source, with quarterly update cycles when needed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// table_of_contents</p>
+  <h2 class="proc-section-title">14 Chapters + Appendix</h2>
+  <p class="proc-section-desc">The standard encyclopedia format absorbs variations such as artbook, narrative bible, game design bible, and official comic/webtoon setting book.</p>
+
+  <div class="chapter-list">
+    <div class="chapter-item"><div class="chapter-num">01</div><div class="chapter-title">An Encyclopedia for One IP — What a Lorebook Is</div></div>
+    <div class="chapter-item"><div class="chapter-num">02</div><div class="chapter-title">Five Types of Lorebook</div></div>
+    <div class="chapter-item"><div class="chapter-num">03</div><div class="chapter-title">After Librarying — From Vault to Lorebook</div></div>
+    <div class="chapter-item"><div class="chapter-num">04</div><div class="chapter-title">Six Macro Sections and Twelve Parts — Where the Skeleton Is Set</div></div>
+    <div class="chapter-item"><div class="chapter-num">05</div><div class="chapter-title">The Shape of One Entry — Standard Template and Frontmatter</div></div>
+    <div class="chapter-item"><div class="chapter-num">06</div><div class="chapter-title">Nine Categories and Worldbuilding Axes — Two Coordinates Decide Parts</div></div>
+    <div class="chapter-item"><div class="chapter-num">07</div><div class="chapter-title">Three Voices — Chronicle, Field, and Encyclopedia Styles</div></div>
+    <div class="chapter-item"><div class="chapter-num">08</div><div class="chapter-title">Dual Description — External Analogy and Internal Law</div></div>
+    <div class="chapter-item"><div class="chapter-num">09</div><div class="chapter-title">Short Quotes and Multilingual Material — What Enters the Main Book</div></div>
+    <div class="chapter-item"><div class="chapter-num">10</div><div class="chapter-title">Phase 0 to 3 — The First Half from Agreement to Pilot Part</div></div>
+    <div class="chapter-item"><div class="chapter-num">11</div><div class="chapter-title">Phase 4 to 6 — When Materials Become a Book</div></div>
+    <div class="chapter-item"><div class="chapter-num">12</div><div class="chapter-title">With AI Coworkers — A Book Built by Two Hands</div></div>
+    <div class="chapter-item"><div class="chapter-num">13</div><div class="chapter-title">Consistency, Versions, and Illustration — A Living Lorebook</div></div>
+    <div class="chapter-item"><div class="chapter-num">14</div><div class="chapter-title">Five Variations and the Final Greeting</div></div>
+    <div class="chapter-item"><div class="chapter-num">+</div><div class="chapter-title">Appendix — Term Index and Market Case Collection</div></div>
+  </div>
+
+  <a href="https://brunch.co.kr/@whtdrgon" target="_blank" rel="noopener" class="proc-cta">Publication Link →</a>
+  <a href="https://books.meje.kr/books/meje-lorebook/" target="_blank" rel="noopener" class="proc-cta">MEJE Books →</a>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// applied_projects</p>
+  <h2 class="proc-section-title">Applied Projects</h2>
+  <p class="proc-section-desc">Used for B2B setting-bible delivery and internal IP encyclopedia publication.</p>
+  <div class="applied-list">
+    <div class="applied-row">
+      <div class="applied-name">FEWK World Book</div>
+      <div class="applied-desc">An encyclopedia for MEJE's cyberpunk TRPG system, paired with the FEWK Core Rulebook.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">B2B Setting Bible Delivery</div>
+      <div class="applied-desc">Private PDF or publication-ready setting bibles for game and entertainment IPs.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">WhtDrgon World Guide</div>
+      <div class="applied-desc">An integrated encyclopedia of long-running WhtDrgon creative materials.</div>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// next_in_pipeline</p>
+  <h2 class="proc-section-title">Inside the Pipeline</h2>
+  <p class="proc-section-desc">Lorebook is an output stage of the Librarying Vault. Storytelling 100 branches from the same input.</p>
+  <div class="cross-grid">
+    <a href="librarying.html" class="cross-card">
+      <div class="cross-card-label">↑ Input</div>
+      <div class="cross-card-title">Librarying Process</div>
+      <p class="cross-card-desc">The standard input: 1,500 Vault entries mapped into a twelve-part matrix.</p>
+    </a>
+    <a href="storytelling100.html" class="cross-card">
+      <div class="cross-card-label">↔ Paired Output</div>
+      <div class="cross-card-title">Storytelling 100 Process</div>
+      <p class="cross-card-desc">If Lorebook is the dictionary, Storytelling 100 is one hundred stories that use it.</p>
+    </a>
+    <a href="seoyeongak.html" class="cross-card">
+      <div class="cross-card-label">↑ Paired Input</div>
+      <div class="cross-card-title">Seoyeongak Process</div>
+      <p class="cross-card-desc">Translation assets become sources for multilingual publication.</p>
+    </a>
+    <a href="character.html" class="cross-card">
+      <div class="cross-card-label">↑ Paired Input</div>
+      <div class="cross-card-title">Character Process</div>
+      <p class="cross-card-desc">Character sheets become the primary material for the character encyclopedia section.</p>
+    </a>
   </div>
 </section>
 
@@ -97,9 +178,18 @@
     <a href="../works.html">Works</a>
     <a href="../process.html">Process</a>
     <a href="../knowledge.html">Knowledge</a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
   </div>
   <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
 </footer>
 
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+</script>
 </body>
 </html>

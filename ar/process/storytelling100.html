@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Storytelling 100 — A 4-stage pipeline that turns scattered IP materials into a 1,500-entry Obsidian Vault.">
-<title>Storytelling 100 | MEJE WORKS Process</title>
+<meta name="description" content="Storytelling 100 turns a Vault and 100 character sheets into one hundred slice-of-life scenarios.">
+<title>Storytelling 100 Process | MEJE WORKS Process</title>
+<meta property="og:title" content="Storytelling 100 Process | MEJE WORKS">
+<meta property="og:description" content="A seven-stage process for producing one hundred short scenarios from a worldview Vault and character sheets.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/ar/process/storytelling100.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="ko" href="https://meje.kr/process/storytelling100.html">
 <link rel="alternate" hreflang="en" href="https://meje.kr/en/process/storytelling100.html">
 <link rel="alternate" hreflang="ja" href="https://meje.kr/ja/process/storytelling100.html">
@@ -17,22 +23,20 @@
 <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
 <link rel="apple-touch-icon" href="../../img/logo.png">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css">
 <style>
 .lang-bar { display:flex; gap:8px; align-items:center; }
-.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
 .lang-bar a.active { color:var(--accent); }
 .lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
-.pending-wrap { max-width: 720px; margin: 0 auto; padding: 40px; text-align:center; }
-.pending-wrap h1 { font-family: var(--display); font-size: 42px; font-weight: 700; margin-bottom: 8px; }
-.pending-wrap .meta { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.16em; margin-bottom: 24px; }
-.pending-wrap .lead { font-family: var(--sans); font-size: 14px; color: var(--text-dim); line-height: 2; margin-bottom: 32px; }
-.pending-wrap .cta-pair { display:flex; gap: 12px; justify-content:center; flex-wrap:wrap; }
-.pending-wrap .cta-link { display:inline-block; padding: 12px 24px; background: var(--bg-2); border: 1px solid var(--border-dim); color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; transition: border-color 0.2s; }
-.pending-wrap .cta-link:hover { border-color: var(--accent-dim); color: var(--accent); }
-.pending-wrap .cta-link.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-.pending-wrap .cta-link.primary:hover { background: transparent; color: var(--accent); }
+.proc-cta + .proc-cta { margin-left: 10px; }
+[dir="rtl"] .proc-cta + .proc-cta { margin-left: 0; margin-right: 10px; }
+@media (max-width: 640px) {
+  .proc-cta + .proc-cta { margin-left: 0; margin-top: 10px; }
+  [dir="rtl"] .proc-cta + .proc-cta { margin-right: 0; }
+}
 </style>
 </head>
 <body>
@@ -40,23 +44,19 @@
 <div id="scroll-progress"></div>
 
 <nav class="site-nav">
-  <a href="../../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <a href="../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
   <div class="lang-bar">
-    <a href="../../process/storytelling100.html">KR</a><span class="sep">&middot;</span>
-    <a href="../../en/process/storytelling100.html">EN</a><span class="sep">&middot;</span>
-    <a href="../../ja/process/storytelling100.html">JA</a><span class="sep">&middot;</span>
-    <a href="../../zh-tw/process/storytelling100.html">繁</a><span class="sep">&middot;</span>
-    <a href="../../zh-cn/process/storytelling100.html">简</a><span class="sep">&middot;</span>
-    <a href="storytelling100.html" class="active">AR</a><span class="sep">&middot;</span>
-    <a href="../../fa/process/storytelling100.html">FA</a><span class="sep">&middot;</span>
-    <a href="../../ur/process/storytelling100.html">UR</a>
+    <a href="../../process/storytelling100.html">KR</a><span class="sep">&middot;</span><a href="../../en/process/storytelling100.html">EN</a><span class="sep">&middot;</span><a href="../../ja/process/storytelling100.html">JA</a><span class="sep">&middot;</span><a href="../../zh-tw/process/storytelling100.html">繁</a><span class="sep">&middot;</span><a href="../../zh-cn/process/storytelling100.html">简</a><span class="sep">&middot;</span><a href="../../ar/process/storytelling100.html" class="active">AR</a><span class="sep">&middot;</span><a href="../../fa/process/storytelling100.html">FA</a><span class="sep">&middot;</span><a href="../../ur/process/storytelling100.html">UR</a>
   </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
   <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../about.html">About</a></li>
-    <li><a href="../works.html">Works</a></li>
-    <li><a href="../process.html" class="active">Process</a></li>
-    <li><a href="../knowledge.html">Knowledge</a></li>
+    <li><a href="../index.html">الرئيسية</a></li>
+    <li><a href="../about.html">عن الشركة</a></li>
+    <li><a href="../works.html">الأعمال</a></li>
+    <li><a href="../ip.html">IP</a></li>
+    <li><a href="../process.html" class="active">العملية</a></li>
+    <li><a href="../knowledge.html">المعرفة</a></li>
+    <li><a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a></li>
   </ul>
   <span class="nav-badge">Storytelling 100</span>
 </nav>
@@ -64,22 +64,98 @@
 <main>
 
 <section class="proc-hero">
-  <div class="pending-wrap">
-    <div class="meta">// PROCESS 05 / OUTPUT · 7 STAGES</div>
-    <h1>Storytelling 100</h1>
-    <p class="lead">
-      A 7-stage process that uses a Vault and character sheets
-      to write 100 everyday-cross-section short stories.
-      A world is explained by rulebooks but comes alive through short fiction.
-      <br><br>
-      <strong>English translation pending.</strong>
-      The full Korean version is available with chapter index,
-      applied projects, and pipeline cross-links.
-    </p>
-    <div class="cta-pair">
-      <a href="../../process/storytelling100.html" class="cta-link primary">한국어판 보기 (Korean) →</a>
-      <a href="../process.html" class="cta-link">← Back to Process</a>
+  <div class="proc-hero-meta">// PROCESS 05 / OUTPUT · 7 STAGES</div>
+  <h1 class="proc-hero-title">Storytelling 100 Process</h1>
+  <p class="proc-hero-en">STORYTELLING 100</p>
+  <p class="proc-hero-lead">
+    Worldbuilding is explained by rulebooks, but it comes alive through stories. When one hundred characters have been defined, the Vault becomes the input for one hundred slice-of-life scenarios.<br><br>
+    The story does not need a giant incident. The smell of a job, the rhythm of a day, the weight of a prop, and the feeling that people live this way in this world are enough. Across one hundred pieces, the IP gains density.
+  </p>
+</section>
+
+<section class="proc-io">
+  <div class="proc-io-grid">
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">INPUT</div>
+      <div class="proc-io-box-title">Vault + 100 Character Sheets</div>
+      <p class="proc-io-box-desc">A worldbuilding dictionary created by Librarying and one hundred confirmed character sheets from Character Build.</p>
     </div>
+    <div class="proc-io-arrow">→</div>
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">OUTPUT</div>
+      <div class="proc-io-box-title">100 Slice-of-Life Scenarios · Companion Short-Story Volume</div>
+      <p class="proc-io-box-desc">One hundred pieces in forms such as short story, sketch, dialogue, or four-panel-comic scenario, often forming a 600 to 1,000 page companion volume.</p>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// table_of_contents</p>
+  <h2 class="proc-section-title">14-Part Series</h2>
+  <p class="proc-section-desc">Covers six quality criteria, five fun engines, coverage matrix, QA reports, and archive operation.</p>
+
+  <div class="chapter-list">
+    <div class="chapter-item"><div class="chapter-num">01</div><div class="chapter-title">The Blank Document After the Vault — How Slice-of-Life Scenarios Complete a World</div></div>
+    <div class="chapter-item"><div class="chapter-num">02</div><div class="chapter-title">What Makes One Piece Alive — A Map of Six Quality Criteria</div></div>
+    <div class="chapter-item"><div class="chapter-num">03</div><div class="chapter-title">Stakes, Viewpoint, Form, and Length — Four Decisions Before Writing</div></div>
+    <div class="chapter-item"><div class="chapter-num">04</div><div class="chapter-title">The Interface Between Vault and Writing — Single Source of Truth and Two-Way Sync</div></div>
+    <div class="chapter-item"><div class="chapter-num">05</div><div class="chapter-title">One Hundred Protagonists — Coverage Matrix and Character Balance</div></div>
+    <div class="chapter-item"><div class="chapter-num">06</div><div class="chapter-title">Four Paths for Finding Materials — Library Entries and Everyday Density</div></div>
+    <div class="chapter-item"><div class="chapter-num">07</div><div class="chapter-title">Designing Body Anchors — Without a Body There Is No Reader</div></div>
+    <div class="chapter-item"><div class="chapter-num">08</div><div class="chapter-title">Five Fun Engines — Devices That Make a Story Run</div></div>
+    <div class="chapter-item"><div class="chapter-num">09</div><div class="chapter-title">Ending Landing and Numeral Scene-Making — What Remains at the End</div></div>
+    <div class="chapter-item"><div class="chapter-num">10</div><div class="chapter-title">From Design Sheet to Manuscript — A Chain of Ten Decisions</div></div>
+    <div class="chapter-item"><div class="chapter-num">11</div><div class="chapter-title">Reference Writer System — Integrating Skill, Work Routine, and Inner Sensation</div></div>
+    <div class="chapter-item"><div class="chapter-num">12</div><div class="chapter-title">Standing Before the Acceptance Line — QA Report and Self-Correction</div></div>
+    <div class="chapter-item"><div class="chapter-num">13</div><div class="chapter-title">Managing One Hundred Pieces — Coverage Matrix and Archive Operation</div></div>
+    <div class="chapter-item"><div class="chapter-num">14</div><div class="chapter-title">What Practice Taught Us — What Appears at the End of One Hundred Stories</div></div>
+  </div>
+
+  <a href="https://brunch.co.kr/magazine/fewk" target="_blank" rel="noopener" class="proc-cta">Publication Link →</a>
+  <a href="https://books.meje.kr/books/meje-storytelling-100/" target="_blank" rel="noopener" class="proc-cta">MEJE Books →</a>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// applied_projects</p>
+  <h2 class="proc-section-title">Applied Projects</h2>
+  <p class="proc-section-desc">Used for B2B daily-content series and internal IP short-story volumes.</p>
+  <div class="applied-list">
+    <div class="applied-row">
+      <div class="applied-name">FEWK 102 Stories</div>
+      <div class="applied-desc">A series of cyberpunk slice-of-life stories satirizing fashion, advertising, no-kids zones, body modification, and other real-world issues.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">B2B Daily Content Series</div>
+      <div class="applied-desc">Scenario materials for fandom platforms: daily routines, relationships, props, and repeated interaction themes.</div>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// next_in_pipeline</p>
+  <h2 class="proc-section-title">Inside the Pipeline</h2>
+  <p class="proc-section-desc">Storytelling 100 is the final output stage that consumes assets from the earlier processes.</p>
+  <div class="cross-grid">
+    <a href="librarying.html" class="cross-card">
+      <div class="cross-card-label">↑ Input</div>
+      <div class="cross-card-title">Librarying Process</div>
+      <p class="cross-card-desc">The single source of truth for writing. Stories enrich the Vault through two-way sync.</p>
+    </a>
+    <a href="character.html" class="cross-card">
+      <div class="cross-card-label">↑ Input</div>
+      <div class="cross-card-title">Character Process</div>
+      <p class="cross-card-desc">One hundred character sheets become protagonist material.</p>
+    </a>
+    <a href="lorebook.html" class="cross-card">
+      <div class="cross-card-label">↔ Paired Output</div>
+      <div class="cross-card-title">Lorebook Process</div>
+      <p class="cross-card-desc">If Lorebook is the encyclopedia, Storytelling 100 is the set of stories that live inside it.</p>
+    </a>
+    <a href="seoyeongak.html" class="cross-card">
+      <div class="cross-card-label">↑ Paired Input</div>
+      <div class="cross-card-title">Seoyeongak Process</div>
+      <p class="cross-card-desc">Translation and adaptation materials provide tone, era, and character-reference sources.</p>
+    </a>
   </div>
 </section>
 
@@ -92,14 +168,23 @@
     503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
   </div>
   <div class="footer-links">
-    <a href="../index.html">&larr; Home</a>
-    <a href="../about.html">About</a>
-    <a href="../works.html">Works</a>
-    <a href="../process.html">Process</a>
-    <a href="../knowledge.html">Knowledge</a>
+    <a href="../index.html">&larr; الرئيسية</a>
+    <a href="../about.html">عن الشركة</a>
+    <a href="../works.html">الأعمال</a>
+    <a href="../process.html">العملية</a>
+    <a href="../knowledge.html">المعرفة</a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
   </div>
   <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
 </footer>
 
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+</script>
 </body>
 </html>

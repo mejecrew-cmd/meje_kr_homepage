@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Seoyeongak — A 4-stage pipeline that turns scattered IP materials into a 1,500-entry Obsidian Vault.">
- <title>Seoyeongak | MEJE WORKS Process</title>
+<meta name="description" content="Seoyeongak is a six-step process that turns a foreign-language source work into translation and adaptation assets.">
+<title>Seoyeongak Process | MEJE WORKS Process</title>
+<meta property="og:title" content="Seoyeongak Process | MEJE WORKS">
+<meta property="og:description" content="A six-step process for deep-reading foreign-language works before translation, using Pride and Prejudice as a practical case.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/ur/process/seoyeongak.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="ko" href="https://meje.kr/process/seoyeongak.html">
 <link rel="alternate" hreflang="en" href="https://meje.kr/en/process/seoyeongak.html">
 <link rel="alternate" hreflang="ja" href="https://meje.kr/ja/process/seoyeongak.html">
@@ -17,22 +23,20 @@
 <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
 <link rel="apple-touch-icon" href="../../img/logo.png">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css">
 <style>
 .lang-bar { display:flex; gap:8px; align-items:center; }
-.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
 .lang-bar a.active { color:var(--accent); }
 .lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
-.pending-wrap { max-width: 720px; margin: 0 auto; padding: 40px; text-align:center; }
-.pending-wrap h1 { font-family: var(--display); font-size: 42px; font-weight: 700; margin-bottom: 8px; }
-.pending-wrap .meta { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.16em; margin-bottom: 24px; }
-.pending-wrap .lead { font-family: var(--sans); font-size: 14px; color: var(--text-dim); line-height: 2; margin-bottom: 32px; }
-.pending-wrap .cta-pair { display:flex; gap: 12px; justify-content:center; flex-wrap:wrap; }
-.pending-wrap .cta-link { display:inline-block; padding: 12px 24px; background: var(--bg-2); border: 1px solid var(--border-dim); color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; transition: border-color 0.2s; }
-.pending-wrap .cta-link:hover { border-color: var(--accent-dim); color: var(--accent); }
-.pending-wrap .cta-link.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-.pending-wrap .cta-link.primary:hover { background: transparent; color: var(--accent); }
+.proc-cta + .proc-cta { margin-left: 10px; }
+[dir="rtl"] .proc-cta + .proc-cta { margin-left: 0; margin-right: 10px; }
+@media (max-width: 640px) {
+  .proc-cta + .proc-cta { margin-left: 0; margin-top: 10px; }
+  [dir="rtl"] .proc-cta + .proc-cta { margin-right: 0; }
+}
 </style>
 </head>
 <body>
@@ -40,23 +44,19 @@
 <div id="scroll-progress"></div>
 
 <nav class="site-nav">
-  <a href="../../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <a href="../index.html" class="nav-logo">MEJE<span>.</span>KR</a>
   <div class="lang-bar">
-    <a href="../../process/seoyeongak.html">KR</a><span class="sep">&middot;</span>
-    <a href="../../en/process/seoyeongak.html">EN</a><span class="sep">&middot;</span>
-    <a href="../../ja/process/seoyeongak.html">JA</a><span class="sep">&middot;</span>
-    <a href="../../zh-tw/process/seoyeongak.html">繁</a><span class="sep">&middot;</span>
-    <a href="../../zh-cn/process/seoyeongak.html">简</a><span class="sep">&middot;</span>
-    <a href="../../ar/process/seoyeongak.html">AR</a><span class="sep">&middot;</span>
-    <a href="../../fa/process/seoyeongak.html">FA</a><span class="sep">&middot;</span>
-    <a href="seoyeongak.html" class="active">UR</a>
+    <a href="../../process/seoyeongak.html">KR</a><span class="sep">&middot;</span><a href="../../en/process/seoyeongak.html">EN</a><span class="sep">&middot;</span><a href="../../ja/process/seoyeongak.html">JA</a><span class="sep">&middot;</span><a href="../../zh-tw/process/seoyeongak.html">繁</a><span class="sep">&middot;</span><a href="../../zh-cn/process/seoyeongak.html">简</a><span class="sep">&middot;</span><a href="../../ar/process/seoyeongak.html">AR</a><span class="sep">&middot;</span><a href="../../fa/process/seoyeongak.html">FA</a><span class="sep">&middot;</span><a href="../../ur/process/seoyeongak.html" class="active">UR</a>
   </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
   <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="../about.html">About</a></li>
     <li><a href="../works.html">Works</a></li>
+    <li><a href="../ip.html">IP</a></li>
     <li><a href="../process.html" class="active">Process</a></li>
     <li><a href="../knowledge.html">Knowledge</a></li>
+    <li><a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a></li>
   </ul>
   <span class="nav-badge">Seoyeongak</span>
 </nav>
@@ -64,22 +64,102 @@
 <main>
 
 <section class="proc-hero">
-  <div class="pending-wrap">
-    <div class="meta">// PROCESS 01 / INPUT · 6 STEPS</div>
-    <h1>Seoyeongak</h1>
-    <p class="lead">
-      A 6-step process that turns a foreign-language source work&mdash;like Pride and Prejudice&mdash;
-      into about 35 translation and adaptation assets.
-      Walking one book end-to-end across 14 episodes.
-      <br><br>
-      <strong>English translation pending.</strong>
-      The full Korean version is available with chapter index,
-      applied projects, and pipeline cross-links.
-    </p>
-    <div class="cta-pair">
-      <a href="../../process/seoyeongak.html" class="cta-link primary">한국어판 보기 (Korean) →</a>
-      <a href="../process.html" class="cta-link">← Back to Process</a>
+  <div class="proc-hero-meta">// PROCESS 01 / INPUT · 6 STEPS</div>
+  <h1 class="proc-hero-title">Seoyeongak Process</h1>
+  <p class="proc-hero-en">SEOYEONGAK · 書淵閣</p>
+  <p class="proc-hero-lead">
+    An apple is not simply 'apple.' The weight of one word can decide the texture of a work. Seoyeongak is the work of reading a foreign-language source once more before translation and placing the weight of words beside the words themselves.<br><br>
+    About 35 assets are produced from one source work. Those assets carry tone, era, class, relationship, and adaptation cues to translators, adaptors, and writers. The 14-part series follows Pride and Prejudice end to end.
+  </p>
+</section>
+
+<section class="proc-io">
+  <div class="proc-io-grid">
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">INPUT</div>
+      <div class="proc-io-box-title">One Foreign-Language Source Work</div>
+      <p class="proc-io-box-desc">A work such as Pride and Prejudice or Romeo and Juliet, usually from a reliable text source such as Project Gutenberg.</p>
     </div>
+    <div class="proc-io-arrow">→</div>
+    <div class="proc-io-box">
+      <div class="proc-io-box-label">OUTPUT</div>
+      <div class="proc-io-box-title">About 35 Translation and Adaptation Assets</div>
+      <p class="proc-io-box-desc">Common references, novel-pack materials, character notes, event guides, era vocabulary, honorific tone guides, motif tracking, and adaptation-ready supporting documents.</p>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// table_of_contents</p>
+  <h2 class="proc-section-title">14-Part Series</h2>
+  <p class="proc-section-desc">A tutorial that follows the full work rather than separating abstract procedure from practical example.</p>
+
+  <div class="chapter-list">
+    <div class="chapter-item"><div class="chapter-num">01</div><div class="chapter-title">An Apple Is Not Simply Apple — What Seoyeongak Does</div></div>
+    <div class="chapter-item"><div class="chapter-num">02</div><div class="chapter-title">Seoyeongak Flows Through Six Steps</div></div>
+    <div class="chapter-item"><div class="chapter-num">03</div><div class="chapter-title">Thirty-Plus Assets — Why Pride and Prejudice Became 35 Documents</div></div>
+    <div class="chapter-item"><div class="chapter-num">04</div><div class="chapter-title">Inside the Pride and Prejudice Work Folder</div></div>
+    <div class="chapter-item"><div class="chapter-num">05</div><div class="chapter-title">Looking into One Segment, Unfolding One Event Group</div></div>
+    <div class="chapter-item"><div class="chapter-num">06</div><div class="chapter-title">Where a Sentence Splits — Materials That Decide Structure in Advance</div></div>
+    <div class="chapter-item"><div class="chapter-num">07</div><div class="chapter-title">How the 35 Assets Were Chosen</div></div>
+    <div class="chapter-item"><div class="chapter-num">08</div><div class="chapter-title">The Skeleton of Every Work — Common Assets and the Novel Pack</div></div>
+    <div class="chapter-item"><div class="chapter-num">09</div><div class="chapter-title">The World of the Work — Era Encyclopedia and Motif Materials</div></div>
+    <div class="chapter-item"><div class="chapter-num">10</div><div class="chapter-title">Pride and Prejudice-Specific Supplementary Materials</div></div>
+    <div class="chapter-item"><div class="chapter-num">11</div><div class="chapter-title">The Protagonist's Notes — Elizabeth Bennet</div></div>
+    <div class="chapter-item"><div class="chapter-num">12</div><div class="chapter-title">The Supporting Character's Notes — Charlotte Lucas</div></div>
+    <div class="chapter-item"><div class="chapter-num">13</div><div class="chapter-title">Minor Roles, Appendices, and the Technique of Division of Labor</div></div>
+    <div class="chapter-item"><div class="chapter-num">14</div><div class="chapter-title">Integrity of Materials and the Final Greeting</div></div>
+  </div>
+
+  <a href="https://brunch.co.kr/brunchbook/mejei18n" target="_blank" rel="noopener" class="proc-cta">Publication Link →</a>
+  <a href="https://books.meje.kr/books/meje-seoyeongak/" target="_blank" rel="noopener" class="proc-cta">MEJE Books →</a>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// applied_projects</p>
+  <h2 class="proc-section-title">Applied Projects</h2>
+  <p class="proc-section-desc">Used for deep reading, multilingual translation preparation, and integrating foreign-language materials into worldbuilding pipelines.</p>
+  <div class="applied-list">
+    <div class="applied-row">
+      <div class="applied-name">Pride and Prejudice Case</div>
+      <div class="applied-desc">A full 14-part lecture case where about 35 assets are generated from one novel.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">i18n Website Operation</div>
+      <div class="applied-desc">Terminology and tone guides for the eight-language MEJE.kr site operation.</div>
+    </div>
+    <div class="applied-row">
+      <div class="applied-name">FEWK Rulebook Translation Preparation</div>
+      <div class="applied-desc">Pre-deciding how to translate cyberpunk-specific terms by transliteration, semantic translation, or explanation.</div>
+    </div>
+  </div>
+</section>
+
+<section class="proc-section">
+  <p class="proc-section-label">// next_in_pipeline</p>
+  <h2 class="proc-section-title">Inside the Pipeline</h2>
+  <p class="proc-section-desc">Seoyeongak outputs flow back into the Librarying Vault and then become input materials for Lorebook and Storytelling 100.</p>
+  <div class="cross-grid">
+    <a href="librarying.html" class="cross-card">
+      <div class="cross-card-label">↓ Next</div>
+      <div class="cross-card-title">Librarying Process</div>
+      <p class="cross-card-desc">Absorbs Seoyeongak outputs into Obsidian Vault entries.</p>
+    </a>
+    <a href="character.html" class="cross-card">
+      <div class="cross-card-label">↔ Paired Input</div>
+      <div class="cross-card-title">Character Process</div>
+      <p class="cross-card-desc">If Character builds a person from zero, Seoyeongak captures existing people in a source work.</p>
+    </a>
+    <a href="lorebook.html" class="cross-card">
+      <div class="cross-card-label">↓ Output</div>
+      <div class="cross-card-title">Lorebook Process</div>
+      <p class="cross-card-desc">Translation and adaptation assets become sources for encyclopedic publication.</p>
+    </a>
+    <a href="storytelling100.html" class="cross-card">
+      <div class="cross-card-label">↓ Output</div>
+      <div class="cross-card-title">Storytelling 100 Process</div>
+      <p class="cross-card-desc">Era, tone, and character materials become inputs for short scenarios.</p>
+    </a>
   </div>
 </section>
 
@@ -97,9 +177,18 @@
     <a href="../works.html">Works</a>
     <a href="../process.html">Process</a>
     <a href="../knowledge.html">Knowledge</a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
   </div>
   <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
 </footer>
 
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+</script>
 </body>
 </html>
