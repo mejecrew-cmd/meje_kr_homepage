@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MEJE Knowledge of Universe Setting — FEWK 세계관, MEJEwiki, FEWKbooks3rd, 10개 교육용 세계관 샘플.">
+<title>Universe Setting — FEWK & MEJEwiki | MEJE WORKS</title>
+<meta property="og:title" content="Universe Setting — FEWK & MEJEwiki | MEJE WORKS">
+<meta property="og:description" content="FEWK 세계관 설정 지식, MEJEwiki, FEWKbooks3rd, 10개 교육용 세계관 샘플 입구.">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
+<meta property="og:url" content="https://meje.kr/universe.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+#universe-hero {
+  max-width: 100%;
+  padding: 120px 40px 80px;
+  border-bottom: 1px solid var(--border-dim);
+  text-align: center;
+}
+.universe-hero-badge {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+}
+.universe-hero-badge::before { content: '● '; }
+.universe-hero-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.universe-hero-desc {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 2;
+}
+.universe-section {
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border-dim);
+}
+.universe-section:last-of-type { border-bottom: none; }
+.universe-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  margin-bottom: 6px;
+}
+.universe-title {
+  font-family: var(--display);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.universe-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  max-width: 760px;
+  line-height: 1.9;
+}
+.universe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2px;
+}
+.universe-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 220px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.universe-card:hover {
+  background: var(--bg-3);
+  border-color: var(--border);
+}
+.universe-card.featured { border-left: 2px solid var(--green); }
+.universe-card.source { border-left: 2px solid var(--accent-dim); }
+.universe-card-kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+.universe-card-title {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+.universe-card-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  flex: 1;
+}
+.universe-card-arrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent-dim);
+}
+.universe-card:hover .universe-card-arrow { color: var(--accent); }
+.world-card {
+  padding: 0;
+  gap: 0;
+  min-height: auto;
+  overflow: hidden;
+}
+.world-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-dim);
+}
+.world-card-body {
+  padding: 22px 24px 24px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+}
+.read-order {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.read-step {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dim);
+  padding: 24px;
+}
+.read-step-num {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+.read-step-title {
+  font-family: var(--display);
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.read-step-desc {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-sub); }
+.lang-bar a.active { color:var(--accent); }
+@media (max-width: 900px) {
+  .read-order { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  #universe-hero { padding: 100px 20px 60px; }
+  .universe-section { padding: 48px 20px 40px; }
+  .universe-grid, .read-order { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
+  <div class="lang-bar">
+    <a href="universe.html" class="active">KR</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="ceo.html">CEO</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="ip.html">IP</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="knowledge.html">Knowledge</a></li>
+    <li><a href="universe.html" class="active">Universe</a></li>
+  </ul>
+  <span class="nav-badge">Universe</span>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section id="universe-hero">
+  <span class="universe-hero-badge">MEJE Knowledge</span>
+  <h1 class="universe-hero-title">Universe Setting</h1>
+  <p class="universe-hero-desc">
+    MEJE Knowledge of Universe Setting. FEWK 세계관, MEJEwiki, FEWKbooks3rd, 교육용 샘플을 따로 묶어
+    세계관 설정을 읽고 공부하는 입구로 정리합니다.
+  </p>
+</section>
+
+<!-- ── POSITION ── -->
+<section class="universe-section reveal" id="position">
+  <p class="universe-label">// position</p>
+  <h2 class="universe-title">전체 맵의 포지션</h2>
+  <p class="universe-desc">
+    Process가 제작 절차의 지도라면, Universe Setting은 실제 세계관 설정을 읽는 자리입니다.
+    FEWK와 10개의 교육용 샘플은 MEJE의 세계관 설계 지식을 외부에서 학습 가능한 형태로 보여주는 공개 레퍼런스입니다.
+  </p>
+  <div class="read-order">
+    <div class="read-step">
+      <p class="read-step-num">01 / WIKI</p>
+      <h3 class="read-step-title">MEJEwiki</h3>
+      <p class="read-step-desc">세계관 설정과 용어를 먼저 훑는 공개 위키입니다.</p>
+    </div>
+    <div class="read-step">
+      <p class="read-step-num">02 / RULEBOOK</p>
+      <h3 class="read-step-title">FEWKbooks3rd</h3>
+      <p class="read-step-desc">FEWK 3판 룰북 구조와 플레이 규칙을 읽는 공개본입니다.</p>
+    </div>
+    <div class="read-step">
+      <p class="read-step-num">03 / SAMPLES</p>
+      <h3 class="read-step-title">세계관 샘플 10종</h3>
+      <p class="read-step-desc">공개 로어북 10종을 이미지, 제목, 링크 단위로 읽습니다.</p>
+    </div>
+    <div class="read-step">
+      <p class="read-step-num">04 / PROCESS</p>
+      <h3 class="read-step-title">제작 절차로 환원</h3>
+      <p class="read-step-desc">읽은 설정을 라이브러링, 로어북, 스토리100 공정으로 되짚습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── PUBLIC SOURCES ── -->
+<section class="universe-section reveal" id="fewk">
+  <p class="universe-label">// public_sources</p>
+  <h2 class="universe-title">FEWK · MEJEwiki 공개 연결</h2>
+  <p class="universe-desc">
+    공개 열람용 페이지와 GitHub 저장소를 분리해 둡니다. 방문자는 공개 페이지에서 읽고,
+    제작·정리 이력은 저장소에서 확인할 수 있습니다.
+  </p>
+  <div class="universe-grid">
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/" target="_blank" rel="noopener" class="universe-card featured">
+      <span class="universe-card-kicker">PUBLIC WIKI</span>
+      <span class="universe-card-title">MEJEwiki</span>
+      <p class="universe-card-desc">세계관 설정, 용어, FEWK 관련 지식을 웹에서 읽는 공개 위키입니다.</p>
+      <span class="universe-card-arrow">→ 공개 위키</span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/FEWKbooks3rd/#home" target="_blank" rel="noopener" class="universe-card featured">
+      <span class="universe-card-kicker">ONLINE RULEBOOK</span>
+      <span class="universe-card-title">FEWKbooks3rd</span>
+      <p class="universe-card-desc">FEWK 3판 룰북 공개본. 시스템과 세계관을 읽는 기본 입구입니다.</p>
+      <span class="universe-card-arrow">→ 온라인 룰북</span>
+    </a>
+    <a href="https://github.com/whtdrgongmail/MEJEwiki" target="_blank" rel="noopener" class="universe-card source">
+      <span class="universe-card-kicker">GITHUB</span>
+      <span class="universe-card-title">whtdrgongmail/MEJEwiki</span>
+      <p class="universe-card-desc">MEJEwiki의 소스 저장소. 공개 위키의 설정 자료와 정리 이력을 관리합니다.</p>
+      <span class="universe-card-arrow">→ GitHub</span>
+    </a>
+    <a href="https://github.com/whtdrgongmail/FEWKbooks3rd" target="_blank" rel="noopener" class="universe-card source">
+      <span class="universe-card-kicker">GITHUB</span>
+      <span class="universe-card-title">whtdrgongmail/FEWKbooks3rd</span>
+      <p class="universe-card-desc">FEWK 3판 공개본의 소스 저장소. 룰북과 책 구조를 관리합니다.</p>
+      <span class="universe-card-arrow">→ GitHub</span>
+    </a>
+  </div>
+</section>
+
+<!-- ── EDUCATIONAL SAMPLES ── -->
+<section class="universe-section reveal" id="samples">
+  <p class="universe-label">// educational_samples</p>
+  <h2 class="universe-title">10개의 교육용 샘플</h2>
+  <p class="universe-desc">
+    MEJEwiki에 공개된 하얀용 세계관 로어북 10종입니다.
+    각 카드는 해당 세계관의 공개 독서기로 바로 연결됩니다.
+  </p>
+  <div class="universe-grid">
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h1-gongdong/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h1-gongdong-hero.png" alt="공동 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 01</span>
+        <span class="universe-card-title">공동</span>
+        <span class="universe-card-desc">게이트, 등급사회, 무특성의 변칙을 다루는 헌터형 세계관.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h2-hyanggung/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h2-hyanggung-hero.png" alt="향궁 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 02</span>
+        <span class="universe-card-title">향궁</span>
+        <span class="universe-card-desc">향과 마나, 황실과 조향 길드가 권력을 이루는 세계관.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h3-seongra-gangho/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h3-seongra-gangho-hero.png" alt="성라강호 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 03</span>
+        <span class="universe-card-title">성라강호</span>
+        <span class="universe-card-desc">천기, 별, 본명성, 강호의 은원이 교차하는 무협 세계관.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h4-gyunsahae/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h4-gyunsahae-hero.png" alt="균사해 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 04</span>
+        <span class="universe-card-title">균사해</span>
+        <span class="universe-card-desc">균사망, 접속, 공생과 부패의 윤리를 다루는 생태형 세계관.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h5-sangyeoho/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h5-sangyeoho-hero.png" alt="상여호 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 05</span>
+        <span class="universe-card-title">상여호</span>
+        <span class="universe-card-desc">명로, 망자항법, 물 위의 의례와 기억을 다루는 세계관.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h6-rosy-hollow/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h6-rosy-hollow-hero.png" alt="로지할로우 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 06</span>
+        <span class="universe-card-title">로지할로우</span>
+        <span class="universe-card-desc">로지할로우 세계관 로어북.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h7-jeonsuseo/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h7-jeonsuseo-hero.png" alt="전수서 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 07</span>
+        <span class="universe-card-title">전수서</span>
+        <span class="universe-card-desc">전수서 세계관 로어북.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h8-nubi/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h8-nubi-hero.png" alt="누비의 땅 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 08</span>
+        <span class="universe-card-title">누비의 땅</span>
+        <span class="universe-card-desc">누비의 땅 세계관 로어북.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h9-usabu/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h9-usabu-hero.png" alt="우사부 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 09</span>
+        <span class="universe-card-title">우사부</span>
+        <span class="universe-card-desc">우사부 세계관 로어북.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+    <a href="https://whtdrgongmail.github.io/MEJEwiki/worlds/h10-daesu/" target="_blank" rel="noopener" class="universe-card world-card">
+      <img class="world-card-image" src="https://whtdrgongmail.github.io/MEJEwiki/assets/worlds/h10-daesu-hero.png" alt="대수의 등 세계관 대표 이미지" loading="lazy">
+      <span class="world-card-body">
+        <span class="universe-card-kicker">WORLD SAMPLE 10</span>
+        <span class="universe-card-title">대수의 등</span>
+        <span class="universe-card-desc">거대한 짐승의 등 위에서 살아가는 마을과 약속의 세계관.</span>
+        <span class="universe-card-arrow">→ 세계관 보기</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-logo">MEJE<span>.</span>KR</p>
+  <div class="footer-contact">
+    주식회사 메제웍스 ｜ 김동은 ｜ 772-87-02365<br>
+    서울특별시 강남구 역삼로 217. 503호(역삼동) ｜ 0507-1420-1205
+  </div>
+  <div class="footer-contact" style="margin-top:8px; font-size:13px; color:var(--text-muted); opacity:0.6;">
+    MEJE Works Corp. ｜ Kim Dong-eun ｜ 772-87-02365<br>
+    503, 217, Yeoksam-ro, Gangnam-gu, Seoul ｜ 0507-1420-1205
+  </div>
+  <div class="footer-links">
+    <a href="index.html">&larr; Home</a>
+    <a href="about.html">About</a>
+    <a href="works.html">Works</a>
+    <a href="ip.html">IP</a>
+    <a href="process.html">Process</a>
+    <a href="knowledge.html">Knowledge</a>
+    <a href="universe.html">Universe</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p class="footer-copy">&copy; MEJE Works Corp. All Rights Reserved.</p>
+</footer>
+
+<script>
+const prog = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const st = document.documentElement.scrollTop;
+  const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  prog.style.width = (sh > 0 ? (st / sh) * 100 : 0) + '%';
+}, { passive: true });
+
+document.querySelectorAll('.universe-card, .read-step').forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(14px)';
+  card.style.transition = 'opacity 0.45s ease, transform 0.45s ease, background 0.2s, border-color 0.2s';
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('visible');
+    e.target.querySelectorAll('.universe-card, .read-step').forEach((card, i) => {
+      card.style.transitionDelay = (i * 60) + 'ms';
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    });
+    observer.unobserve(e.target);
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
