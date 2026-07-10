@@ -130,6 +130,13 @@ nav.site-nav {
 }
 .nav-badge::before { content: '● '; }
 
+/* ── LANG BAR ── */
+.lang-bar { display:flex; gap:8px; align-items:center; }
+.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-muted); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+.lang-bar a:hover { color:var(--text-dim); }
+.lang-bar a.active { color:var(--accent); }
+.lang-bar .sep { color:var(--text-muted); font-size:8px; opacity:0.4; }
+
 /* ── MOBILE NAV TOGGLE ── */
 .nav-toggle {
   display: none;
@@ -554,37 +561,6 @@ footer {
   font-size: 13px;
   color: var(--text-muted);
   opacity: 0.5;
-}
-
-/* ── TIMELINE VISUAL LINE ── */
-.timeline {
-  position: relative;
-  margin-top: 8px;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 39px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--accent-dim), var(--border-dim));
-}
-
-.timeline-item {
-  position: relative;
-}
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: 36px;
-  top: 18px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent-dim);
-  border: 1px solid var(--bg);
-  z-index: 1;
 }
 
 /* ── FLOW ARROWS (CSS-only between grid cells) ── */

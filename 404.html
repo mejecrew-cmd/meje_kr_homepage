@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — MEJE Works</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #080808;
+  --bg-2:     #0f0f0f;
+  --border:   #2a2a2a;
+  --text:     #f0f0f0;
+  --text-sub: #aaa;
+  --text-dim: #777;
+  --accent:   #c9a84c;
+  --green:    #4caf7d;
+  --mono:     'JetBrains Mono', 'Courier New', monospace;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+.code {
+  font-family: 'DM Sans', var(--mono), sans-serif;
+  font-weight: 700;
+  font-size: clamp(72px, 16vw, 160px);
+  letter-spacing: 0.1em;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.terminal {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 2.2;
+  margin-bottom: 40px;
+}
+.terminal .ps { color: var(--green); }
+.terminal .hl { color: var(--accent); }
+.terminal .dim { color: var(--text-dim); }
+.cursor::after {
+  content: '_';
+  color: var(--accent);
+  animation: blink 1.2s step-start infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+.home-link {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  padding: 12px 28px;
+  letter-spacing: 0.06em;
+  transition: background 0.3s, color 0.3s;
+}
+.home-link:hover { background: var(--accent); color: var(--bg); }
+</style>
+</head>
+<body>
+<div class="code">404</div>
+<div class="terminal">
+  <span class="ps">$</span> find /meje.kr <span class="dim">-name</span> <span class="hl">requested_page</span><br>
+  <span class="dim">find: no such file or directory</span><br>
+  <span class="dim">요청하신 주소에 페이지가 없습니다. 주소를 확인하거나 홈으로 이동해 주세요.</span><span class="cursor"></span>
+</div>
+<a href="/" class="home-link">cd /home →</a>
+</body>
+</html>

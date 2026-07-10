@@ -9,6 +9,7 @@
 <meta property="og:description" content="IP Strategy · K-Contents · Fandom Design · AI Technology">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://meje.kr">
+<meta property="og:image" content="https://meje.kr/img/og-cover.png">
 <link rel="alternate" hreflang="ko" href="https://meje.kr/">
 <link rel="alternate" hreflang="en" href="https://meje.kr/en/">
 <link rel="alternate" hreflang="ja" href="https://meje.kr/ja/">
@@ -422,6 +423,26 @@ nav {
   .pillars { grid-template-columns: 1fr; }
   .numbers-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── PROJECT STATUS PULSE ── */
+@keyframes soon-pulse { 0%,100%{opacity:1} 50%{opacity:.55} }
+
+/* ── PROCESS SECTION OVERRIDES ── */
+#process .project-status { font-size: 11px; }
+#process .project-title {
+  font-size: clamp(19px, 1.8vw, 23px) !important;
+  line-height: 1.35;
+}
+#process .project-desc {
+  font-size: 15px;
+  line-height: 1.65;
+}
+@media (max-width: 1024px) {
+  #process .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  #process .projects-grid { grid-template-columns: 1fr !important; }
+}
 </style>
 </head>
 <body>
@@ -442,6 +463,7 @@ nav {
   <div class="nav-links">
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
+    <a href="ip.html">IP</a>
     <a href="process.html">Process</a>
     <a href="knowledge.html">Knowledge</a>
     <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
@@ -548,10 +570,6 @@ nav {
   </div>
 </section>
 
-<style>
-@keyframes soon-pulse { 0%,100%{opacity:1} 50%{opacity:.55} }
-</style>
-
 <!-- ── NUMBERS ── -->
 <section class="half reveal">
   <p class="sec-label">// metrics</p>
@@ -639,24 +657,6 @@ nav {
 
   <a href="process.html" class="cta" style="margin-top:32px; display:inline-block; padding:12px 28px; border:1px solid var(--accent); color:var(--accent); font-family:var(--mono); font-size:13px; letter-spacing:0.06em; text-decoration:none;">파이프라인 전체 보기 →</a>
 </section>
-
-<style>
-@media (max-width: 1024px) {
-  #process .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
-}
-#process .project-status { font-size: 11px; }
-#process .project-title {
-  font-size: clamp(19px, 1.8vw, 23px) !important;
-  line-height: 1.35;
-}
-#process .project-desc {
-  font-size: 15px;
-  line-height: 1.65;
-}
-@media (max-width: 600px) {
-  #process .projects-grid { grid-template-columns: 1fr !important; }
-}
-</style>
 
 <!-- ── KNOWLEDGE ── -->
 <section class="half reveal" id="knowledge">

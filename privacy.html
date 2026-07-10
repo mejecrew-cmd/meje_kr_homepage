@@ -190,11 +190,6 @@
   .article-header { flex-direction: column; gap: 4px; }
   .remedies-grid { grid-template-columns: 1fr; }
 }
-.lang-bar { display:flex; gap:8px; align-items:center; }
-.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
-.lang-bar a:hover { color:var(--text-sub); }
-.lang-bar a.active { color:var(--accent); }
-.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
 </style>
 </head>
 <body>
@@ -204,7 +199,13 @@
   <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
   <div class="lang-bar">
     <a href="privacy.html" class="active">KR</a><span class="sep">&middot;</span>
-    <a href="en/privacy.html">EN</a>
+    <a href="en/privacy.html">EN</a><span class="sep">&middot;</span>
+    <a href="ja/privacy.html">JA</a><span class="sep">&middot;</span>
+    <a href="zh-tw/privacy.html">繁</a><span class="sep">&middot;</span>
+    <a href="zh-cn/privacy.html">简</a><span class="sep">&middot;</span>
+    <a href="ar/privacy.html">AR</a><span class="sep">&middot;</span>
+    <a href="fa/privacy.html">FA</a><span class="sep">&middot;</span>
+    <a href="ur/privacy.html">UR</a>
   </div>
   <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">MENU</button>
   <ul class="nav-links">
@@ -215,6 +216,7 @@
     <li><a href="ip.html">IP</a></li>
     <li><a href="process.html">Process</a></li>
     <li><a href="knowledge.html">Knowledge</a></li>
+    <li><a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a></li>
     <li><a href="universe.html">Universe</a></li>
     <li><a href="privacy.html" class="active">Privacy</a></li>
   </ul>

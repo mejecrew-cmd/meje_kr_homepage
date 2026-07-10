@@ -104,11 +104,6 @@
   color: var(--text);
   font-weight: 600;
 }
-.lang-bar { display:flex; gap:8px; align-items:center; }
-.lang-bar a { font-family:var(--mono); font-size:10px; color:var(--text-dim); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
-.lang-bar a:hover { color:var(--text-sub); }
-.lang-bar a.active { color:var(--accent); }
-.lang-bar .sep { color:var(--text-dim); font-size:8px; opacity:0.4; }
 </style>
 </head>
 <body>
@@ -118,16 +113,24 @@
   <a href="index.html" class="nav-logo">MEJE<span>.</span>KR</a>
   <div class="lang-bar">
     <a href="terms.html" class="active">KR</a><span class="sep">&middot;</span>
-    <a href="en/terms.html">EN</a>
+    <a href="en/terms.html">EN</a><span class="sep">&middot;</span>
+    <a href="ja/terms.html">JA</a><span class="sep">&middot;</span>
+    <a href="zh-tw/terms.html">繁</a><span class="sep">&middot;</span>
+    <a href="zh-cn/terms.html">简</a><span class="sep">&middot;</span>
+    <a href="ar/terms.html">AR</a><span class="sep">&middot;</span>
+    <a href="fa/terms.html">FA</a><span class="sep">&middot;</span>
+    <a href="ur/terms.html">UR</a>
   </div>
   <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
   <div class="nav-links">
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="ceo.html">CEO</a>
     <a href="works.html">Works</a>
     <a href="ip.html">IP</a>
     <a href="process.html">Process</a>
     <a href="knowledge.html">Knowledge</a>
+    <a href="https://books.meje.kr/" target="_blank" rel="noopener">Books</a>
     <a href="universe.html">Universe</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html" class="active">Terms</a>

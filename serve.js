@@ -20,7 +20,13 @@ const MIME = {
 http.createServer((req, res) => {
   let url = req.url.split('?')[0];
   if (url === '/') url = '/index.html';
-  const filePath = path.join(ROOT, decodeURIComponent(url));
+  if (url.endsWith('/')) url += 'index.html';
+  const filePath = path.join(ROOT, path.normalize(decodeURIComponent(url)));
+  if (!filePath.startsWith(ROOT + path.sep)) {
+    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.end('403 Forbidden');
+    return;
+  }
   const ext = path.extname(filePath);
   fs.readFile(filePath, (err, data) => {
     if (err) {
